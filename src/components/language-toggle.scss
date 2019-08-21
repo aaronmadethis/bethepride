@@ -1,0 +1,30 @@
+@import "_settings";
+
+$toggleImageWidth: 73px;
+
+.language-toggle {
+    .language-toggle__title {
+        font-weight: $boldFontWeight;
+        color: $beige;
+        display: block;
+        margin-bottom: $smallSpacing;
+        text-align: center;
+        text-transform: uppercase;
+    }
+
+    .language-toggle__image {
+        max-width: $toggleImageWidth;
+
+        @media only screen and (min-width: 769px) {
+            max-width: $toggleImageWidth * 1.2;
+        }
+    }
+
+    .language-toggle__image--english {
+
+    }
+
+    .language-toggle__image--swahili {
+        display: none;
+    }
+}

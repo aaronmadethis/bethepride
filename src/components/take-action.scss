@@ -1,0 +1,11 @@
+@import "_settings";
+
+.take-action {
+    background-image: url('../images/take-action-background-image.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    .wrapper-take-action__twitter-cards{
+        display: flex;
+    }
+}

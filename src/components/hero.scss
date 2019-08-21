@@ -1,0 +1,68 @@
+@import "_settings";
+
+.hero {
+    @include fullBackgroundSize($heroBackgroundImageUrl, bottom center);
+
+    background-color: $black;
+
+    .hero__content {
+        padding-top: calc(1rem + 15vh);
+
+        @media only screen and (min-width: 769px) {
+            padding-top: calc(1rem + 25vh);
+        }
+    }
+
+    h1 {
+        color: $beigeAlternate;
+
+        span {
+            color: $beige;
+            margin-left: $h1OffsetMarginMobile;
+
+            @media only screen and (min-width: 769px) {
+                margin-left: $h1OffsetMargin;
+            }
+        }
+    }
+
+    p,
+    a {
+        @media only screen and (min-width: 769px) {
+            margin-left: $h1OffsetMargin;
+        }
+    }
+
+    p {
+        @include fontSize(28px);
+
+        width: 70%;
+        color: $beige;
+        margin-top: 2rem;
+
+        @media only screen and (min-width: 769px) {
+            width: 45%;
+        }
+    }
+
+    a {
+        margin-top: 2.75rem;
+        display: inline-block;
+
+        @media only screen and (min-width: 769px) {
+            margin-top: 3.75rem;
+        }
+    }
+
+    .hero__caption {
+        color: $orange;
+        position: absolute;
+        bottom: 3rem;
+        right: $outerMarginMobile;
+
+        @media only screen and (min-width: 769px) {
+            right: $outerMargin;
+        }
+    }
+}
+

@@ -1,0 +1,54 @@
+@import "_settings";
+
+$hamburgerIconWidth: 27px;
+$logoImageWidth: 54px;
+
+.navigation {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+
+    .navigation__menu {
+        position: static;
+
+        @media only screen and (min-width: 769px) {
+            position: absolute;
+            left: -70px;
+        }
+
+        .button--hamburger {
+            margin-right: 10px;
+
+            img {
+                max-width: $hamburgerIconWidth;
+
+                @media only screen and (min-width: 769px) {
+                    max-width: $hamburgerIconWidth * 2;
+                }
+            }
+        }
+    }
+
+    // .navigation__expanded {
+    //     display: none;
+    // }
+
+    .navigation__links {
+        display: none;
+
+        .menu-is-open & {
+            display: block;
+        }
+    }
+
+    .navigation__logo {
+        img {
+            max-width: $logoImageWidth;
+
+            @media only screen and (min-width: 769px) {
+                max-width: $logoImageWidth * 2;
+            }
+        }
+    }
+}

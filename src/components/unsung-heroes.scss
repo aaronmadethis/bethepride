@@ -1,0 +1,10 @@
+@import "_settings";
+
+.unsung-heroes {
+    .unsung-heroes__paragraph {
+        background-image: url('../images/unsung-heroes-background-image.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 100vh;
+    }
+}

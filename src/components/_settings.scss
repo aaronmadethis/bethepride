@@ -1,0 +1,77 @@
+/************************************
+    Media Queries
+************************************/
+$largeScreen: 1824px;
+$laptop: 1440px;
+$tabletLandscape: 1024px;
+$tabletPortrait: 768px;
+$mobile: 481px;
+
+
+/************************************
+    Branding
+************************************/
+$orange: #E17000;
+$orangeAlternate: adjust-color($orange, $alpha: -0.4);
+$beige: #FFEDD9;
+$beigeAlternate: adjust-color($beige, $alpha: -0.45);
+$black: #000000;
+$white: #FFFFFF;
+$grey: adjust-color(#ECEDF5, $alpha: -0.64);
+$yellow: #E1B100;
+$red: #D60404;
+
+$linkColor: $orange;
+
+$headerFontFamily: 'Vesper Libre', Georgia, serif;
+$bodyFontFamily: 'Open Sans', Helvetica, sans-serif;
+
+$boldFontWeight: 700;
+$normalFontWeight: 400;
+
+$outerMarginMobile: calc(1rem + 1vw);
+$outerMargin: calc(1rem + 8vw);
+$h1OffsetMarginMobile: calc(1rem + 36vw);
+$h1OffsetMargin: calc(1rem + 12vw);
+
+$smallSpacing: 5px;
+
+/************************************
+    URLs
+************************************/
+$heroBackgroundImageUrl: url('../images/hero-background-image.jpg');
+
+
+
+/************************************
+    Functions
+************************************/
+@function calculateRem($pxSize) {
+    $remSize: $pxSize / 16px;
+    @return #{$remSize}rem;
+}
+
+
+/************************************
+    Mixins
+************************************/
+@mixin fontSize($fontSize) {
+    font-size: $fontSize;
+    font-size: calculateRem($fontSize);
+}
+
+@mixin fullBackgroundSize($backgroundImage, $backgroundPosition, $backgroundSize: cover, $backgroundRepeat: no-repeat) {
+    background-image: $backgroundImage;
+    background-size: $backgroundSize;
+    background-repeat: $backgroundRepeat;
+    background-position: $backgroundPosition;
+}
+
+@mixin flexbox($display: flex, $alignItems: center, $justifyContent: center, $flexFlow: row nowrap) {
+    display: $display;
+    align-items: $alignItems;
+    justify-content: $justifyContent;
+    flex-flow: $flexFlow;
+}
+
+
