@@ -9,7 +9,7 @@ description: This is a custom description for SEO and Open Graph purposes, rathe
     <section className="hero">
         <component-hero
             content='{
-                "headline": "Be the",
+                "headline": "Update",
                 "headlineAlt": "Pride",
                 "subheadline": "Lion populations are in crisis, and you&apos;re the solution.",
                 "buttonText": "Help Now",
