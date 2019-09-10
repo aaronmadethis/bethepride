@@ -1,5 +1,118 @@
-@import "settings";
+@import "_settings";
 
-.footer {
+$socialImageHeightMobile: 18px;
+$socialImageHeight: 24px;
+$logoWidth: 60px;
+$logoWidthDesktop: 150px;
+
+footer {
     background-color: $black;
+    color: $beige;
+    padding: $verticalMargin $outerMarginMobile;
+
+    @media only screen and (min-width: 1024px) {
+        padding: 6rem $outerMargin;
+    }
+
+    .footer__content {
+        @media only screen and (min-width: 1024px) {
+            @include flexbox($flexFlow: row wrap, $alignItems: flex-start);
+        }
+    }
+
+    .footer__logo {
+        max-width: $logoWidth;
+        margin-top: $verticalMargin / 2;
+
+        @media only screen and (min-width: 1024px) {
+            max-width: $logoWidthDesktop;
+            flex: 0 1 calc(25% - 5vw);
+            margin-right: 5vw;
+        }
+    }
+
+    .footer__columns {
+        @include flexbox($alignItems: flex-start, $justifyContent: flex-start);
+
+        margin: $verticalMargin auto;
+
+        > * {
+            flex: 0 1 calc(50% - 1rem);
+        }
+
+        @media only screen and (min-width: 1024px) {
+            flex: 0 1 75%;
+            margin-top: 0;
+            margin-left: 0;
+        }
+    }
+
+    .footer__links {
+        margin-right: 1rem;
+    }
+
+    .footer__link {
+        @include fontSize(21px);
+
+        margin-bottom: 1.5rem;
+
+        @media only screen and (min-width: 1024px) {
+            @include fontSize(16px);
+        }
+    }
+
+    .footer__title {
+        @include fontSize(18px);
+
+        color: $orange;
+        font-weight: $boldFontWeight;
+        text-transform: uppercase;
+        margin-bottom: 1rem;
+    }
+
+    .footer__paragraph {
+        @include fontSize(21px);
+
+        margin-bottom: 1rem;
+
+        @media only screen and (min-width: 1024px) {
+            @include fontSize(16px);
+        }
+    }
+
+    .footer__icons {
+        @include flexbox($justifyContent: flex-start);
+
+        margin: 2rem 0;
+    }
+
+    .footer__icon {
+        width: auto;
+        height: auto;
+        flex: 0 1 33.3333%;
+
+        @media only screen and (min-width: 1024px) {
+            flex: 0 1 15%;
+        }
+
+        img {
+            width: auto;
+            height: $socialImageHeightMobile;
+        }
+    }
+
+    .footer__copyright {
+        small {
+            color: $beige;
+
+            a {
+                color: inherit;
+            }
+        }
+
+        @media only screen and (min-width: 1024px) {
+            flex: 0 1 100%;
+            margin-left: calc(150px + 5vw);
+        }
+    }
 }

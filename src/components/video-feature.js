@@ -1,17 +1,27 @@
 import React from "react"
+import VideoPlayer from "./video-player"
+
 import "./video-feature.scss"
 
 const VideoFeature = ({ content }) => {
     const data = JSON.parse(content)
     return(
-        <section className="video-feature">
-            <h2>{data.headline}</h2>
-            <h5>{data.subheadline}</h5>
-            <div>
-                <p>(video placeholder)</p>
-                <p>{data.paragraph}</p>
+        <>
+        <div className="video-feature__content">
+            <h2 className="video-feature__headline">{data.headline}</h2>
+            <p className="video-feature__subheadline">{data.subheadline}</p>
+            <div className="video-feature__row">
+                <div className="video-feature__video">
+                    <VideoPlayer
+                        className="video-player is-selected"
+                        title={data.title}
+                        url={data.url}
+                    />
+                </div>
+                <p className="video-feature__paragraph">{data.paragraph}</p>
             </div>
-        </section>
+        </div>
+        </>
     )
 }
 

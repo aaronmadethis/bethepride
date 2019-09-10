@@ -1,82 +1,141 @@
 import React from "react"
+
+import Person from "./person"
+import VideoPlayer from "./video-player"
+import VideoSlide from "./video-slide"
+
+import Flickity from "./flickity-fixed"
+
+import "./vendor/flickity.min.css"
 import "./unsung-heroes.scss"
 
-import videoThumbnailPlaceholderImage from "../images/video-thumbnail-placeholder.png"
 import lionImage from "../images/lion-image.jpg"
 
-const UnsungHeroes = ({ content }) => {
-    const data = JSON.parse(content)
-    return(
-        <section className="unsung-heroes">
-            <div className="unsung-heroes__heading">
-                <h1>{data.headline}<br/>{data.headlineAlt}</h1>
-                <h5>{data.subheadline}</h5>
-            </div>
-            <div className="unsung-heroes__video">
-                <p>(video placeholder)</p>
-            </div>
-            <div className="unsung-heroes__people">
-                <div className="callout">
-                    <div className="callout__person">
-                        <h6>{data.personName1}</h6>
-                        <small className="small">{data.personTitle1}</small>
+const flickityOptions = {
+    cellSelector: '.video-slide__slide',
+    cellAlign: 'left',
+    wrapAround: false,
+    pageDots: false,
+    watchCSS: true,
+    prevNextButtons: false
+}
+
+class UnsungHeroes extends React.Component {
+    constructor(props) {
+        super(props);
+
+        this.state = {
+            currentSlide: 0,
+        };
+
+        this.flkty = '';
+        this.selectSlide = this.selectSlide.bind(this);
+    }
+
+    componentDidMount = () => {
+        this.flkty.on('scroll', () => {
+            this.setState(state => ({
+                currentSlide: this.flkty.selectedIndex,
+            }));
+        })
+    }
+
+    selectSlide(e, slideNumber) {
+        e.preventDefault();
+
+        let windowWidth = window.innerWidth;
+
+        if (windowWidth >= 1024) {
+            this.setActiveSlide(slideNumber);
+        }
+    }
+
+    setActiveSlide(slideNumber) {
+        this.setState(state => ({
+            currentSlide: slideNumber
+        }));
+    }
+
+    render() {
+        const {content} = this.props;
+        const data = JSON.parse(content);
+        const {people, videos, slides} = data;
+
+        let {currentSlide} = this.state;
+
+        return(
+            <>
+            <div className="unsung-heroes__content">
+                <div className="unsung-heroes__heading">
+                    <h2 className="unsung-heroes__headline">{data.headline}</h2>
+                    <p className="unsung-heroes__subheadline">{data.subheadline}</p>
+                </div>
+                <div className="unsung-heroes__video">
+                    {videos.map((video, i) => {
+                        return(
+                            <VideoPlayer
+                                key={i}
+                                className={currentSlide === i ? 'video-player is-selected' : 'video-player'}
+                                title={video.title}
+                                url={video.url}
+                                ariaCurrent={currentSlide === i ? true : false}
+                            />
+                        )
+                    })}
+                </div>
+                <div className="unsung-heroes__people">
+                    <div className="unsung-heroes__person">
+                        {people.map((person, i) => {
+                            return(
+                                <Person
+                                    key={i}
+                                    className={currentSlide === i ? 'person is-selected' : 'person'}
+                                    name={person.name}
+                                    title={person.title}
+                                    ariaCurrent={currentSlide === i ? true : false}
+                                />
+                            )
+                        })}
                     </div>
-                    <div className="callout__person">
-                        <h6>{data.personName2}</h6>
-                        <small className="small">{data.personTitle2}</small>
+                    <div className="unsung-heroes__carousel">
+                        <Flickity
+                            className={'video-slide'}
+                            elementType={'div'}
+                            options={flickityOptions}
+                            disableImagesLoaded={false}
+                            reloadOnUpdate = {false}
+                            static
+                            flickityRef={c => this.flkty = c}
+                        >
+                            {slides.map((slide, i) => {
+                                return(
+                                    <VideoSlide
+                                        key={i}
+                                        slideNumber={i + 1}
+                                        url={slide.url}
+                                        name={slide.name}
+                                        title={slide.title}
+                                        clickEvent={(e) => this.selectSlide(e, i)}
+                                        className={currentSlide === i ? 'video-slide__slide is-active' : 'video-slide__slide'}
+                                        alt={slide.imageAltText}
+                                        ariaCurrent={currentSlide === i ? true : false}
+                                    />
+                                )
+                            })}
+                        </Flickity>
                     </div>
-                    <div className="callout__person">
-                        <h6>{data.personName3}</h6>
-                        <small className="small">{data.personTitle3}</small>
-                    </div>
-                    <div className="callout__person">
-                        <h6>{data.personName4}</h6>
-                        <small className="small">{data.personTitle4}</small>
-                    </div>
-                    <div className="callout__person">
-                        <h6>{data.personName5}</h6>
-                        <small className="small">{data.personTitle5}</small>
+                    <div className="unsung-heroes__copy">
+                        <div
+                            className="unsung-heroes__paragraph"
+                            dangerouslySetInnerHTML={{__html:data.paragraph}}
+                        />
+                        <img className="unsung-heroes__image" src={lionImage} alt={data.lionImageAlt} />
                     </div>
                 </div>
-                <div className="slides">
-                    <div className="slide">
-                        <small className="small small--tiny">1/5</small>
-                        <img src={videoThumbnailPlaceholderImage} />
-                        <small className="small small--headline">{data.personName1}</small>
-                        <small className="small small--tiny">{data.personTitle1}</small>
-                    </div>
-                    <div className="slide">
-                        <small className="small small--tiny">2/5</small>
-                        <img src={videoThumbnailPlaceholderImage} />
-                        <small className="small small--headline">{data.personName2}</small>
-                        <small className="small small--tiny">{data.personTitle2}</small>
-                    </div>
-                    <div className="slide">
-                        <small className="small small--tiny">3/5</small>
-                        <img src={videoThumbnailPlaceholderImage} />
-                        <small className="small small--headline">{data.personName3}</small>
-                        <small className="small small--tiny">{data.personTitle3}</small>
-                    </div>
-                    <div className="slide">
-                        <small className="small small--tiny">4/5</small>
-                        <img src={videoThumbnailPlaceholderImage} />
-                        <small className="small small--headline">{data.personName4}</small>
-                        <small className="small small--tiny">{data.personTitle4}</small>
-                    </div>
-                    <div className="slide">
-                        <small className="small small--tiny">5/5</small>
-                        <img src={videoThumbnailPlaceholderImage} />
-                        <small className="small small--headline">{data.personName5}</small>
-                        <small className="small small--tiny">{data.personTitle5}</small>
-                    </div>
-                </div>
-                <div className="unsung-heroes__paragraph">
-                    <img src={lionImage} />
-                    <p>{data.paragraph}</p>
-                </div>
             </div>
-        </section>
-    )
+            </>
+        )
+    }
 }
 
 export default UnsungHeroes

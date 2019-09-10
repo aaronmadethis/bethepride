@@ -1,0 +1,95 @@
+@import "_settings";
+
+.video-slide {
+    width: 100%;
+    height: 100%;
+
+    @media only screen and (min-width: 1024px) {
+        @include flexbox($justifyContent: space-between);
+    }
+
+    &:after {
+        content: 'flickity';
+        display: none;
+
+        @media only screen and (min-width: 1024px) {
+            content: '';
+            display: block;
+        }
+    }
+
+    .video-slide__slide {
+        @include transition;
+
+        background-color: transparent;
+        border: 1px solid $orange;
+        width: 65%;
+        height: auto;
+        padding: 0 1rem 1rem;
+        margin-right: 2.5rem;
+        cursor: pointer;
+
+        @media only screen and (min-width: 768px) {
+            margin-right: 5rem;
+        }
+
+        @media only screen and (min-width: 1024px) {
+            width: 100%;
+            flex: 0 1 calc(20% - 1rem);
+            margin-right: 2rem;
+            padding: 0 0 .5rem .5rem;
+
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+
+        &.is-selected,
+        &.is-active {
+            @include fullBackgroundSize($unsungHeroesSlideBackgroundImageUrl, center center);
+
+            background-color: $orange;
+            border: none;
+
+            .video-slide__person-title {
+                color: $beige;
+            }
+        }
+    }
+
+    .video-slide__slide-number {
+        @include fontSize(20px);
+
+        color: $black;
+
+        @media only screen and (min-width: 1024px) {
+            @include fontSize(14px);
+        }
+    }
+
+    .video-slide__thumbnail {
+        width: 110%;
+    }
+
+    .video-slide__person-name {
+        margin-top: 1rem;
+        line-height: 1.8;
+
+        @media only screen and (min-width: 1024px) {
+            @include fontSize(20px);
+
+            line-height: .85;
+            margin-top: .5rem;
+        }
+    }
+
+    .video-slide__person-title {
+        @include fontSize(20px);
+
+        color: $orange;
+
+        @media only screen and (min-width: 1024px) {
+            @include fontSize(14px);
+        }
+    }
+}

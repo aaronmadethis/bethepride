@@ -1,54 +1,195 @@
 @import "_settings";
 
-$hamburgerIconWidth: 27px;
-$logoImageWidth: 54px;
+$hamburgerIconWidthMobile: 37px;
+$hamburgerIconWidthDesktop: 48px;
+$closeIconWidthMobile: 28px;
+$closeIconWidthDesktop: 36px;
+$logoImageWidthMobile: 85px;
+$logoImageWidth: 110px;
+
+.header {
+    @include flexbox($justifyContent: space-between, $alignItems: center);
+    @include transition;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+    background-color: transparent;
+    height: $headerHeightMobile;
+
+    @media only screen and (min-width: 1024px) {
+        height: $headerHeightDesktop;
+    }
+
+    &.header--show {
+        background-color: $black;
+
+        @media only screen and (min-width: 1024px) {
+            height: $headerHeightOnScrollDesktop;
+        }
+    }
+}
 
 .navigation {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    @include flexbox($alignItems: center, $justifyContent: space-between);
+    @include transition;
+
     position: relative;
+    height: $headerHeightMobile;
 
-    .navigation__menu {
-        position: static;
+    + .language-toggle {
+        .header--show & {
+            display: none;
+        }
+    }
 
-        @media only screen and (min-width: 769px) {
-            position: absolute;
-            left: -70px;
+    @media only screen and (min-width: 1024px) {
+        height: $headerHeightDesktop;
+
+        .header--show & {
+            height: $headerHeightOnScrollDesktop;
+        }
+    }
+
+    .menu-is-open & {
+        + .language-toggle {
+            transform: translate3d($navWidthMobile, 0, 0);
+
+            @media only screen and (min-width: 1024px) {
+                transform: translate3d($navWidthDesktop, 0, 0);
+            }
         }
 
-        .button--hamburger {
-            margin-right: 10px;
+        ~ #header__tweet-button {
+            transform: translate3d(45vw, 0, 0);
+        }
+    }
 
-            img {
-                max-width: $hamburgerIconWidth;
+    .navigation__menu {
+        @include flexbox($flexFlow: column, $alignItems: flex-start, $justifyContent: flex-start);
+        @include transition;
 
-                @media only screen and (min-width: 769px) {
-                    max-width: $hamburgerIconWidth * 2;
-                }
+        overflow: auto;
+        background-color: $black;
+        height: 100vh;
+        padding: calc(1rem + 2vh) $outerMarginMobile;
+        width: $navWidthMobile;
+        transform: translate3d(-$navWidthMobile, 0, 0);
+        align-self: flex-start;
+
+        .menu-is-open & {
+            transform: translate3d(0, 0, 0);
+        }
+
+        .language-toggle {
+            transform: translate3d(0, 0, 0);
+        }
+
+        @media only screen and (min-width: 1024px) {
+            padding: calc(1rem + 5vh) $outerMarginMobile;
+            width: $navWidthDesktop;
+
+            .header--show & {
+                padding: calc(1rem + 2vh) $outerMarginMobile;
             }
         }
     }
 
-    // .navigation__expanded {
-    //     display: none;
-    // }
-
     .navigation__links {
-        display: none;
+        margin: calc(1rem + 2vh) 0 0;
+
+        @media only screen and (min-width: 1024px) {
+            margin-top: $verticalMargin;
+        }
+
+        .navigation__link {
+            @include fontSize(24px);
+
+            padding: 1.5rem 0;
+
+            &:last-child {
+                padding-top: $verticalMargin;
+
+                a {
+                    padding: 1rem 2rem;
+                }
+            }
+
+            @media only screen and (min-width: 1024px) {
+                 @include fontSize(16px);
+
+                padding: 1rem 0;
+            }
+        }
+    }
+
+    .navigation__branding {
+        @include flexbox($alignItems: flex-start);
+        @include transition;
+
+        transform: translate3d(-40vw, 0, 0);
 
         .menu-is-open & {
-            display: block;
+            transform: translate3d(5vw, 0, 0);
+        }
+
+        @media only screen and (min-width: 1024px) {
+            transform: translate3d(-15vw, 0, 0);
+
+            .menu-is-open & {
+                transform: translate3d($outerMargin, 0, 0);
+            }
+        }
+    }
+
+    .navigation__toggle {
+        margin-right: 10px;
+
+        @media only screen and (min-width: 1024px) {
+            position: absolute;
+            left: -56px;
+        }
+
+        &.navigation__toggle--hamburger {
+            width: $hamburgerIconWidthMobile;
+
+            @media only screen and (min-width: 1024px) {
+                width: $hamburgerIconWidthDesktop;
+            }
+        }
+
+        &.navigation__toggle--close {
+            width: $closeIconWidthMobile;
+
+            @media only screen and (min-width: 1024px) {
+                width: $closeIconWidthDesktop;
+            }
         }
     }
 
     .navigation__logo {
-        img {
-            max-width: $logoImageWidth;
+        max-width: $logoImageWidthMobile;
+        width: auto;
 
-            @media only screen and (min-width: 769px) {
-                max-width: $logoImageWidth * 2;
-            }
+        @media only screen and (min-width: 768px) {
+            max-width: $logoImageWidth;
+        }
+    }
+}
+
+#header__tweet-button {
+    @include transition;
+
+    display: none;
+
+    .header--show & {
+        display: block;
+        transform: translate3d(-$outerMarginMobile, 0, 0);
+
+        @media only screen and (min-width: 1024px) {
+            transform: translate3d(-$outerMargin, 0, 0);
         }
     }
 }

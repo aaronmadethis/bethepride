@@ -1,42 +1,60 @@
 @import "_settings";
 
+/************************************
+    Base
+************************************/
+
+html {
+    font-size: calc(0.94rem + 0.25 * (100vw - 80rem) / 40);
+    font-size: -webkit-calc(94% + 0.25 * (100vw - 8000%) / 40);
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: $bodyFontFamily;
+    font-weight: $normalFontWeight;
+    background-color: $black;
+}
+
+section {
+    min-height: 100vh;
+    padding: 0 $outerMarginMobile;
+    position: relative;
+    overflow: hidden;
+
+    @media only screen and (min-width: 1024px) {
+        min-height: 1024px;
+        padding: 0 $outerMargin;
+    }
+
+    > div {
+        padding-top: calc(1rem + 16vh);
+        margin-bottom: $sectionVerticalMarginMobile;
+
+        @media only screen and (min-width: 1024px) {
+            margin-top: calc(1rem + 15vh);
+            padding-top: 5vh;
+        }
+    }
+}
+
 .layout {
+    @include transition;
+
     width: 100%;
     margin: 0 auto;
     font-family: $bodyFontFamily;
     font-weight: $normalFontWeight;
     position: relative;
+    transform: translate3d(0, 0, 0);
 
-    header {
-        @include flexbox($justifyContent: space-between);
+    .menu-is-open & {
+        transform: translate3d($navWidthMobile, 0, 0);
 
-        width: 100%;
-        padding-top: 1.75rem;
-        position: absolute;
-        z-index: 2;
-        padding: 1.75rem $outerMarginMobile 0;
-
-        @media only screen and (min-width: 769px) {
-            padding: 3.75rem $outerMargin 0;
+        @media only screen and (min-width: 1024px) {
+            transform: translate3d($navWidthDesktop, 0, 0);
         }
-    }
-
-    main {
-
-    }
-
-    section {
-        min-height: 100vh;
-        padding: 0 $outerMarginMobile;
-        position: relative;
-        overflow: hidden;
-
-        @media only screen and (min-width: 769px) {
-            padding: 0 $outerMargin;
-        }
-    }
-
-    footer {
-
     }
 }
+
+
