@@ -86,7 +86,7 @@ description: This is a custom description for SEO and Open Graph purposes, rathe
             content='{
                 "headline": "Video Here",
                 "subheadline": "Subheadline will go here.",
-                "url": "http://www.youtube.com/embed/4aQwT3n2c1Q",
+                "url": "https://www.youtube.com/embed/4aQwT3n2c1Q",
                 "title": "iframe title",
                 "paragraph": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent consequat neque eu nunc semper, at pretium urna accumsan. Etiam et cursus eros, nec faucibus purus. Nullam ullamcorper malesuada mi, eu dictum ligula vulputate et. Maecenas sodales tincidunt pulvinar. In sit amet nulla convallis, bibendum massa gravida, posuere turpis. Vivamus condimentum justo nec mi dictum ornare. Nam fringilla sapien et sapien ornare gravida et sed ligula. Vivamus massa lorem, ullamcorper eget accumsan in, molestie non augue. Curabitur congue nunc eget tristique vestibulum. Aliquam erat volutpat. Aliquam sit amet ornare est. Vestibulum sollicitudin sodales commodo."
         }'></component-video-feature>
@@ -192,7 +192,7 @@ description: This is a custom description for SEO and Open Graph purposes, rathe
                 "headline": "Share the",
                 "headlineAlt": "\"Simba Ni\"",
                 "subheadline": "What does the lion mean to you?",
-                "videoUrl": "http://www.youtube.com/embed/4aQwT3n2c1Q",
+                "videoUrl": "https://www.youtube.com/embed/4aQwT3n2c1Q",
                 "iframeTitle": "iframe title",
                 "title": "About the People",
                 "paragraph": "In Tanzania it is a symbol that&apos;s inextricably linked with our national identity, representing not just our rich natural heritage, but also the traits we idealise and aim to embody as a nation. Qualities like strength, majesty, power, courage and resilience. To raise awareness about how deeply linked the lion is to our identity, please share the Simba Ni video below. And then read about the inspiring individuals featured in the video by clicking on their bios.",
@@ -311,7 +311,7 @@ description: This is a custom description for SEO and Open Graph purposes, rathe
                 "videos": [
                     {
                         "title": "iframe title 1",
-                        "url": "http://www.youtube.com/embed/4aQwT3n2c1Q"
+                        "url": "https://www.youtube.com/embed/4aQwT3n2c1Q"
                     },
                     {
                         "title": "iframe title 2",
@@ -323,11 +323,11 @@ description: This is a custom description for SEO and Open Graph purposes, rathe
                     },
                     {
                         "title": "iframe title 4",
-                        "url": "http://www.youtube.com/embed/Bg_tJvCA8zw"
+                        "url": "https://www.youtube.com/embed/Bg_tJvCA8zw"
                     },
                     {
                         "title": "iframe title 5",
-                        "url": "http://www.youtube.com/embed/Io6xuGmS5pM"
+                        "url": "https://www.youtube.com/embed/Io6xuGmS5pM"
                     }
                 ],
                 "people": [
