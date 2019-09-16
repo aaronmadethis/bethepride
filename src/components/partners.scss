@@ -1,0 +1,104 @@
+@import "_settings";
+
+$logoHeightMobile: 70px;
+$logoHeightDesktop: $logoHeightMobile * 2;
+
+.partners {
+    background-color: $beige;
+    min-height: unset;
+
+    .partners__headline {
+
+    }
+
+    .partners__logos {
+        @include flexbox($justifyContent: flex-start, $flexFlow: row wrap);
+
+        margin-top: $verticalMargin;
+
+        @media only screen and (min-width: 1024px) {
+            width: 75%;
+            margin-left: 8vw;
+        }
+
+        @media only screen and (min-width: 1440px) {
+            width: 60%;
+        }
+    }
+
+    .partners__logo {
+        margin-bottom: $verticalMargin;
+
+        &:first-child {
+            flex: 0 1 25%;
+
+            @media only screen and (min-width: 1024px) {
+                flex: 0 1 27%;
+            }
+        }
+
+        &:nth-child(2) {
+            flex: 0 1 31%;
+            text-align: center;
+
+            @media only screen and (min-width: 1024px) {
+                flex: 0 1 29%;
+            }
+        }
+
+        &:nth-child(3) {
+            flex: 0 1 44%;
+            text-align: center;
+
+            @media only screen and (min-width: 1024px) {
+                flex: 0 1 34%;
+                text-align: right;
+            }
+        }
+
+        &:nth-child(4) {
+            flex: 0 1 43%;
+        }
+
+        &:nth-child(5) {
+            flex: 0 1 22%;
+            text-align: center;
+
+            @media only screen and (min-width: 1024px) {
+                flex: 0 1 27%;
+            }
+        }
+
+        &:nth-child(6) {
+            flex: 0 1 35%;
+            text-align: center;
+
+            @media only screen and (min-width: 1024px) {
+                flex: 0 1 30%;
+                text-align: right;
+            }
+        }
+
+        &:nth-child(7) {
+            flex: unset;
+            margin-right: 13vw;
+
+            @media only screen and (min-width: 1024px) {
+                margin-right: 10vw;
+            }
+        }
+
+        &:last-child(-n+2) {
+            flex: unset;
+        }
+
+        img {
+            height: $logoHeightMobile;
+            width: auto;
+
+            @media only screen and (min-width: 1024px) {
+                height: $logoHeightDesktop;
+            }
+        }
+    }
+}

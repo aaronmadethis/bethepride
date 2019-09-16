@@ -1,5 +1,5 @@
 import React from "react"
-import { Link, graphql } from "gatsby"
+import { graphql } from "gatsby"
 import rehypeReact from "rehype-react"
 
 import Layout from "../components/layout"
@@ -12,11 +12,12 @@ import VideoFeature from "../components/video-feature"
 import TakeAction from "../components/take-action"
 import SimbaNi from "../components/simba-ni"
 import UnsungHeroes from "../components/unsung-heroes"
-import InstagramFeed from "../components/instagram-feed"
 import LionLife from "../components/lion-life"
+import Exhibition from "../components/exhibition"
 import Media from "../components/media"
+import Learn from "../components/learn"
+import Partners from "../components/partners"
 import Footer from "../components/footer"
-import { isConstructorDeclaration } from "typescript";
 
 const renderAst = new rehypeReact({
     createElement: React.createElement,
@@ -27,9 +28,11 @@ const renderAst = new rehypeReact({
         "component-take-action": TakeAction,
         "component-simba-ni": SimbaNi,
         "component-unsung-heroes": UnsungHeroes,
-        "component-instagram-feed": InstagramFeed,
         "component-lion-life": LionLife,
+        "component-exhibition": Exhibition,
         "component-media": Media,
+        "component-learn": Learn,
+        "component-partners": Partners,
         "component-footer": Footer
     },
   }).Compiler
@@ -41,22 +44,21 @@ class IndexPage extends React.Component {
             appClasses: ['app-init'],
         };
 
-        // This binding is necessary to make `this` work in the callback
         this.changeAppClass = this.changeAppClass.bind(this);
     }
 
     changeAppClass(action, changedClass) {
         let { appClasses } = this.state;
 
-        if (action == "remove") {
+        if (action === "remove") {
             if(appClasses.includes(changedClass)){
                 appClasses = appClasses.filter(function(ele){
-                    return ele != changedClass;
+                    return ele !== changedClass;
                 });
             }
         }
 
-        if (action == "add"){
+        if (action === "add"){
             if(!appClasses.includes(changedClass)){
                 appClasses.push(changedClass);
             }
@@ -77,9 +79,9 @@ class IndexPage extends React.Component {
 
         return(
             <div className={finalClasses}>
+                <Navigation locale={locale} nav={nav} changeAppClass={this.changeAppClass} />
                 <Layout locale={locale}>
                     <SEO title="Home" />
-                    <Navigation locale={locale} nav={nav} changeAppClass={this.changeAppClass} />
                     {
                         renderAst(post.htmlAst)
                     }

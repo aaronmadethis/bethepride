@@ -1,0 +1,29 @@
+@import "_settings";
+
+.person {
+    display: none;
+    margin-top: .5rem;
+
+    &.is-selected {
+        display: block;
+    }
+
+    .person__name {
+        @include fontSize(41px);
+
+        color: $black;
+        line-height: 1;
+
+        @media only screen and (min-width: 1024px) {
+             @include fontSize(30px);
+        }
+    }
+
+    .person__title {
+        color: $beige;
+
+        @media only screen and (min-width: 1024px) {
+             @include fontSize(18px);
+        }
+    }
+}

@@ -4,11 +4,45 @@ title: Navigation
 ---
 
 {
-    "linkTitle1": "SW About the Crisis",
-    "linkTitle2": "How to Help",
-    "linkTitle3": "Simba Ni",
-    "linkTitle4": "Unsung Heroes",
-    "linkTitle5": "Lion in Your Life",
-    "linkTitle6": "Media",
-    "linkTitle7": "Partners"
+    "links": [
+        {
+            "text": "About the Crisis",
+            "href": "#section__population"
+        },
+        {
+            "text": "Chukua hatua",
+            "href": "#section__take-action"
+        },
+        {
+            "text": "Sambaza Video ya \"Simba Ni\"",
+            "href": "#section__simba-ni"
+        },
+        {
+            "text": "Mashujaa wa Uhifadhi Wasiosifika",
+            "href": "#section__unsung-heroes"
+        },
+        {
+            "text": "Simba maishani mwangu",
+            "href": "#section__lion-life"
+        },
+        {
+            "text": "Katika Vyombo vya Habari",
+            "href": "#section__media"
+        },
+        {
+            "text": "Kujifunza Zaidi",
+            "href": "#section__learn"
+        },
+        {
+            "text": "Washirika",
+            "href": "#section__partners"
+        },
+        {
+            "text": "Tweet",
+            "href": "#section__take-action",
+            "className": "link-button"
+        }
+    ],
+    "iconImageAlt": "Main navigation toggle",
+    "logoImageAlt": "WildAid logo"
 }
