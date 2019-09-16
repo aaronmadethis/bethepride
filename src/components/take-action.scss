@@ -1,11 +1,84 @@
 @import "_settings";
 
+$gradient: linear-gradient(black 0, #B07D73 25%, #B07D73 85%, transparent 100%);
+
 .take-action {
-    background-image: url('../images/take-action-background-image.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 100vh;
-    .wrapper-take-action__twitter-cards{
-        display: flex;
+    @include fullBackgroundSize($takeActionBackgroundImageUrl, right bottom, $backgroundSize: 150%);
+
+    background-color: $black;
+    color: $beige;
+    padding: 0 0 calc(1rem + 20vh);
+
+    @media only screen and (min-width: 1024px) {
+        background-size: contain;
+    }
+
+    .take-action__content {
+        @include flexbox($flexFlow: column, $alignItems: stretch);
+
+        padding-left: $outerMarginMobile;
+        padding-right: $outerMarginMobile;
+        background-image: $gradient;
+    }
+
+    .take-action__heading {
+
+    }
+
+    .take-action__headline {
+        color: $beigeAlternate;
+
+        span {
+            color: $beige;
+            margin-left: $h2OffsetMarginMobile;
+
+            @media only screen and (min-width: 768px) {
+               margin-left: 11vw;
+            }
+
+            @media only screen and (min-width: 1024px) {
+               margin-left: 5vw;
+            }
+        }
+    }
+
+    .take-action__paragraph {
+        margin-top: $subheadlineVerticalMargin;
+
+        @media only screen and (min-width: 1024px) {
+            margin-left: 5vw;
+            width: 50%;
+        }
+    }
+
+    .take-action__twitter-cards {
+        @media only screen and (min-width: 1024px) {
+            @include flexbox($alignItems: stretch, $justifyContent: space-between, $flexFlow: row wrap);
+
+            width: 90%;
+            margin: 3rem auto;
+        }
+
+        .twitter-card:nth-child(n+5) {
+            display: none;
+
+            @media only screen and (min-width: 1024px) {
+                display: block;
+            }
+        }
+
+        &.take-action__twitter-cards--view-more {
+            .twitter-card:nth-child(n+5) {
+                display: block;
+            }
+        }
+    }
+
+    .take-action__view-more-button {
+        margin: $verticalMargin auto 0;
+
+        @media only screen and (min-width: 1024px) {
+            display: none;
+        }
     }
 }

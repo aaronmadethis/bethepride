@@ -1,0 +1,53 @@
+@import "_settings";
+
+.about-person {
+    display: none;
+
+    &.is-selected {
+        display: block;
+    }
+
+    .about-person__name {
+        margin-top: -2.5rem;
+        margin-bottom: 2rem;
+
+        @media only screen and (min-width: 1024px) {
+            margin-bottom: 1rem;
+        }
+
+        h5 {
+            line-height: 1;
+        }
+
+        p {
+            color: $orange;
+            margin-top: 0;
+            line-height: 1.2;
+        }
+    }
+
+    .about-person__info {
+        @include columnTextFlow();
+
+        margin-top: $verticalMargin / 2;
+
+        @media only screen and (min-width: 1024px) {
+            margin-top: 0;
+            column-gap: 2vw;
+        }
+    }
+
+    .about-person__image {
+        margin-bottom: $verticalMargin / 2;
+    }
+
+    .about-person__paragraph {
+        @media only screen and (min-width: 1024px) {
+            @include fontSize(18px);
+        }
+
+        @media only screen and (min-width: 1440px) {
+            @include fontSize(16px);
+        }
+    }
+}

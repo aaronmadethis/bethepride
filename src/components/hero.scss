@@ -5,62 +5,84 @@
 
     background-color: $black;
 
-    .hero__content {
-        padding-top: calc(1rem + 15vh);
+    @media only screen and (min-width: 1024px) {
+        min-height: 100vh;
+    }
 
-        @media only screen and (min-width: 769px) {
-            padding-top: calc(1rem + 25vh);
+    .hero__content {
+        padding-top: calc(1rem + 20vh);
+
+        @media only screen and (min-width: 1024px) {
+            padding-top: calc(1rem + 5vh);
         }
     }
 
-    h1 {
+    .hero__headline {
         color: $beigeAlternate;
 
         span {
             color: $beige;
             margin-left: $h1OffsetMarginMobile;
 
-            @media only screen and (min-width: 769px) {
-                margin-left: $h1OffsetMargin;
+            @media only screen and (min-width: 768px) {
+                margin-left: 21vw;
+            }
+
+            @media only screen and (min-width: 1024px) {
+                margin-left: $h1OffsetMarginTablet;
+            }
+
+            @media only screen and (min-width: 1440px) {
+                margin-left: $h1OffsetMarginDesktop;
             }
         }
     }
 
-    p,
-    a {
-        @media only screen and (min-width: 769px) {
-            margin-left: $h1OffsetMargin;
+    .hero__subheadline,
+    .primary-button {
+        @media only screen and (min-width: 768px) {
+            margin-left: 21vw;
         }
-    }
 
-    p {
+        @media only screen and (min-width: 1024px) {
+            margin-left: $h1OffsetMarginTablet;
+        }
+
+        @media only screen and (min-width: 1440px) {
+            margin-left: $h1OffsetMarginDesktop;
+        }
+}
+
+    .hero__subheadline {
         @include fontSize(28px);
 
         width: 70%;
         color: $beige;
         margin-top: 2rem;
+        line-height: 1.4;
 
-        @media only screen and (min-width: 769px) {
+        @media only screen and (min-width: 1024px) {
             width: 45%;
         }
     }
 
     a {
         margin-top: 2.75rem;
-        display: inline-block;
 
-        @media only screen and (min-width: 769px) {
+        @media only screen and (min-width: 1024px) {
             margin-top: 3.75rem;
         }
     }
 
     .hero__caption {
+        @include fontSize(18px);
+
         color: $orange;
         position: absolute;
         bottom: 3rem;
         right: $outerMarginMobile;
 
-        @media only screen and (min-width: 769px) {
+        @media only screen and (min-width: 1024px) {
             right: $outerMargin;
         }
     }
