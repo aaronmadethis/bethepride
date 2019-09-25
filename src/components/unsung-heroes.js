@@ -134,7 +134,7 @@ class UnsungHeroes extends React.Component {
                                                 )
                                             })}
                                         </Flickity>}
-                                        {matches.medium && <div>
+                                        {matches.medium && <div className={'video-slide'} >
                                             {slides.map((slide, i) => {
                                                 return (
                                                     <VideoSlide
@@ -171,6 +171,7 @@ class UnsungHeroes extends React.Component {
 
 export default UnsungHeroes
 
+/*
 const FlickityComponent = ({ flickityOptions, flktyCallback, slides, currentSlide }) => {
     return <Flickity
         className={'video-slide'}
@@ -198,3 +199,4 @@ const FlickityComponent = ({ flickityOptions, flktyCallback, slides, currentSlid
         })}
     </Flickity>
 };
+*/
