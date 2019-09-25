@@ -354,31 +354,31 @@ description: This is a custom description for SEO and Open Graph purposes, rathe
                 ],
                 "slides": [
                     {
-                        "url": "http://i3.ytimg.com/vi/4aQwT3n2c1Q/maxresdefault.jpg",
+                        "url": "https://i3.ytimg.com/vi/4aQwT3n2c1Q/maxresdefault.jpg",
                         "name": "nametest1",
                         "title": "titletest1",
                         "imageAltText": ""
                     },
                     {
-                        "url": "http://i3.ytimg.com/vi/hHW1oY26kxQ/maxresdefault.jpg",
+                        "url": "https://i3.ytimg.com/vi/hHW1oY26kxQ/maxresdefault.jpg",
                         "name": "nametest2",
                         "title": "titletest2",
                         "imageAltText": ""
                     },
                     {
-                        "url": "http://i3.ytimg.com/vi/Ltdd2RGkNUY/maxresdefault.jpg",
+                        "url": "https://i3.ytimg.com/vi/Ltdd2RGkNUY/maxresdefault.jpg",
                         "name": "nametest3",
                         "title": "titletest3",
                         "imageAltText": ""
                     },
                     {
-                        "url": "http://i3.ytimg.com/vi/Bg_tJvCA8zw/maxresdefault.jpg",
+                        "url": "https://i3.ytimg.com/vi/Bg_tJvCA8zw/maxresdefault.jpg",
                         "name": "nametest4",
                         "title": "titletest4",
                         "imageAltText": ""
                     },
                     {
-                        "url": "http://i3.ytimg.com/vi/Io6xuGmS5pM/maxresdefault.jpg",
+                        "url": "https://i3.ytimg.com/vi/Io6xuGmS5pM/maxresdefault.jpg",
                         "name": "nametest5",
                         "title": "titletest5",
                         "imageAltText": ""
