@@ -5,6 +5,7 @@ import VideoPlayer from "./video-player"
 import VideoSlide from "./video-slide"
 
 import Flickity from "./flickity-fixed"
+import Media from 'react-media'
 
 import "./vendor/flickity.min.css"
 import "./unsung-heroes.scss"
@@ -33,11 +34,15 @@ class UnsungHeroes extends React.Component {
     }
 
     componentDidMount = () => {
-        this.flkty.on('scroll', () => {
-            this.setState(state => ({
-                currentSlide: this.flkty.selectedIndex,
-            }));
-        })
+        let windowWidth = window.innerWidth;
+
+        if (windowWidth <= 599) {
+            this.flkty.on('scroll', () => {
+                this.setState(state => ({
+                    currentSlide: this.flkty.selectedIndex,
+                }));
+            })
+        }
     }
 
     selectSlide(e, slideNumber) {
@@ -98,31 +103,57 @@ class UnsungHeroes extends React.Component {
                         })}
                     </div>
                     <div className="unsung-heroes__carousel">
-                        <Flickity
-                            className={'video-slide'}
-                            elementType={'div'}
-                            options={flickityOptions}
-                            disableImagesLoaded={false}
-                            reloadOnUpdate = {false}
-                            static
-                            flickityRef={c => this.flkty = c}
-                        >
-                            {slides.map((slide, i) => {
-                                return(
-                                    <VideoSlide
-                                        key={i}
-                                        slideNumber={i + 1}
-                                        url={slide.url}
-                                        name={slide.name}
-                                        title={slide.title}
-                                        clickEvent={(e) => this.selectSlide(e, i)}
-                                        className={currentSlide === i ? 'video-slide__slide is-active' : 'video-slide__slide'}
-                                        alt={slide.imageAltText}
-                                        ariaCurrent={currentSlide === i ? true : false}
-                                    />
-                                )
-                            })}
-                        </Flickity>
+                            <Media queries={{
+                                small: "(max-width: 599px)",
+                                medium: "(min-width: 600px)"
+                            }}>
+                                {matches => (
+                                    <div>
+                                    {matches.small && <Flickity
+                                            className={'video-slide'}
+                                            elementType={'div'}
+                                            options={flickityOptions}
+                                            disableImagesLoaded={false}
+                                            reloadOnUpdate = {false}
+                                            static
+                                            flickityRef={c => this.flkty = c}
+                                            >
+                                            {slides.map((slide, i) => {
+                                                return(
+                                                    <VideoSlide
+                                                        key={i}
+                                                        slideNumber={i + 1}
+                                                        url={slide.url}
+                                                        name={slide.name}
+                                                        title={slide.title}
+                                                        clickEvent={(e) => this.selectSlide(e, i)}
+                                                        className={currentSlide === i ? 'video-slide__slide is-active' : 'video-slide__slide'}
+                                                        alt={slide.imageAltText}
+                                                        ariaCurrent={currentSlide === i ? true : false}
+                                                    />
+                                                )
+                                            })}
+                                        </Flickity>}
+                                        {matches.medium && <div>
+                                            {slides.map((slide, i) => {
+                                                return (
+                                                    <VideoSlide
+                                                        key={i}
+                                                        slideNumber={i + 1}
+                                                        url={slide.url}
+                                                        name={slide.name}
+                                                        title={slide.title}
+                                                        clickEvent={(e) => this.selectSlide(e, i)}
+                                                        className={currentSlide === i ? 'video-slide__slide is-active' : 'video-slide__slide'}
+                                                        alt={slide.imageAltText}
+                                                        ariaCurrent={currentSlide === i ? true : false}
+                                                    />
+                                                )
+                                            })}
+                                        </div>}
+                                    </div>
+                                )}
+                            </Media>
                     </div>
                     <div className="unsung-heroes__copy">
                         <div
@@ -139,3 +170,31 @@ class UnsungHeroes extends React.Component {
 }
 
 export default UnsungHeroes
+
+const FlickityComponent = ({ flickityOptions, flktyCallback, slides, currentSlide }) => {
+    return <Flickity
+        className={'video-slide'}
+        elementType={'div'}
+        options={flickityOptions}
+        disableImagesLoaded={false}
+        reloadOnUpdate={false}
+        static
+        flickityRef={c => flktyCallback = c}
+    >
+        {slides.map((slide, i) => {
+            return (
+                <VideoSlide
+                    key={i}
+                    slideNumber={i + 1}
+                    url={slide.url}
+                    name={slide.name}
+                    title={slide.title}
+                    clickEvent={(e) => this.selectSlide(e, i)}
+                    className={currentSlide === i ? 'video-slide__slide is-active' : 'video-slide__slide'}
+                    alt={slide.imageAltText}
+                    ariaCurrent={currentSlide === i ? true : false}
+                />
+            )
+        })}
+    </Flickity>
+};
