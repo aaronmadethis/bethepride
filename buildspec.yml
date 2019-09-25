@@ -5,7 +5,7 @@ phases:
             nodejs: 10  
         commands:
             - 'touch .npmignore'
-            - 'npm install -g gatsby'
+            - 'npm install -g gatsby@2.14.0'
     pre_build:
         commands:
             - 'npm install'
