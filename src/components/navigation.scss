@@ -1,7 +1,7 @@
 @import "_settings";
 
 $hamburgerIconWidthMobile: 37px;
-$hamburgerIconWidthDesktop: 48px;
+$hamburgerIconWidthDesktop: 45px;
 $closeIconWidthMobile: 28px;
 $closeIconWidthDesktop: 36px;
 $logoImageWidthMobile: 85px;
@@ -149,7 +149,8 @@ $logoImageWidth: 110px;
 
         @media only screen and (min-width: 1024px) {
             position: absolute;
-            left: -56px;
+            // left: -56px;
+            left: -72px;
         }
 
         &.navigation__toggle--hamburger {
@@ -157,6 +158,7 @@ $logoImageWidth: 110px;
 
             @media only screen and (min-width: 1024px) {
                 width: $hamburgerIconWidthDesktop;
+                margin-top:3px;
             }
         }
 

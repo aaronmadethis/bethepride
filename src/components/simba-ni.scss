@@ -6,6 +6,12 @@
     background-color: $black;
     color: $beige;
 
+    > div{
+        @media only screen and (min-width: 1024px) {
+            margin-top: 0;
+        }
+    }
+
     .simba-ni__headline {
         color: $beigeAlternate;
 

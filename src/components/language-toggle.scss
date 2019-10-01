@@ -1,6 +1,6 @@
 @import "_settings";
 
-$toggleImageWidth: 85px;
+$toggleImageWidth: 70px;
 
 .language-toggle {
     @include transition;
@@ -22,7 +22,7 @@ $toggleImageWidth: 85px;
         text-align: center;
 
         @media only screen and (min-width: 1024px) {
-            @include fontSize(16px);
+            @include fontSize(12px);
         }
     }
 
@@ -30,7 +30,7 @@ $toggleImageWidth: 85px;
         max-width: $toggleImageWidth;
 
         @media only screen and (min-width: 1024px) {
-            max-width: $toggleImageWidth * 1.2;
+            max-width: $toggleImageWidth;
         }
     }
 }

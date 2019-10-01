@@ -6,7 +6,8 @@
     background-color: $black;
 
     @media only screen and (min-width: 1024px) {
-        min-height: 100vh;
+        min-height: 128vh;
+        max-height: 1020px;
     }
 
     .hero__content {
@@ -14,6 +15,9 @@
 
         @media only screen and (min-width: 1024px) {
             padding-top: calc(1rem + 5vh);
+            max-width: 1152px;
+            margin-right: auto;
+            margin-left: auto;
         }
     }
 
@@ -51,7 +55,7 @@
         @media only screen and (min-width: 1440px) {
             margin-left: $h1OffsetMarginDesktop;
         }
-}
+    }
 
     .hero__subheadline {
         @include fontSize(28px);
@@ -71,11 +75,12 @@
 
         @media only screen and (min-width: 1024px) {
             margin-top: 3.75rem;
+            margin-left: 14vw;
         }
     }
 
     .hero__caption {
-        @include fontSize(18px);
+        @include fontSize(11px);
 
         color: $orange;
         position: absolute;

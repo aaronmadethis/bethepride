@@ -14,6 +14,12 @@
         padding-bottom: 50vh;
     }
 
+     > div{
+        @media only screen and (min-width: 1024px) {
+            margin-top: 0;
+        }
+    }
+
     .unsung-heroes__content {
         margin-bottom: 0;
     }
