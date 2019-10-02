@@ -2,58 +2,60 @@
 
 .africa-map {
     display: none;
+    position: relative;
 
     &.is-selected {
         @include flexbox($flexFlow: column, $alignItems: flex-start);
-    }
-
-    position: relative;
-
-    &:last-child {
         .africa-map__image {
-            width: calc(1rem + 125vh);
-            position: absolute;
-            left: -123vw;
-            top: calc(1rem - 36vh);
-            margin: 0;
-
-            @media only screen and (min-width: 768px) {
-                left: -88vw;
-            }
-
-            @media only screen and (min-width: 1024px) {
-                left: -53vw;
-                top: calc(1rem - 45vh);
-            }
-
-            @media only screen and (min-width: 1440px) {
-                width: 100%;
-                left: -30%;
-                top: calc(1rem - 37vh);
-            }
+            position: relative;
         }
     }
 
-    > * {
-        @media only screen and (min-width: 1024px) {
-            position: absolute;
+    &:last-child {
+        .africa-map__image {
+            // width: calc(1rem + 125vh);
+            // position: absolute;
+            // left: -123vw;
+            // top: calc(1rem - 36vh);
+            // margin: 0;
+            // overflow:hidden;
+
+            @media only screen and (min-width: 768px) {
+                // left: -88vw;
+            }
+
+            @media only screen and (min-width: 1024px) {
+                // width:622px;
+                // left: -53vw;
+                // top: calc(1rem - 45vh);
+            }
+
+            @media only screen and (min-width: 1440px) {
+                // width: 100%;
+                // width:622px;
+                // left: -30%;
+                // top: calc(1rem - 37vh);
+            }
         }
     }
 
     .africa-map__image {
         width: 82vw;
-        margin: 0 auto;
+        // margin: 0 auto;
         margin-top: calc(1rem + 1vh);
         order: 2;
 
         @media only screen and (min-width: 1024px) {
-            width: 40vw;
+            position: absolute;
+            // width: 40vw;
+            width:54%;
             top: 0;
             left: 0;
         }
 
         @media only screen and (min-width: 1824px) {
-            width: 50vw;
+            // width: 50vw;
+            width:54%;
         }
     }
 
@@ -64,6 +66,7 @@
         @media only screen and (min-width: 1024px) {
             top: -2vh;
             left: 35vw;
+            position: absolute;
         }
     }
 
@@ -74,12 +77,16 @@
         top: calc(1rem + 42vh);
 
         @media only screen and (min-width: 1024px) {
-            left: 6vw;
-            top: calc(1rem + 29vh);
+            // left: 6vw;
+            // top: calc(1rem + 29vh);
+            left:11.5%;
+            top:60%;
+            font-size:40px;
+            position: absolute;
         }
 
         @media only screen and (min-width: 1440px) {
-            top: calc(1rem + 36vh);
+            // top: calc(1rem + 36vh);
         }
     }
 }

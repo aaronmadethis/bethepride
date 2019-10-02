@@ -2,7 +2,7 @@
 
 $slidesMinHeightMobile: 150px;
 $slidesMinHeightTablet: 300px;
-$slidesMinHeightDesktop: 350px;
+$slidesMinHeightDesktop: 287px;
 $rgbaBeigeFrom: rgba(236,237,245,1);
 $rgbaBeigeTo: rgba(236,237,245,.15);
 $rgbaYellowFrom: rgba(225,177,0,1);
@@ -28,10 +28,12 @@ $rgbaOrangeTo: rgba(225,112,0,.15);
 
         @media only screen and (min-width: 1024px) {
             padding: 1rem 3rem;
+            padding: 70px;
         }
 
         @media only screen and (min-width: 1440px) {
-            padding: 1rem 5rem;
+            // padding: 1rem 5rem;
+            padding: 70px;
         }
 
         &:nth-child(2) {
@@ -72,7 +74,8 @@ $rgbaOrangeTo: rgba(225,112,0,.15);
     }
 
     .text-slide__paragraph {
-        @include fontSize(21px);
+        // @include fontSize(21px);
+        @include fontSize(18px);
     }
 
     /* Flickity overrides */

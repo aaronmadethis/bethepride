@@ -11,6 +11,7 @@ $slideHeightMobile: 116px;
 
     .population__content {
         color: $beige;
+        margin-top:0;
 
         @media only screen and (min-width: 1024px) {
             padding-top: calc(1rem + 10vh);
@@ -45,8 +46,11 @@ $slideHeightMobile: 116px;
             margin: 0;
             position: absolute;
             right: 0;
-            width: 40vw;
-            top: 50vh;
+            width: 34.375vw;
+            min-width: 495px;
+            // top: 50vh;
+            bottom:170px;
+            // bottom:0;
         }
     }
 
