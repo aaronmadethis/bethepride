@@ -3,7 +3,7 @@
 
 $twitterCardImageWidthMobile: 69px;
 $twitterCardImageWidthTablet: 90px;
-$twitterCardImageWidthDesktop: 83px;
+$twitterCardImageWidthDesktop: 100px;
 $twitterCardHeightDesktop: calc(1rem + 9vh);
 $twitterCardHeightLarge: calc(1rem + 11vh);
 
@@ -14,7 +14,7 @@ $twitterCardHeightLarge: calc(1rem + 11vh);
         // flex: 0 1 calc(33.3333% - 1rem);
         flex: 0 1 25%;
         // margin: 2rem 0;
-        margin: 1.4rem 0;
+        margin: 1rem 0;
     }
 
     .twitter-card__button-target {
@@ -65,7 +65,7 @@ $twitterCardHeightLarge: calc(1rem + 11vh);
             width: 100%;
             height: 100%;
             // margin: 0;
-            margin: 0 76px 0 0;
+            margin: 0 106px 0 0;
         }
 
         .twitter-card__name {
@@ -113,7 +113,7 @@ $twitterCardHeightLarge: calc(1rem + 11vh);
             @media only screen and (min-width: 1024px) {
                 position: absolute;
                 bottom: -30px;
-                padding: .4rem 1.5rem;
+                padding: .4rem 1rem;
                 font-size: 12px;
             }
 

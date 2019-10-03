@@ -25,9 +25,11 @@ footer {
         margin-top: $verticalMargin / 2;
 
         @media only screen and (min-width: 1024px) {
-            max-width: $logoWidthDesktop;
-            flex: 0 1 calc(25% - 5vw);
+            // max-width: $logoWidthDesktop;
+            max-width: (4 / 24) * 100%;
+            flex: 0 1 10%;
             margin-right: 5vw;
+            margin-top: 0;
         }
     }
 
@@ -41,14 +43,23 @@ footer {
         }
 
         @media only screen and (min-width: 1024px) {
-            flex: 0 1 75%;
+            flex: 0 1 50%;
             margin-top: 0;
             margin-left: 0;
         }
     }
 
+    .footer__contact {
+        @media only screen and (min-width: 1024px) {
+            flex: 0 1 (7 / 12) * 100%;
+        }
+    }
+
     .footer__links {
         margin-right: 1rem;
+        @media only screen and (min-width: 1024px) {
+            flex: 0 1 (5 / 12) * 100%;
+        }
     }
 
     .footer__link {
@@ -57,12 +68,13 @@ footer {
         margin-bottom: 1.5rem;
 
         @media only screen and (min-width: 1024px) {
-            @include fontSize(16px);
+            @include fontSize(14px);
+            margin-bottom: 1rem;
         }
     }
 
     .footer__title {
-        @include fontSize(18px);
+        @include fontSize(16px);
 
         color: $orange;
         font-weight: $boldFontWeight;
@@ -76,7 +88,7 @@ footer {
         margin-bottom: 1rem;
 
         @media only screen and (min-width: 1024px) {
-            @include fontSize(16px);
+            @include fontSize(14px);
         }
     }
 
@@ -112,7 +124,8 @@ footer {
 
         @media only screen and (min-width: 1024px) {
             flex: 0 1 100%;
-            margin-left: calc(150px + 5vw);
+            margin-left: (4 / 24) * 100%;
+            @include fontSize(12px);            
         }
     }
 }

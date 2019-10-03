@@ -16,7 +16,17 @@ body {
     background-color: $black;
 }
 
+main{
+    display: flex;
+    flex-wrap: wrap;
+    align-items:flex-start;
+    background-color: $beige;
+}
+
 section {
+    flex-grow:1;
+    flex-shrink: 0;
+    width:100%;
     min-height: 100vh;
     padding: 0 $outerMarginMobile;
     position: relative;
@@ -26,6 +36,8 @@ section {
         // min-height: 1024px;
         padding: 0 $outerMargin;
     }
+
+
 
     > div {
         padding-top: calc(1rem + 16vh);

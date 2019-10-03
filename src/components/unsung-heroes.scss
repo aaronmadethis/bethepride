@@ -50,6 +50,7 @@
             margin-left: 0;
 
             @media only screen and (min-width: 1024px) {
+                @include fontSize(24px);
                 margin-left: $outerMargin;
             }
         }

@@ -15,7 +15,7 @@ class InstagramFeed extends React.Component {
         return(
             <div className="instagram-feed">
                 <div className="instagram-feed__posts">
-                    {instaimages.slice(0, 6).map((post, i) =>{
+                    {instaimages.slice(0, 9).map((post, i) =>{
                             return(
                                 <div key={i} className="instagram-feed__post">
                                     <figure>

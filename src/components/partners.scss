@@ -7,9 +7,12 @@ $logoHeightDesktop: $logoHeightMobile * 2;
     background-color: $beige;
     min-height: unset;
 
-    .partners__headline {
-
+    @media only screen and (min-width: 1024px) {
+        width: 50%;
+        padding: 0 $outerMargin 0 16px;
     }
+
+    // .partners__headline {}
 
     .partners__logos {
         @include flexbox($justifyContent: flex-start, $flexFlow: row wrap);
@@ -17,12 +20,12 @@ $logoHeightDesktop: $logoHeightMobile * 2;
         margin-top: $verticalMargin;
 
         @media only screen and (min-width: 1024px) {
-            width: 75%;
-            margin-left: 8vw;
+            // width: 75%;
+            // margin-left: 8vw;
         }
 
         @media only screen and (min-width: 1440px) {
-            width: 60%;
+            // width: 60%;
         }
     }
 
