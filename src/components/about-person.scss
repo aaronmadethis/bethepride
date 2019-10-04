@@ -10,11 +10,15 @@
     .about-person__name {
         margin-top: -2.5rem;
         margin-bottom: 2rem;
+        position: absolute;
+        margin-top: 0;
+        top:-80px;
+        left:calc(50% + 2.5vw);
 
         @media only screen and (min-width: 1024px) {
             // margin-bottom: 1rem;
-            position: absolute;
-            margin-top: 0;
+            // position: absolute;
+            // margin-top: 0;
             top:-70px;
             left:calc(50% + 1vw);
         }
@@ -36,7 +40,9 @@
         position: relative;
         @include columnTextFlow();
 
-        margin-top: $verticalMargin / 2;
+        // margin-top: $verticalMargin / 2;
+
+        margin-top: 110px;
 
         @media only screen and (min-width: 1024px) {
             margin-top: 52px;
@@ -47,8 +53,12 @@
     .about-person__image {
         // margin-bottom: $verticalMargin / 2;
         position: relative;
-        top:-60px;
-        margin-bottom: -45px;
+        top:-54px;
+        margin-bottom: -40px;
+        @media only screen and (min-width: 1024px) {
+            top:-60px;
+            margin-bottom: -45px;
+        }
     }
 
     .about-person__paragraph {

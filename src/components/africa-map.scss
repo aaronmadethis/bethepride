@@ -10,8 +10,16 @@
             position: relative;
         }
     }
+    @media only screen and (max-width: 767px) {
+        padding-top:80px;
+    }
 
+    
     &:last-child {
+        @media only screen and (max-width: 767px) {
+            // height: (278.25 / 262.5) * 70 + vw;
+            // height: (374.3 / 337.5) * 100 + vw;
+        }
         .africa-map__image {
             // width: calc(1rem + 125vh);
             // position: absolute;
@@ -38,12 +46,14 @@
             }
         }
     }
+    
 
     .africa-map__image {
-        width: 82vw;
-        // margin: 0 auto;
+        width: 70vw;
+        margin: 0 auto;
         margin-top: calc(1rem + 1vh);
         order: 2;
+        
 
         @media only screen and (min-width: 1024px) {
             position: absolute;
@@ -51,6 +61,7 @@
             width:54%;
             top: 0;
             left: 0;
+            margin:0;
         }
 
         @media only screen and (min-width: 1824px) {
@@ -62,19 +73,22 @@
     .africa-map__headline {
         order: 1;
         z-index: 1;
-
+        // min-height: 80px;
+        position: absolute;
+        top:0;
+        
         @media only screen and (min-width: 1024px) {
             top: -2vh;
             left: 35vw;
-            position: absolute;
+            // position: absolute;
         }
     }
 
     .africa-map__subheadline {
         order: 3;
         position: absolute;
-        left: 21vw;
-        top: calc(1rem + 42vh);
+        left: 18vw;
+        top: calc(1rem + 41vh);
 
         @media only screen and (min-width: 1024px) {
             // left: 6vw;

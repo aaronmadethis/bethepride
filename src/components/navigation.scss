@@ -183,8 +183,14 @@ $logoImageWidth: 110px;
 
 #header__tweet-button {
     @include transition;
-
+    
     display: none;
+    position: absolute;
+    right:0;
+
+    @media only screen and (min-width: 1024px) {
+        position: relative;
+    }
 
     .header--show & {
         display: block;

@@ -33,9 +33,10 @@
         span {
             position: absolute;
             display: block;
-            bottom:-77px;
+            // bottom:-77px;
+            bottom:-44px;
             color: $beige;
-            margin-left: $h1OffsetMarginMobile;
+            margin-left: $h1OffsetMarginMobile + 1;
 
             @media only screen and (min-width: 768px) {
                 margin-left: 21vw;
@@ -43,6 +44,7 @@
 
             @media only screen and (min-width: 1024px) {
                 margin-left: $h1OffsetMarginTablet;
+                bottom:-77px;
             }
 
             @media only screen and (min-width: 1440px) {
@@ -89,7 +91,7 @@
     }
 
     .hero__caption {
-        @include fontSize(11px);
+        @include fontSize(16px);
 
         color: $orange;
         position: absolute;
@@ -98,6 +100,7 @@
 
         @media only screen and (min-width: 1024px) {
             right: $outerMargin;
+            @include fontSize(11px);
         }
     }
 }

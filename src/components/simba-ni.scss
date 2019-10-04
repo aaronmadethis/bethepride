@@ -2,11 +2,12 @@
 
 .simba-ni {
     @include fullBackgroundSize($simbaNiBackgroundImageUrl, bottom center, $backgroundSize: contain);
-    height:100vh;
+    
     background-color: $black;
     color: $beige;
 
      @media only screen and (min-width: 1024px) {
+        height:100vh;
         min-height: 1600px;
     }
 

@@ -11,7 +11,9 @@
     }
 
     .learn__content {
-
+        @media only screen and (max-width: 767px) {
+            padding-top:3rem;
+        }
         @media only screen and (min-width: 1024px) {
             margin-bottom: 0;
             padding-bottom: 5rem;
