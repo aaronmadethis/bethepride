@@ -533,7 +533,7 @@ description: This is a custom description for SEO and Open Graph purposes, rathe
                     {
                         "url": "http://google.com",
                         "altText": "",
-                        "pic": "partners-ministry-tourism"
+                        "pic": "partners-tanzania-tourist-board"
                     },
                     {
                         "url": "http://google.com",
