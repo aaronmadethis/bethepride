@@ -23,15 +23,15 @@ description: This is a custom description for SEO and Open Graph purposes, rathe
                 "slides": [
                     {
                         "title": "",
-                        "paragraph": "Kihistoria, simba walipatakinana  maeneo mengi Africa, leo wametoweka kutoka katika 94% ya maeneo hayo."
+                        "paragraph": "Kihistoria, simba walipatikana maeneo mengi Africa, leo wametoweka kutoka katika 94% ya maeneo hayo."
                     },
                     {
                         "title": "UJANGILI WA NYAMA PORI",
-                        "paragraph": "Ujangili umepunguza mno mawindo ya simba. Mara nyingi pia simba hunaswa na mitego haramua  iliyowekwa na majangili kwa ajili ya kupata nyama pori."
+                        "paragraph": "Ujangili umepunguza mno mawindo ya simba. Mara nyingi pia simba hunaswa na mitego haramu iliyowekwa na majangili kwa ajili ya kupata nyama pori."
                     },
                     {
                         "title": "",
-                        "paragraph": "Mifugo hugombania malisho  na wanamapori wala majani ambao ni chakula cha simba. Kitendo hiki huwasukuma wanyama wawindaji karibu zaidi na wanadamu. Mifugo inapouawa, mara nyingi simba huwa ndio walengwa wa kwanza wa mauaji ya kulipiza kisasi."
+                        "paragraph": "Mifugo hugombania malisho na wanyamapori wala majani ambao ni chakula cha simba. Kitendo hiki huwasukuma wanyama wawindaji karibu zaidi na wanadamu. Mifugo inapouawa, mara nyingi simba huwa ndio walengwa wa kwanza wa mauaji ya kulipiza kisasi."
                     },
                     {
                         "title": "UVAMIZI WA BINADAMU",
@@ -90,18 +90,18 @@ description: This is a custom description for SEO and Open Graph purposes, rathe
                 "paragraph": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent consequat neque eu nunc semper, at pretium urna accumsan. Etiam et cursus eros, nec faucibus purus. Nullam ullamcorper malesuada mi, eu dictum ligula vulputate et. Maecenas sodales tincidunt pulvinar. In sit amet nulla convallis, bibendum massa gravida, posuere turpis. Vivamus condimentum justo nec mi dictum ornare. Nam fringilla sapien et sapien ornare gravida et sed ligula. Vivamus massa lorem, ullamcorper eget accumsan in, molestie non augue. Curabitur congue nunc eget tristique vestibulum. Aliquam erat volutpat. Aliquam sit amet ornare est. Vestibulum sollicitudin sodales commodo."
         }'></component-video-feature>
     </section>
-    <section id="section__take-action" className="take-action" aria-label="Chukua hatua">
+    <section id="section__take-action" className="take-action" aria-label="Chukua Hatua">
         <component-take-action
             content='{
                 "headline": "Chukua",
-                "headlineAlt": "hatua",
+                "headlineAlt": "Hatua",
                 "paragraph": "Njia bora zaidi ya kuchukukua hatua  ni kuwatumia viongozi, wenye ushawishi na wenyeuamuzi Tanzania, ujumbe kwa kupitia mtandao wa kijamii wa twitter usemao #bethepride okoa simba kabla hawajatoweka kabisa. Anza kwa kubofya kwenye akaunti iliopo hapo chini.",
                 "buttonText": "View More",
                 "buttonTextTwitter": "Send Tweet",
                 "people": [{
                         "name": "Dk. John Magufuli",
                         "handle": "@MagufuliJP",
-                        "title": "President of Tanzania",
+                        "title": "Raisi wa Tanzania",
                         "pic": "twitter-magufuli",
                         "personType": "politician"
                     },
@@ -115,70 +115,70 @@ description: This is a custom description for SEO and Open Graph purposes, rathe
                     {
                         "name": "Diamond Platnumz",
                         "handle": "@diamondplatnumz",
-                        "title": "Musician",
+                        "title": "Mwanamuziki",
                         "pic": "twitter-platnumz",
                         "personType": "influencer"
                     },
                     {
                         "name": "Fatma Karume",
                         "handle": "@fatma_karume",
-                        "title": "Activist and Lawyer",
+                        "title": "Mwanasheria na Mwanaharakati",
                         "pic": "twitter-karume",
                         "personType": "politician"
                     },
                     {
                         "name": "Majaliwa Kassim",
                         "handle": "@majaliwa_kassim",
-                        "title": "Prime Minister of Tanzania",
+                        "title": "Waziri Mkuu",
                         "pic": "twitter-kassim",
                         "personType": "politician"
                     },
                     {
                         "name": "Gerson Msigwa",
                         "handle": "@MsigwaGerson",
-                        "title": "Director of Presidential Communication",
+                        "title": "Mkurugenzi wa Mawasiliano ya Raisi Ikulu",
                         "pic": "twitter-msigwa",
                         "personType": "politician"
                     },
                     {
                         "name": "Jokate Mwegelo",
                         "handle": "@jokateM",
-                        "title": "District Commissioner of Kisarawe",
+                        "title": "Mkuu wa Wilaya ya Kisarawe",
                         "pic": "twitter-mwegelo",
                         "personType": "politician"
                     },
                     {
                         "name": "Masanja",
                         "handle": "@mkandamizaji",
-                        "title": "Comedian",
+                        "title": "Mchekeshaji",
                         "pic": "twitter-masanja",
                         "personType": "influencer"
                     },
                     {
                         "name": "Maria Sarungi Tsehai",
                         "handle": "@mariaSTsehai",
-                        "title": "Activist",
+                        "title": "Mwanaharakati",
                         "pic": "twitter-tsehai",
                         "personType": "influencer"
                     },
                     {
                         "name": "Idris Sultan",
                         "handle": "@IdrisSultan",
-                        "title": "Comedian & Writer",
+                        "title": "Mchekeshaji na Muandishi",
                         "pic": "twitter-sultan",
                         "personType": "influencer"
                     },
                     {
                         "name": "Mwana Fa",
                         "handle": "@mwanaFA",
-                        "title": "Rapper",
+                        "title": "Rapa",
                         "pic": "twitter-fa",
                         "personType": "influencer"
                     },
                     {
                         "name": "Salama Zalhata Jabir",
                         "handle": "@EceJay",
-                        "title": "TV Anchor",
+                        "title": "Mtangazaji",
                         "pic": "twitter-jabir",
                         "personType": "influencer"
                     }
@@ -194,7 +194,7 @@ description: This is a custom description for SEO and Open Graph purposes, rathe
                 "videoUrl": "http://www.youtube.com/embed/4aQwT3n2c1Q",
                 "iframeTitle": "Simba ana maana gani kwako?",
                 "title": "Kuhusu watu",
-                "paragraph": "Njia bora zaidi ya kuchukukua hatua ni kuwatumia viongozi, wenye ushawishi na wenyeuamuzi Tanzania, ujumbe kwa kupitia mtandao wa kijamii wa twitter usemao #bethepride okoa simba kabla hawajatoweka kabisa. Anza kwa kubofya kwenye akaunti iliopo hapo chini.",
+                "paragraph": "Nchini Tanzania, simba ni ishara  ambayo imeingiliana sana na utambulisho wetu wa taifa,  ikiwakilisha sio tu urithi wetu mkubwa wa asili, ila pia tabia tunazothamini na kuvaa kama taifa. Sifa kama nguvu, fahari, mamlaka, ujasiri na ustahimilivu. Ili kuongeza ufahamu juu ya kiasi gani simba ameingiliana sana na utambulisho wetu, tafadhali sambaza video ya Simba Ni. Kisha soma kuhusu watu wenye uhamasisho walioko kwenye video kwa kubofya kwenye wasifu wao.",
                 "buttonText": "Kuhusu watu",
                 "thumbnails": [
                     {
@@ -304,7 +304,7 @@ description: This is a custom description for SEO and Open Graph purposes, rathe
     <section id="section__unsung-heroes" className="unsung-heroes" aria-label="Kusherehekea watu wanaoleta mabadiliko.">
         <component-unsung-heroes
             content='{
-                "headline": "Mashujaa wa Uhifadhi Wasiosifika",
+                "headline": "Mashujaa wa Uhifadhi Wasiojulikana",
                 "subheadline": "Kusherehekea watu wanaoleta mabadiliko.",
                 "videos": [
                     {
@@ -382,16 +382,16 @@ description: This is a custom description for SEO and Open Graph purposes, rathe
                         "imageAltText": ""
                     }
                 ],
-                "paragraph": "<p>Yamat. Neria. Julius. Mandela. Bernard. Stefano. Kirerenjo. Unaweza usitambue majina haya, lakini hawa ni mashujaa wetu na tunatumaini watakuwa wa kwako- wao ni wanaume na wanawake wa kawaida wanaofanya kazi mchana (na wakati mwingine usiku) kwenye uhifadhi wa wanyamapori, wakichangia juhudi zao katika kulinda simba wa Tanzania na mazingira yao. Mfululizo wetu unaowamulika Mashujaa wasiojulikana wa Uhifadhi unawatambua watu ambao mara nyingi hawajulikani na hawaonekani mara kwa mara ambao wana nafasi kubwa sio tu katika kuhifadhi spishi hii pendwa ila pia katika kusaidia jamii ambazo zinapitia changamoto ya kuishi karibut nao.</p><p>Inaweza kuwa watetezi wa simba kama Julius na Mandela, waliofanya kazi kuzuia uwindaji wa kiasili wa simba, au mama anayefanya kazi, Yamat, anayekusanya habari za thamani sana zinazolisaidia shirika lake kufanya maamuzi yenye ufanisi ya kuzuia mashambulizi ya simba; au Kirerenjo, anayeelimisha wafugaji kuhusu kuchunga wanyama wao kwa ufanisi zaidi na kwa njia yenye madhara madogo zaidi kwenye makazi ya simba. Tafadhali tazama video zetu za mashujaa hawa hapo chini, kisha waachie ujumbe wa kuwatia moyo.</p>",
+                "paragraph": "<p>Yamat. Neria. Julius. Mandela. Bernard. Stefano. Kirerenjo. Unaweza usitambue majina haya, lakini hawa ni mashujaa wetu na tunatumaini watakuwa wa kwako- wao ni wanaume na wanawake wa kawaida wanaofanya kazi mchana (na wakati mwingine usiku) kwenye uhifadhi wa wanyamapori, wakichangia juhudi zao katika kulinda simba wa Tanzania na mazingira yao. Mfululizo wetu unaowamulika Mashujaa wasiojulikana wa Uhifadhi unawatambua watu ambao mara nyingi hawajulikani na hawaonekani mara kwa mara ambao wana nafasi kubwa sio tu katika kuhifadhi spishi hii pendwa ila pia katika kusaidia jamii ambazo zinapitia changamoto ya kuishi karibu nao.</p><p>Inaweza kuwa watetezi wa simba kama Julius na Mandela, waliofanya kazi kuzuia uwindaji wa kiasili wa simba, au mama anayefanya kazi, Yamat, anayekusanya habari za thamani sana zinazolisaidia shirika lake kufanya maamuzi yenye ufanisi ya kuzuia mashambulizi ya simba; au Kirerenjo, anayeelimisha wafugaji kuhusu kuchunga wanyama wao kwa ufanisi zaidi na kwa njia yenye madhara madogo zaidi kwenye makazi ya simba. Tafadhali tazama film zetu za mashujaa wa uhifadhi alafu uwaachie ujumbe wa kuwatia moyo.</p>",
                 "lionImageAlt": "Simba"
         }'></component-unsung-heroes>
     </section>
     <section id="section__lion-life" className="lion-life" aria-label="Simba maishani mwangu">
         <component-lion-life
             content='{
-                "headline": "Simba<br />maishani mwangu",
+                "headline": "Simba<br />Maishani Mwangu",
                 "paragraph": "<p>Tunauona mchoro wa simba kila mahali, kuanzia noti za fedha mpaka kanga, fulana na mapambo. Ni ishara muhimu, sehemu ya historia yetu na simulizi, imekuwa ni sehemu kubwa sana ya utamaduni wetu mpaka mara nyingi hata hatuitambui. Ila sasa tunakutaka utuonyeshe uwepo katika maisha yako wa huyo simba aliyepuuzwa na kusahauliwa kwa muda mrefu kwa kupiga picha wakati wowote unapoona kitu chenye nembo au picha ya simba – inaweza kuwa kishikio cha ufunguo, mchoro, bango, fulana, hata tatoo! – na upakie kwenye  Instagram ukitumia alama za reli (hashtags) #simbamaishanimwangu  na #bethepride.</p><p>Tuambie kwa sentensi moja simba ana maana gani kwako na utaingizwa kwenye droo. Mshindi atapata safari iliyogharamiwa kwa kila kitu ya kwenda Serengeti Tanzania kuwaona simba katika mazingira yao  halisi, ambapo utalipiwa kukaa katika hoteli nzuri ya Alex Walker Serian iitwayo Serengeti Lamai. Ili kuangalia vigezo na masharti, <a href=\"https://www.instagram.com/wildaidafrica\">tazama hapa</a>.</p>",
-                "buttonText": "Tuonyeshe Simbai Wako",
+                "buttonText": "Tuonyeshe Simba Wako",
                 "buttonUrl": "https://www.instagram.com/wildaidafrica"
         }'></component-lion-life>
     </section>
@@ -531,7 +531,7 @@ description: This is a custom description for SEO and Open Graph purposes, rathe
                     {
                         "url": "http://google.com",
                         "altText": "",
-                        "pic": "partners-ministry-tourism"
+                        "pic": "partners-tanzania-tourist-board"
                     },
                     {
                         "url": "http://google.com",
@@ -576,7 +576,7 @@ description: This is a custom description for SEO and Open Graph purposes, rathe
                     "href": "#section__population"
                 },
                 {
-                    "text": "Chukua hatua",
+                    "text": "Chukua Hatua",
                     "href": "#section__take-action"
                 },
                 {
@@ -584,7 +584,7 @@ description: This is a custom description for SEO and Open Graph purposes, rathe
                     "href": "#section__simba-ni"
                 },
                 {
-                    "text": "Mashujaa wa Uhifadhi Wasiosifika",
+                    "text": "Mashujaa wa Uhifadhi Wasiojulikana",
                     "href": "#section__unsung-heroes"
                 },
                 {

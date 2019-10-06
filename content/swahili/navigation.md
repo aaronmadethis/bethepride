@@ -6,7 +6,7 @@ title: Navigation
 {
     "links": [
         {
-            "text": "About the Crisis",
+            "text": "Kuhusu Janga Hili",
             "href": "#section__population"
         },
         {
