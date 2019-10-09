@@ -308,12 +308,12 @@ description: This is a custom description for SEO and Open Graph purposes, rathe
                 "subheadline": "Kusherehekea watu wanaoleta mabadiliko.",
                 "videos": [
                     {
-                        "title": "iframe title 1",
-                        "url": "http://www.youtube.com/embed/4aQwT3n2c1Q"
+                        "title": "iframe Yamat Lengai",
+                        "url": "https://www.youtube.com/embed/O9-RzYbK7q8"
                     },
                     {
-                        "title": "iframe title 2",
-                        "url": "https://www.youtube.com/embed/hHW1oY26kxQ"
+                        "title": "iframe Stefano Asicheka",
+                        "url": "https://www.youtube.com/embed/MS2WLeEhQGI"
                     },
                     {
                         "title": "iframe title 3",
@@ -321,65 +321,55 @@ description: This is a custom description for SEO and Open Graph purposes, rathe
                     },
                     {
                         "title": "iframe title 4",
-                        "url": "http://www.youtube.com/embed/Bg_tJvCA8zw"
+                        "url": "https://www.youtube.com/embed/WR5-DREoVes"
                     },
                     {
                         "title": "iframe title 5",
-                        "url": "http://www.youtube.com/embed/Io6xuGmS5pM"
+                        "url": "https://www.youtube.com/embed/1rt9nrhAWSE"
                     }
                 ],
                 "people": [
                     {
-                        "name": "nametest1",
-                        "title": "titletest1"
+                        "name": "Yamat Lengai",
+                        "title": "Monitoring and Evaluation Officer"
                     },
                     {
-                        "name": "nametest2",
-                        "title": "titletest2"
+                        "name": "Stefano Asicheka",
+                        "title": "Community Liaison Officer"
                     },
                     {
-                        "name": "nametest3",
-                        "title": "titletest3"
+                        "name": "Neria Abdi",
+                        "title": "Lion Conflict Officer"
                     },
                     {
-                        "name": "nametest4",
-                        "title": "titletest4"
-                    },
-                    {
-                        "name": "nametest5",
-                        "title": "titletest5"
+                        "name": "Mandela and Julius",
+                        "title": "Lion Defenders"
                     }
                 ],
                 "slides": [
                     {
-                        "url": "http://i3.ytimg.com/vi/4aQwT3n2c1Q/maxresdefault.jpg",
-                        "name": "nametest1",
-                        "title": "titletest1",
-                        "imageAltText": ""
+                        "url": "https://i3.ytimg.com/vi/O9-RzYbK7q8/maxresdefault.jpg",
+                        "name": "Yamat Lengai",
+                        "title": "Monitoring and Evaluation Officer",
+                        "imageAltText": "Yamat Lengai Video"
                     },
                     {
-                        "url": "http://i3.ytimg.com/vi/hHW1oY26kxQ/maxresdefault.jpg",
-                        "name": "nametest2",
-                        "title": "titletest2",
-                        "imageAltText": ""
+                        "url": "https://i3.ytimg.com/vi/MS2WLeEhQGI/maxresdefault.jpg",
+                        "name": "Stefano Asicheka",
+                        "title": "Community Liaison Officer",
+                        "imageAltText": "Stefano Asicheka Video"
                     },
                     {
-                        "url": "http://i3.ytimg.com/vi/Ltdd2RGkNUY/maxresdefault.jpg",
-                        "name": "nametest3",
-                        "title": "titletest3",
-                        "imageAltText": ""
+                        "url": "https://i3.ytimg.com/vi/WR5-DREoVes/maxresdefault.jpg",
+                        "name": "Neria Abdi",
+                        "title": "Lion Conflict Officer",
+                        "imageAltText": "Neria Abdi"
                     },
                     {
-                        "url": "http://i3.ytimg.com/vi/Bg_tJvCA8zw/maxresdefault.jpg",
-                        "name": "nametest4",
-                        "title": "titletest4",
-                        "imageAltText": ""
-                    },
-                    {
-                        "url": "http://i3.ytimg.com/vi/Io6xuGmS5pM/maxresdefault.jpg",
-                        "name": "nametest5",
-                        "title": "titletest5",
-                        "imageAltText": ""
+                        "url": "https://i3.ytimg.com/vi/1rt9nrhAWSE/maxresdefault.jpg",
+                        "name": "Mandela and Julius",
+                        "title": "Lion Defenders",
+                        "imageAltText": "Mandela and Julius Video"
                     }
                 ],
                 "paragraph": "<p>Yamat. Neria. Julius. Mandela. Bernard. Stefano. Kirerenjo. Unaweza usitambue majina haya, lakini hawa ni mashujaa wetu na tunatumaini watakuwa wa kwako- wao ni wanaume na wanawake wa kawaida wanaofanya kazi mchana (na wakati mwingine usiku) kwenye uhifadhi wa wanyamapori, wakichangia juhudi zao katika kulinda simba wa Tanzania na mazingira yao. Mfululizo wetu unaowamulika Mashujaa wasiojulikana wa Uhifadhi unawatambua watu ambao mara nyingi hawajulikani na hawaonekani mara kwa mara ambao wana nafasi kubwa sio tu katika kuhifadhi spishi hii pendwa ila pia katika kusaidia jamii ambazo zinapitia changamoto ya kuishi karibu nao.</p><p>Inaweza kuwa watetezi wa simba kama Julius na Mandela, waliofanya kazi kuzuia uwindaji wa kiasili wa simba, au mama anayefanya kazi, Yamat, anayekusanya habari za thamani sana zinazolisaidia shirika lake kufanya maamuzi yenye ufanisi ya kuzuia mashambulizi ya simba; au Kirerenjo, anayeelimisha wafugaji kuhusu kuchunga wanyama wao kwa ufanisi zaidi na kwa njia yenye madhara madogo zaidi kwenye makazi ya simba. Tafadhali tazama film zetu za mashujaa wa uhifadhi alafu uwaachie ujumbe wa kuwatia moyo.</p>",
@@ -394,71 +384,6 @@ description: This is a custom description for SEO and Open Graph purposes, rathe
                 "buttonText": "Tuonyeshe Simba Wako",
                 "buttonUrl": "https://www.instagram.com/wildaidafrica"
         }'></component-lion-life>
-    </section>
-    <section id="section__exhibition" className="exhibition" aria-label="Exhibition">
-        <component-exhibition
-            content='{
-                "headline": "Exhibition",
-                "paragraph": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent consequat neque eu nunc semper, at pretium urna accumsan. Etiam et cursus eros, nec faucibus purus.",
-                "slides": [
-                    {
-                        "pic": "exhibition-placeholder-image1",
-                        "imageAltText": "Image alt text",
-                        "caption": "Caption 1 - Lorem Ipsum is simply dummy text of the printing and typesetting industry."
-                    },
-                    {
-                        "pic": "exhibition-placeholder-image2",
-                        "imageAltText": "Image alt text",
-                        "caption": "Caption 1 - Lorem Ipsum is simply dummy text of the printing and typesetting industry."
-                    },
-                    {
-                        "pic": "exhibition-placeholder-image3",
-                        "imageAltText": "Image alt text",
-                        "caption": "Caption 1 - Lorem Ipsum is simply dummy text of the printing and typesetting industry."
-                    }
-                ],
-                "events": [
-                    {
-                        "title": "Dar Es Salaam",
-                        "when": "Date goes here",
-                        "where": "Address goes here",
-                        "more": "More info goes here"
-                    },
-                    {
-                        "title": "Dar Es Salaam",
-                        "when": "Date goes here",
-                        "where": "Address goes here",
-                        "more": "More info goes here"
-                    }
-                ]
-        }'></component-exhibition>
-    </section>
-    <section id="section__media" className="media" aria-label="Katika Vyombo vya Habari">
-        <component-media
-            content='{
-                "headline": "Katika Vyombo",
-                "headlineAlt": "vya Habari",
-                "mediaBlocks": [
-                    {
-                        "title": "Press Headline with Vertical Photo Can Go in this Block",
-                        "href": "http://google.com"
-                    },
-                    {
-                        "title": "Press Headline with No Photo Can Go in this Block",
-                        "href": "http://google.com"
-                    },
-                    {
-                        "title": "Press Headline with Horizontal Photo Can Go in this Block",
-                        "href": "http://google.com"
-                    },
-                    {
-                        "title": "Press Headline with Square Photo Can Go in this Block",
-                        "href": "http://google.com"
-                    }
-                ],
-                "linkText": "Read More",
-                "buttonText": "View More"
-        }'></component-media>
     </section>
     <section id="section__learn" className="learn" aria-label="Soma kuhusu hatari zinazowakabili simba.">
         <component-learn
@@ -495,7 +420,7 @@ description: This is a custom description for SEO and Open Graph purposes, rathe
                         "href": "https://www.smithsonianmag.com/science-nature/the-truth-about-lions-11558237/"
                     },
                     {
-                        "text": "Nine lions found dead in the Serengeti | The Citizen",
+                        "text": "Nine lions found dead in Serengeti | The Citizen",
                         "href": "https://www.thecitizen.co.tz/news/Nine-lions-found-dead-in-Serengeti/1840340-4591868-h03c04z/index.html"
                     },
                     {
@@ -524,43 +449,43 @@ description: This is a custom description for SEO and Open Graph purposes, rathe
                 "headline": "Washirika",
                 "logos": [
                     {
-                        "url": "http://google.com",
-                        "altText": "",
+                        "url": "https://www.lionrecoveryfund.org",
+                        "altText": "Lion Recover Fund",
                         "pic": "partners-lion-recovery-fund"
                     },
                     {
-                        "url": "http://google.com",
-                        "altText": "",
+                        "url": "https://www.tanzaniatourism.go.tz/en",
+                        "altText": "Tanzania Tourism Board",
                         "pic": "partners-tanzania-tourist-board"
                     },
                     {
-                        "url": "http://google.com",
-                        "altText": "",
+                        "url": "http://www.coastal.co.tz",
+                        "altText": "Coastal Aviation",
                         "pic": "partners-coastal-aviation"
                     },
                     {
-                        "url": "http://google.com",
-                        "altText": "",
+                        "url": "https://serian.com",
+                        "altText": "Alex Walker’s Serian",
                         "pic": "partners-alex-walkers-serian"
                     },
                     {
-                        "url": "http://google.com",
-                        "altText": "",
+                        "url": "https://www.ruahacarnivoreproject.com",
+                        "altText": "Ruaha Carnivore Project",
                         "pic": "partners-ruaha-carnivore-project"
                     },
                     {
-                        "url": "http://google.com",
-                        "altText": "",
+                        "url": "http://kopelion.org",
+                        "altText": "Kope Lion",
                         "pic": "partners-kope-lion"
                     },
                     {
-                        "url": "http://google.com",
-                        "altText": "",
+                        "url": "https://tarangirelion.weebly.com/about.html",
+                        "altText": "Tarangire Lion Research Initiative",
                         "pic": "partners-tarangire"
                     },
                     {
-                        "url": "http://google.com",
-                        "altText": "",
+                        "url": "https://africanpeoplewildlife.org",
+                        "altText": "Tanzania People & Wildlife",
                         "pic": "partners-tanzania-people-wildlife"
                     }
                 ]
@@ -628,9 +553,9 @@ description: This is a custom description for SEO and Open Graph purposes, rathe
             ],
             "title": "Contact",
             "address": "333 Pine Street<br />Suite 300<br />San Francisco, CA 94104 USA",
-            "addressOther": "info@someurl.com<br />+1 (415) 834-3174",
+            "addressOther": "tanzania@wildaid.org<br />+1 (415) 834-3174",
             "paragraph": "Shukrani za pekee kwa Chris Schmid kwa kupiga picha.",
-            "privacyURL": "",
+            "privacyURL": "https://wildaid.org/privacy-policy/",
             "privacyText": "Privacy Policy",
             "copyright": "&nbsp;|&nbsp;Copyright &copy; 2019 WildAid. All rights reserved."
     }'></component-footer>

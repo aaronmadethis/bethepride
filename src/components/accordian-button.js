@@ -44,8 +44,8 @@ class AccordianButton extends React.Component {
     }
 
     static defaultProps = {
-        buttonText: "View More",
-        buttonTextAlternate: "View Less"
+        buttonText: "View Bios",
+        buttonTextAlternate: "Close Bios"
     }
 }
 

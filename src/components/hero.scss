@@ -4,11 +4,16 @@
     @include fullBackgroundSize($heroBackgroundImageUrl, bottom center);
 
     background-color: $black;
+    @media only screen and (min-width: 768px) {
+        max-height: 1040px;
+        min-height: 770px;
+    }
 
     @media only screen and (min-width: 1024px) {
         // min-height: 128vh;
         height: 128vh;
-        max-height: 1020px;
+        max-height: 1040px;
+        min-height: 1024px;
     }
 
     .hero__content {

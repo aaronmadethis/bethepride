@@ -14,11 +14,11 @@ title: Navigation
             "href": "#section__take-action"
         },
         {
-            "text": "Share the Simba Ni",
+            "text": "Share Simba Ni",
             "href": "#section__simba-ni"
         },
         {
-            "text": "Conservation's Unsung Heroes",
+            "text": "Unsung Heroes",
             "href": "#section__unsung-heroes"
         },
         {

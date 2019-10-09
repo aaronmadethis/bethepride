@@ -24,7 +24,7 @@ class Partners extends React.Component {
 
                         return(
                             <li key={i} className="partners__logo">
-                                <a href={logo.url}>
+                                <a href={logo.url} target="_blank">
                                     <img
                                         src={pic[0].node.publicURL}
                                         alt={logo.altText}

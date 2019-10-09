@@ -18,7 +18,6 @@ const VideoFeature = ({ content }) => {
                         url={data.url}
                     />
                 </div>
-                <p className="video-feature__paragraph">{data.paragraph}</p>
             </div>
         </div>
         </>
