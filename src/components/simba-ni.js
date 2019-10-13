@@ -50,6 +50,7 @@ class SimbaNi extends React.Component {
                     <p className="simba-ni__subheadline">{data.subheadline}</p>
                 </div>
                 <div className="simba-ni__columns">
+
                     <div className="simba-ni__video">
                         <VideoPlayer
                             className="video-player is-selected"
@@ -57,6 +58,9 @@ class SimbaNi extends React.Component {
                             title={data.iframeTitle}
                         />
                     </div>
+
+                    <p className="simba-ni__paragraph">{data.paragraph}</p>
+
                     <div className="simba-ni__accordian-button">
                         <AccordianButton />
                         <div className="accordian-button__toggle-section">
@@ -108,7 +112,6 @@ class SimbaNi extends React.Component {
                             </div>
                         </div>
                     </div>
-                    <p className="simba-ni__paragraph">{data.paragraph}</p>
                 </div>
             </div>
         )

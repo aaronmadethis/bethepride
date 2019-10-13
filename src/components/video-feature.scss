@@ -10,7 +10,9 @@
     }
 
     .video-feature__headline {
-
+        @media only screen and (max-width: 767px) {
+            line-height: 1;
+        }
     }
 
     .video-feature__subheadline {
@@ -18,6 +20,10 @@
 
         margin-top: 1.15rem;
         margin-left: $h2OffsetMarginMobile;
+
+        @media only screen and (max-width: 767px) {
+            margin-left: 0;
+        }
 
         @media only screen and (min-width: 1024px) {
             @include fontSize(24px);

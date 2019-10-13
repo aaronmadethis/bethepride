@@ -14,7 +14,8 @@ class VideoPlayer extends React.Component {
                     className={props.iframeClassName}
                     height="315"
                     width="560"
-                    allowFullScreen=""
+                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
                     frameBorder="0"
                 ></iframe>
             </div>

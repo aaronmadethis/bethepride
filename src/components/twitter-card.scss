@@ -29,7 +29,7 @@ $twitterCardHeightLarge: calc(1rem + 11vh);
         // background-color: $beige;
         position: relative;
         padding: 10px;
-        width: 95%;
+        width: 100%;
 
         &::before{
             content:'';
@@ -41,6 +41,10 @@ $twitterCardHeightLarge: calc(1rem + 11vh);
             right:8px;
             background-color: $beige;
             z-index: -1;
+        }
+
+        @media only screen and (min-width: 768px) {
+            width: 95%;
         }
 
         @media only screen and (min-width: 1024px) {
