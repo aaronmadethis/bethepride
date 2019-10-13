@@ -12,7 +12,11 @@
         @media only screen and (min-width: 1024px) {
             flex: 0 1 calc(33.3333% - 6px);            
         }
-
+        &:last-of-type{
+            @media only screen and (max-width: 767px) {
+                display: none;
+            }
+        }
     }
 
     // .instagram-feed__image {}
