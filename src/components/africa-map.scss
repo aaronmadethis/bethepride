@@ -1,77 +1,106 @@
 @import "_settings";
 
 .africa-map {
-    > div {
-        display: none;
+    display: none;
+    position: relative;
 
-        &.active {
-            @include flexbox($flexFlow: column, $alignItems: flex-start);
+    &.is-selected {
+        @include flexbox($flexFlow: column, $alignItems: flex-start);
+        .africa-map__image {
+            position: relative;
         }
+    }
+    @media only screen and (max-width: 767px) {
+        padding-top:80px;
+    }
 
-        position: relative;
-
-        @media only screen and (min-width: 769px) {
-
+    
+    &:last-child {
+        @media only screen and (max-width: 767px) {
+            // height: (278.25 / 262.5) * 70 + vw;
+            // height: (374.3 / 337.5) * 100 + vw;
         }
+        .africa-map__image {
+            // width: calc(1rem + 125vh);
+            // position: absolute;
+            // left: -123vw;
+            // top: calc(1rem - 36vh);
+            // margin: 0;
+            // overflow:hidden;
 
-        &:last-child {
-            img {
-                width: calc(1rem + 125vh);
-                position: absolute;
-                left: -123vw;
-                top: calc(1rem - 36vh);
-                margin: 0;
-
-                @media only screen and (min-width: 769px) {
-                    width: 44vw;
-                    left: 5vw;
-                    top: 0;
-                    margin: 0;
-                }
+            @media only screen and (min-width: 768px) {
+                // left: -88vw;
             }
-        }
 
-        > * {
+            @media only screen and (min-width: 1024px) {
+                // width:622px;
+                // left: -53vw;
+                // top: calc(1rem - 45vh);
+            }
 
-            @media only screen and (min-width: 769px) {
-                position: absolute;
+            @media only screen and (min-width: 1440px) {
+                // width: 100%;
+                // width:622px;
+                // left: -30%;
+                // top: calc(1rem - 37vh);
             }
         }
     }
+    
 
-    img {
-        width: 82vw;
+    .africa-map__image {
+        width: 70vw;
         margin: 0 auto;
         margin-top: calc(1rem + 1vh);
         order: 2;
+        
 
-        @media only screen and (min-width: 769px) {
-            width: 44vw;
-            left: 5vw;
+        @media only screen and (min-width: 1024px) {
+            position: absolute;
+            // width: 40vw;
+            width:54%;
+            top: 0;
+            left: 0;
+            margin:0;
+        }
+
+        @media only screen and (min-width: 1824px) {
+            // width: 50vw;
+            width:54%;
         }
     }
 
-    h2 {
+    .africa-map__headline {
         order: 1;
         z-index: 1;
-
-        @media only screen and (min-width: 769px) {
-            top: -.6rem;
-            left: 44vw;
+        // min-height: 80px;
+        position: absolute;
+        top:0;
+        
+        @media only screen and (min-width: 1024px) {
+            top: -2vh;
+            left: 35vw;
+            // position: absolute;
         }
     }
 
-    h3 {
+    .africa-map__subheadline {
         order: 3;
         position: absolute;
-        left: 21vw;
-        top: calc(1rem + 42vh);
+        left: 18vw;
+        top: calc(1rem + 41vh);
 
-        @media only screen and (min-width: 769px) {
-            left: 14vw;
-            top: calc(1rem + 27vh);
+        @media only screen and (min-width: 1024px) {
+            // left: 6vw;
+            // top: calc(1rem + 29vh);
+            left:11.5%;
+            top:60%;
+            font-size:40px;
+            position: absolute;
+        }
+
+        @media only screen and (min-width: 1440px) {
+            // top: calc(1rem + 36vh);
         }
     }
-
-
 }

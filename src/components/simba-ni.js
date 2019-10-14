@@ -1,158 +1,137 @@
 import React from "react"
+import { StaticQuery, graphql } from "gatsby"
+
+import VideoPlayer from "./video-player"
+import AccordianButton from "./accordian-button"
+import ThumbnailButton from "./thumbnail-button"
+import AboutPerson from "./about-person"
+
 import "./simba-ni.scss"
 
-import personThumbnailPlaceholderImage from "../images/person-thumbnail-placeholder.png"
+class SimbaNi extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            isAboutPeopleClosed: true,
+            currentSlide: 0
+        };
+        this.toggleClass = this.toggleClass.bind(this);
+        this.selectThumbnail = this.selectThumbnail.bind(this);
+    }
 
-const SimbaNi = ({ content }) => {
-    const data = JSON.parse(content)
-    return(
-        <section className="simba-ni">
-            <div className="simba-ni__heading">
-                <h1>{data.headline}</h1>
-                <h4>{data.subheadline}</h4>
-            </div>
-            <div className="people">
-                <div className="person">
-                    <div className="person__image">
-                        <img src={personThumbnailPlaceholderImage} />
-                    </div>
-                    <div className="person__name">
-                        <h6>{data.personName1}</h6>
-                        <small className="small">{data.personTitle1}</small>
-                    </div>
-                    <div className="person__paragraph">
-                        {data.personParagraph1}
-                    </div>
+    toggleClass(e) {
+        e.preventDefault();
+
+        this.setState(state => ({
+            isAboutPeopleClosed: !state.isAboutPeopleClosed
+        }));
+    }
+
+    selectThumbnail(e, i) {
+        e.preventDefault();
+
+        this.setState(state => ({
+            currentSlide: i
+        }));
+    }
+
+    render() {
+        const { content } = this.props;
+        const data = JSON.parse(content);
+        const { thumbnails, people } = data;
+        const thumbnailPic = this.props.images.allFile.edges;
+
+        let {currentSlide} = this.state;
+
+        return(
+            <div className="simba-ni__content">
+                <div className="simba-ni__heading">
+                    <h2 className="simba-ni__headline">{data.headline}<br/><span>{data.headlineAlt}</span></h2>
+                    <p className="simba-ni__subheadline">{data.subheadline}</p>
                 </div>
-                <div className="person">
-                    <div className="person__image">
-                        <img src={personThumbnailPlaceholderImage} />
+                <div className="simba-ni__columns">
+
+                    <div className="simba-ni__video">
+                        <VideoPlayer
+                            className="video-player is-selected"
+                            url={data.videoUrl}
+                            title={data.iframeTitle}
+                        />
                     </div>
-                    <div className="person__name">
-                        <h6>{data.personName2}</h6>
-                        <small className="small">{data.personTitle2}</small>
-                    </div>
-                    <div className="person__paragraph">
-                        {data.personParagraph2}
-                    </div>
-                </div>
-                <div className="person">
-                    <div className="person__image">
-                        <img src={personThumbnailPlaceholderImage} />
-                    </div>
-                    <div className="person__name">
-                        <h6>{data.personName3}</h6>
-                        <small className="small">{data.personTitle3}</small>
-                    </div>
-                    <div className="person__paragraph">
-                        {data.personParagraph3}
-                    </div>
-                </div>
-                <div className="person">
-                    <div className="person__image">
-                        <img src={personThumbnailPlaceholderImage} />
-                    </div>
-                    <div className="person__name">
-                        <h6>{data.personName4}</h6>
-                        <small className="small">{data.personTitle4}</small>
-                    </div>
-                    <div className="person__paragraph">
-                        {data.personParagraph4}
-                    </div>
-                </div>
-                <div className="person">
-                    <div className="person__image">
-                        <img src={personThumbnailPlaceholderImage} />
-                    </div>
-                    <div className="person__name">
-                        <h6>{data.personName5}</h6>
-                        <small className="small">{data.personTitle5}</small>
-                    </div>
-                    <div className="person__paragraph">
-                        {data.personParagraph5}
-                    </div>
-                </div>
-                <div className="person">
-                    <div className="person__image">
-                        <img src={personThumbnailPlaceholderImage} />
-                    </div>
-                    <div className="person__name">
-                        <h6>{data.personName6}</h6>
-                        <small className="small">{data.personTitle6}</small>
-                    </div>
-                    <div className="person__paragraph">
-                        {data.personParagraph6}
-                    </div>
-                </div>
-                <div className="person">
-                    <div className="person__image">
-                        <img src={personThumbnailPlaceholderImage} />
-                    </div>
-                    <div className="person__name">
-                        <h6>{data.personName7}</h6>
-                        <small className="small">{data.personTitle7}</small>
-                    </div>
-                    <div className="person__paragraph">
-                        {data.personParagraph7}
-                    </div>
-                </div>
-                <div className="person">
-                    <div className="person__image">
-                        <img src={personThumbnailPlaceholderImage} />
-                    </div>
-                    <div className="person__name">
-                        <h6>{data.personName8}</h6>
-                        <small className="small">{data.personTitle8}</small>
-                    </div>
-                    <div className="person__paragraph">
-                        {data.personParagraph8}
-                    </div>
-                </div>
-                <div className="person">
-                    <div className="person__image">
-                        <img src={personThumbnailPlaceholderImage} />
-                    </div>
-                    <div className="person__name">
-                        <h6>{data.personName9}</h6>
-                        <small className="small">{data.personTitle9}</small>
-                    </div>
-                    <div className="person__paragraph">
-                        {data.personParagraph9}
-                    </div>
-                </div>
-                <div className="person">
-                    <div className="person__image">
-                        <img src={personThumbnailPlaceholderImage} />
-                    </div>
-                    <div className="person__name">
-                        <h6>{data.personName10}</h6>
-                        <small className="small">{data.personTitle10}</small>
-                    </div>
-                    <div className="person__paragraph">
-                        {data.personParagraph10}
+
+                    <p className="simba-ni__paragraph">{data.paragraph}</p>
+
+                    <div className="simba-ni__accordian-button">
+                        <AccordianButton />
+                        <div className="accordian-button__toggle-section">
+                            <div className="simba-ni__about-people">
+                                <p className="simba-ni__title">{data.title}</p>
+                                <ul className="simba-ni__thumbnails" role="img" aria-label="Thumbnail image of each person">
+                                    {thumbnails.map((thumbnail, i) => {
+                                        function findPic(n) {
+                                            return n.node.name === thumbnail.pic
+                                        }
+
+                                        let pic = thumbnailPic.filter(findPic);
+
+                                        return(
+                                            <li key={i} className="simba-ni__thumbnail" aria-current={currentSlide === i ? true : false}>
+                                                <ThumbnailButton
+                                                    buttonClassName={currentSlide === i ? 'is-selected' : ''}
+                                                    clickEvent={(e) => this.selectThumbnail(e, i)}
+                                                    pic={pic[0].node.publicURL}
+                                                    imageAltText={thumbnail.imageAltText}
+                                                />
+                                            </li>
+                                        )
+                                    })}
+                                </ul>
+                                <div className="simba-ni__people">
+                                    {people.map((person, i) => {
+                                        function findPic(n) {
+                                            return n.node.name === person.pic
+                                        }
+
+                                        let pic = thumbnailPic.filter(findPic);
+
+                                        return(
+                                            <AboutPerson
+                                                key={i}
+                                                activeClass={currentSlide === i ? 'about-person is-selected' : 'about-person'}
+                                                aboutPersonImageSource={pic[0].node.publicURL}
+                                                aboutPersonImageAltText={person.imageAltText}
+                                                aboutPersonName={person.name}
+                                                aboutPersonTitle={person.title}
+                                                aboutPersonParagraph={person.paragraph}
+                                                ariaCurrent={currentSlide === i ? true : false}
+                                                ariaHidden={currentSlide === i ? false : true}
+                                            />
+                                        )
+                                    })}
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div className="simba-ni__video">
-                <p>(video placeholder)</p>
-            </div>
-            <div className="simba-ni__slider">
-                <small className="small small--bold">{data.title}</small>
-                <ul className="slides">
-                    <li className="slide"></li>
-                    <li className="slide"></li>
-                    <li className="slide"></li>
-                    <li className="slide"></li>
-                    <li className="slide"></li>
-                    <li className="slide"></li>
-                    <li className="slide"></li>
-                    <li className="slide"></li>
-                    <li className="slide"></li>
-                    <li className="slide"></li>
-                </ul>
-            </div>
-        </section>
-    )
+        )
+    }
 }
 
-export default SimbaNi
+export default props => (
+    <StaticQuery
+        query={graphql`
+            query ThumbnailsQuery {
+                allFile(filter: {sourceInstanceName: {eq: "thumbnails"}}) {
+                    edges {
+                        node {
+                            name
+                            publicURL
+                        }
+                    }
+                }
+            }
+        `}
+        render={data => <SimbaNi images={data} {...props} />}
+    />
+)

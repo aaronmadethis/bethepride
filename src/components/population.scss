@@ -7,137 +7,86 @@ $slideHeightMobile: 116px;
 
 .population {
     background-color: $black;
+    padding: 0;
 
     .population__content {
-        padding-top: calc(1rem + 5vh);
         color: $beige;
+        margin-top:0;
 
-        @media only screen and (min-width: 769px) {
-            padding-top: calc(1rem + 20vh);
+        @media only screen and (min-width: 1024px) {
+            padding-top: calc(1rem + 10vh);
         }
     }
 
-    .population__range {
+    .population__africa-maps {
         position: relative;
-        min-height: 62vh;
+        // min-height: 62vh;
+        padding: 0 $outerMarginMobile;
+
+        @media only screen and (min-width: 1024px) {
+            min-height: unset;
+            padding: 0 $outerMargin;
+        }
+
+        @media only screen and (min-width: 1440px) {
+            min-height: 52vh;
+        }
+
+        @media only screen and (min-width: 1824px) {
+            min-height: 75vh;
+        }
     }
 
-    .population__carousel {
-        width: auto;
-        height: $slideHeightMobile;
-        position: relative;
+    .population__slides {
         margin-top: 4rem;
+        margin-left: $outerMarginMobile;
+        position: relative;
 
-        @media only screen and (min-width: 769px) {
-            position: absolute;
-            right: 60px;
-            top: calc(1rem + 50vh);
-            width: $slideWidth;
-            height: $slideHeight;
+        @media only screen and (min-width: 1024px) {
             margin: 0;
+            position: absolute;
+            right: 0;
+            width: 34.375vw;
+            min-width: 495px;
+            // top: 50vh;
+            bottom:170px;
+            // bottom:0;
+        }
+    }
+
+    .population__slide-number-headline {
+        @include flexbox($alignItems: flex-start);
+
+        position: absolute;
+        color: $orangeAlternate;
+        top: -1rem;
+        left: 0;
+        line-height: .65;
+
+        @media only screen and (min-width: 1024px) {
+            flex-flow: column;
+            top: -1.125rem;
+            left: -2.125rem;
         }
 
-        h3 {
-            @include flexbox($alignItems: flex-start);
+        @media only screen and (min-width: 1440px) {
+            top: -1.5rem;
+            left: -2.5rem;
+            line-height: .85;
+        }
 
-            position: absolute;
-            color: $orangeAlternate;
-            line-height: .8;
-            top: -1rem;
-            left: 0;
-
-            @media only screen and (min-width: 769px) {
-                flex-flow: column;
-                top: -1.125rem;
-                left: -2.125rem;
-            }
-
-            span:last-child {
+        > span {
+            &:last-child {
                 font-size: 45%;
                 color: $orange;
             }
-        }
 
-        .carousel {
-            width: 100%;
-            height: 100%;
-            background: -moz-linear-gradient(top,  #1e5799 0%, #7db9e8 100%);
-            background: -webkit-gradient(linear, left top, right top, from(#ECEDF5), to(rgba(236, 237, 245, 0.25)));
-            background: linear-gradient(to right, #ECEDF5, rgba(236,237,245,.25));
-            padding: 1px;
-
-            .carousel__slide {
-                @include flexbox($flexFlow: column, $alignItems: flex-start);
-
-                width: 100%;
-                height: 100%;
-                padding: 1rem 2rem;
-
-                @media only screen and (min-width: 769px) {
-                    padding: 1rem 4rem;
-                }
-
-                &:nth-child(2) {
-                    .carousel__title {
-                        color: $yellow;
-                    }
-                }
-
-                &:nth-child(4) {
-                    .carousel__title {
-                        color: $red;
-                    }
-                }
-
-                &:nth-child(6) {
-                    .carousel__title {
-                        color: $orange;
-                    }
-                }
-
-                .carousel__title {
-                    @include fontSize(15px);
-
-                    font-weight: $boldFontWeight;
-                    text-transform: uppercase;
-                    margin-bottom: 1rem;
-                }
-            }
-
-            .flickity-viewport {
-                background: $black;
-            }
-
-            .flickity-button {
+            &:not(:last-child) {
                 display: none;
 
-                @media only screen and (min-width: 769px) {
+                &.is-selected {
                     display: block;
-                    background-color: transparent;
-                    color: $beige;
-
-                    &:hover,
-                    &:focus,
-                    &:active {
-                        background-color: transparent;
-                        color: $beigeAlternate;
-                    }
                 }
-            }
-
-            .flickity-prev-next-button {
-                bottom: -30%;
-                top: unset;
-            }
-        }
-    }
-
-    .slide-number-headline {
-        > span:not(:last-child) {
-            display: none;
-
-            &.active {
-                display: block;
             }
         }
     }

@@ -1,0 +1,79 @@
+@import "_settings";
+@import "_typography";
+
+.learn {
+    background-color: $beige;
+    min-height: unset;
+
+    @media only screen and (min-width: 1024px) {
+        width: 50%;
+        padding: 0 60px 0 $outerMargin;
+    }
+
+    .learn__content {
+        @media only screen and (max-width: 767px) {
+            padding-top:3rem;
+        }
+        @media only screen and (min-width: 1024px) {
+            margin-bottom: 0;
+            padding-bottom: 5rem;
+        }
+    }
+
+    // .learn__heading {}
+
+    .learn__headline {
+        @include fontSize(60px);
+        line-height: 1;
+    }
+
+    .learn__subheadline {
+        @include fontSize(24px);
+
+        margin-top: .5rem;
+
+        @media only screen and (min-width: 1024px) {
+            // margin-left: 8vw;
+        }
+    }
+
+    .learn__links {
+        margin-top: $verticalMargin;
+
+        @media only screen and (min-width: 1024px) {
+            // margin-left: 8vw;
+            // margin-right: 8vw;
+        }
+
+        .learn__link:nth-child(n+7) {
+            display: none;
+        }
+
+        &.learn__links--view-more {
+            .learn__link:nth-child(n+7) {
+                display: block;
+            }
+        }
+    }
+
+    .learn__link {
+        margin: 2rem auto;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+
+        a {
+            @extend p;
+        }
+    }
+
+    .learn__view-more-button {
+        width: auto;
+        margin: $verticalMargin 0 0;
+
+        @media only screen and (min-width: 1024px) {
+            // margin-left: 8vw;
+        }
+    }
+}

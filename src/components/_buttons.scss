@@ -1,0 +1,73 @@
+@import "_settings";
+
+$arrowIconWidth: 20px;
+
+*[class$="--view-more"] + *[class$="__view-more-button"] {
+    display: none;
+}
+
+button {
+    display: inline-block;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    margin: 0;
+    padding: 0;
+    background-color: transparent;
+}
+
+.primary-button {
+    @include fontSize(24px);
+    @include transition;
+
+    @extend button;
+
+    text-align: center;
+    color: $beige;
+    background-color: $orange;
+    border-radius: 0;
+    padding: 14px 40px;
+
+    &:hover,
+    &:focus,
+    &:active {
+        background-color: $orangeDark;
+        color: $beige;
+    }
+
+    @media only screen and (min-width: 1024px) {
+        @include fontSize(16px);
+    }
+}
+
+.link-button {
+    @extend .primary-button;
+}
+
+.accordian-button {
+    @include flexbox($justifyContent: space-between);
+    @extend .primary-button;
+
+    width: 100%;
+    margin-top: $verticalMargin;
+
+    + [class$="__toggle-section"] {
+        display: none;
+    }
+
+    .accordian-button__button-text {
+        margin: 0 auto;
+    }
+
+    .accordian-button__arrow {
+        width: $arrowIconWidth;
+        margin-left: 1rem;
+    }
+
+    &.accordian-button--open {
+        + [class$="__toggle-section"] {
+            display: block;
+            width: 100%;
+        }
+    }
+}

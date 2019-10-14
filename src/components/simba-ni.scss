@@ -1,8 +1,203 @@
 @import "_settings";
 
 .simba-ni {
-    background-image: url('../images/simba-ni-background-image.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 100vh;
+    @include fullBackgroundSize($simbaNiBackgroundImageUrl, bottom center, $backgroundSize: contain);
+    
+    background-color: $black;
+    color: $beige;
+
+     @media only screen and (min-width: 1024px) {
+        // height:100vh;
+        height:auto;
+        min-height: 1600px;
+    }
+
+    > div{
+        @media only screen and (min-width: 1024px) {
+            margin-top: 0;
+        }
+    }
+    .simba-ni__heading{
+        @media only screen and (min-width: 1024px) {
+            // margin-bottom: 66px;
+            margin-bottom: 16px;
+        }
+    }
+
+    .simba-ni__headline {
+        color: $beigeAlternate;
+
+        span {
+        //    margin-left: 15vw;
+           margin-left: 5vw;
+           color: $beige;
+
+            @media only screen and (min-width: 768px) {
+                // margin-left: 6vw;
+                margin-left: 5vw;
+            }
+        }
+    }
+
+    .simba-ni__subheadline {
+        @include fontSize(32px);
+
+        margin-top: $subheadlineVerticalMargin;
+        margin-left: $h2OffsetMarginMobile;
+        
+        @media only screen and (max-width: 767px) {
+            margin-left: 0;
+        }
+
+        @media only screen and (min-width: 768px) {
+            // margin-left: 16vw;
+           margin-left: 5vw;
+        }
+
+        @media only screen and (min-width: 1024px) {
+            @include fontSize(24px);
+            // margin-left: $h2OffsetMargin;
+           margin-left: 5vw;
+
+       }
+
+       @media only screen and (min-width: 1440px) {
+            margin-top: 1.15rem;
+       }
+    }
+
+    .simba-ni__columns {
+        @media only screen and (max-width: 767px) {
+            padding-bottom: 21rem;
+        }
+        @media only screen and (min-width: 1024px) {
+            @include flexbox($flexFlow: row wrap, $alignItems: flex-start);
+            justify-content: flex-start;
+        }
+    }
+
+    .simba-ni__video {
+        margin-top: $verticalMargin;
+
+        @media only screen and (min-width: 1024px) {
+            margin-top: 2rem;
+            // order: 1;
+            flex: 0 1 100%;
+        }
+    }
+
+    .simba-ni__button-text {
+        @include fontSize(24px);
+
+        order: 1;
+        margin: 0 auto;
+    }
+
+    .simba-ni__paragraph {
+        // @include columnTextFlow();
+
+        margin: $verticalMargin auto ($verticalMargin * 2);
+        // height: 48vh;
+
+        @media only screen and (min-width: 1024px) {
+            // margin-left: 5vw;
+            margin:0;
+            padding-left: 5vw;
+            padding-right: 0;
+            // order: 2;
+            margin-top: $verticalMargin;
+            margin-bottom: $verticalMargin;
+            // flex: 0 1 50%;
+            flex: 0 1 calc(50% + 5vw);
+        }
+    }
+
+    .simba-ni__accordian-button {
+        @media only screen and (min-width: 1024px) {
+            // order: 1;
+            // flex: 0 1 calc(50% - 2rem);
+            flex: 0 1 calc(50% + 5vw);
+            padding-left: 5vw;
+
+            // margin-right: 2rem;
+            margin-right: 0;
+            margin-bottom:5rem;
+        }
+
+        .accordian-button {
+            @media only screen and (min-width: 1024px) {
+                display: none;
+            }
+        }
+
+        .accordian-button__toggle-section {
+            @media only screen and (min-width: 1024px) {
+                display: block;
+            }
+        }
+    }
+
+    .simba-ni__about-people {
+        @media only screen and (min-width: 1024px) {
+            @include flexbox($flexFlow: row wrap, $justifyContent: flex-start);
+        }
+    }
+
+    .simba-ni__title {
+        display: none;
+
+        @media only screen and (min-width: 1024px) {
+            @include fontSize(16px);
+
+            display: block;
+            order: 2;
+            font-weight: 700;
+            text-transform: uppercase;
+            color: $orange;
+        }
+
+        @media only screen and (min-width: 1440px) {
+            @include fontSize(14px);
+        }
+    }
+
+    .simba-ni__thumbnails {
+        @include flexbox($flexFlow: row wrap, $justifyContent: flex-start);
+
+        margin-top: $verticalMargin;
+
+        @media only screen and (min-width: 1024px) {
+            margin-top: 1rem;
+            order: 3;
+        }
+    }
+
+    .simba-ni__thumbnail {
+        margin: 3px 3px 1px;
+        flex: 0 1 calc(20% - 6px);
+
+        @media only screen and (min-width: 1024px) {
+            flex: 1;
+        }
+
+        button.is-selected {
+            img {
+               border: 1px solid $orange;
+           }
+        }
+    }
+
+    .simba-ni__people {
+        margin-top: $verticalMargin;
+        border-bottom: 1px solid $orange;
+        padding-bottom: $verticalMargin;
+
+        @media only screen and (min-width: 1024px) {
+            // order: 3;
+            border: none;
+            padding-bottom: 0rem;
+            margin-bottom:2rem;
+            margin-top: 0;
+        }
+    }
 }

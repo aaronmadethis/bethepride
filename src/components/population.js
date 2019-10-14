@@ -1,25 +1,17 @@
-import React from "react";
-import ReactDOM from "react-dom";
-import Flickity from "./flickity-fixed";
+import React from "react"
+import { StaticQuery, graphql } from "gatsby"
 
-import TextSlide from "./text-slide";
-import AfricaMap from "./africa-map";
+import TextSlide from "./text-slide"
+import AfricaMap from "./africa-map"
 
-import "./vendor/flickity.min.css";
-import "./population.scss";
+import Flickity from "./flickity-fixed"
 
-import africaImage1 from "../images/africa-image1@2x.png"
-import africaImage2 from "../images/africa-image2@2x.png"
-import africaImage3 from "../images/africa-image3@2x.png"
-import africaImage4 from "../images/africa-image4@2x.png"
-import africaImage5 from "../images/africa-image5@2x.png"
-import africaImage6 from "../images/africa-image6@2x.png"
-import africaImage6Mobile from "../images/africa-image6-mobile@2x.png"
+import "./vendor/flickity.min.css"
+import "./population.scss"
 
 const flickityOptions = {
-    setGallerySize: false,
-    cellSelector: '.carousel__slide',
-    cellAlign: 'center',
+    cellSelector: '.text-slide__slide',
+    cellAlign: 'left',
     wrapAround: false,
     pageDots: false,
     arrowShape: {
@@ -40,65 +32,47 @@ class Population extends React.Component {
     }
 
     componentDidMount = () => {
-        // You can register events in componentDidMount hook
-        this.flkty.on('settle', () => {
-            // console.log(`current index is ${this.flkty.selectedIndex}`);
+        this.flkty.on('scroll', () => {
             this.setState(state => ({
                 currentSlide: this.flkty.selectedIndex,
             }));
         })
     }
 
-
     render() {
         const {content} = this.props;
         const data = JSON.parse(content);
+        const {slides, africaMaps} = data;
+        const mapsPic = this.props.images.allFile.edges;
 
         let {currentSlide} = this.state;
-        let mapClass = 'africa-map africa-map__0' +  currentSlide;
 
         return (
-            <>
             <div className="population__content">
-                <div className="population__range">
-                    <div className={mapClass}>
-                        <AfricaMap
-                            activeClass={currentSlide == 0 ? 'active' : '' }
-                            imageSource={africaImage1}
-                            headline={data.slide1Headline}
-                            subheadline={data.slide1Subheadline}
-                        />
-                        <AfricaMap
-                            activeClass={currentSlide == 1 ? 'active' : '' }
-                            imageSource={africaImage2}
-                            headline={data.slide2Headline}
-                        />
-                        <AfricaMap
-                            activeClass={currentSlide == 2 ? 'active' : '' }
-                            imageSource={africaImage3}
-                            headline={data.slide3Headline}
-                        />
-                        <AfricaMap
-                            activeClass={currentSlide == 3 ? 'active' : '' }
-                            imageSource={africaImage4}
-                            headline={data.slide4Headline}
-                        />
-                        <AfricaMap
-                            activeClass={currentSlide == 4 ? 'active' : '' }
-                            imageSource={africaImage5}
-                            headline={data.slide5Headline}
-                            subheadline={data.slide5Subheadline}
-                        />
-                        <AfricaMap
-                            activeClass={currentSlide == 5 ? 'active' : '' }
-                            imageSource={africaImage6}
-                            headline={data.slide6Headline}
-                        />
-                    </div>
+                <div className="population__africa-maps" role="img" aria-label={data.africaMapsAriaLabel}>
+                    {africaMaps.map((africaMap, i) => {
+                        function findPic(n){
+                            return n.node.name === africaMap.pic
+                        }
+
+                        let pic = mapsPic.filter(findPic);
+
+                        return(
+                            <AfricaMap
+                                key={i}
+                                headline={africaMap.headline}
+                                subheadline={africaMap.subheadline}
+                                pic={pic[0].node.publicURL}
+                                className={currentSlide === i ? 'africa-map is-selected' : 'africa-map'}
+                                ariaCurrent={currentSlide === i ? true : false}
+                                ariaHidden={currentSlide === i ? false : true}
+                            />
+                        )
+                    })}
                 </div>
-                <div className="population__carousel">
+                <div className="population__slides">
                     <Flickity
-                        className={'carousel'}
+                        className={'text-slide'}
                         elementType={'div'}
                         options={flickityOptions}
                         disableImagesLoaded={false}
@@ -106,50 +80,49 @@ class Population extends React.Component {
                         static
                         flickityRef={c => this.flkty = c}
                     >
-                        <TextSlide
-                            className={'carousel__slide'}
-                            paragraph={data.slide1Paragraph}
-                        />
-                        <TextSlide
-                            className={'carousel__slide'}
-                            title={data.slide2Title}
-                            paragraph={data.slide2Paragraph}
-                        />
-                        <TextSlide
-                            className={'carousel__slide'}
-                            paragraph={data.slide3Paragraph}
-                        />
-                        <TextSlide
-                            className={'carousel__slide'}
-                            title={data.slide4Title}
-                            paragraph={data.slide4Paragraph}
-                        />
-                        <TextSlide
-                            className={'carousel__slide'}
-                            paragraph={data.slide5Paragraph}
-                        />
-                        <TextSlide
-                            className={'carousel__slide'}
-                            title={data.slide6Title}
-                            paragraph={data.slide6Paragraph}
-                        />
+                        {slides.map((slide, i) => {
+                            return(
+                                <TextSlide
+                                    key={i}
+                                    title={slide.title}
+                                    paragraph={slide.paragraph}
+                                    ariaCurrent={currentSlide === i ? true : false}
+                                    ariaHidden={currentSlide === i ? false : true}
+                                />
+                            )
+                        })}
                     </Flickity>
-                    <h3 className="slide-number-headline">
-                        <span className={currentSlide == 0 ? 'active' : ''}>01</span>
-                        <span className={currentSlide == 1 ? 'active' : ''}>02</span>
-                        <span className={currentSlide == 2 ? 'active' : ''}>03</span>
-                        <span className={currentSlide == 3 ? 'active' : ''}>04</span>
-                        <span className={currentSlide == 4 ? 'active' : ''}>05</span>
-                        <span className={currentSlide == 5 ? 'active' : ''}>06</span>
-                        <span>/06</span>
-                    </h3>
+                    <h4 className="population__slide-number-headline">
+                        {slides.map((slide, i) => {
+                            return(
+                                <span
+                                    key={i}
+                                    className={currentSlide === i ? 'is-selected' : ''}>0{i + 1}
+                                </span>
+                            )
+                        })}
+                        <span>/0{slides.length}</span>
+                    </h4>
                 </div>
             </div>
-            </>
         )
-
-
     }
 }
 
-export default Population
+export default props => (
+    <StaticQuery
+        query={graphql`
+            query AfricaMapsQuery {
+                allFile(filter: {sourceInstanceName: {eq: "africa-maps"}}) {
+                    edges {
+                        node {
+                            name
+                            publicURL
+                        }
+                    }
+                }
+            }
+        `}
+        render={data => <Population images={data} {...props} />}
+    />
+)

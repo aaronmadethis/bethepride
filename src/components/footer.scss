@@ -1,5 +1,131 @@
-@import "settings";
+@import "_settings";
 
-.footer {
+$socialImageHeightMobile: 18px;
+$socialImageHeight: 24px;
+$logoWidth: 60px;
+$logoWidthDesktop: 150px;
+
+footer {
     background-color: $black;
+    color: $beige;
+    padding: $verticalMargin $outerMarginMobile;
+
+    @media only screen and (min-width: 1024px) {
+        padding: 6rem $outerMargin;
+    }
+
+    .footer__content {
+        @media only screen and (min-width: 1024px) {
+            @include flexbox($flexFlow: row wrap, $alignItems: flex-start);
+        }
+    }
+
+    .footer__logo {
+        max-width: $logoWidth;
+        margin-top: $verticalMargin / 2;
+
+        @media only screen and (min-width: 1024px) {
+            // max-width: $logoWidthDesktop;
+            max-width: (4 / 24) * 100%;
+            flex: 0 1 10%;
+            margin-right: 5vw;
+            margin-top: 0;
+        }
+    }
+
+    .footer__columns {
+        @include flexbox($alignItems: flex-start, $justifyContent: flex-start);
+
+        margin: $verticalMargin auto;
+
+        > * {
+            flex: 0 1 calc(50% - 1rem);
+        }
+
+        @media only screen and (min-width: 1024px) {
+            flex: 0 1 50%;
+            margin-top: 0;
+            margin-left: 0;
+        }
+    }
+
+    .footer__contact {
+        @media only screen and (min-width: 1024px) {
+            flex: 0 1 (7 / 12) * 100%;
+        }
+    }
+
+    .footer__links {
+        margin-right: 1rem;
+        @media only screen and (min-width: 1024px) {
+            flex: 0 1 (5 / 12) * 100%;
+        }
+    }
+
+    .footer__link {
+        @include fontSize(21px);
+
+        margin-bottom: 1.5rem;
+
+        @media only screen and (min-width: 1024px) {
+            @include fontSize(14px);
+            margin-bottom: 1rem;
+        }
+    }
+
+    .footer__title {
+        @include fontSize(16px);
+
+        color: $orange;
+        font-weight: $boldFontWeight;
+        text-transform: uppercase;
+        margin-bottom: 1rem;
+    }
+
+    .footer__paragraph {
+        @include fontSize(21px);
+
+        margin-bottom: 1rem;
+
+        @media only screen and (min-width: 1024px) {
+            @include fontSize(14px);
+        }
+    }
+
+    .footer__icons {
+        @include flexbox($justifyContent: flex-start);
+
+        margin: 2rem 0;
+    }
+
+    .footer__icon {
+        width: auto;
+        height: auto;
+        flex: 0 1 33.3333%;
+
+        @media only screen and (min-width: 1024px) {
+            flex: 0 1 15%;
+        }
+
+        img {
+            width: auto;
+            height: $socialImageHeightMobile;
+        }
+    }
+
+    .footer__copyright {
+        small {
+            color: $beige;
+
+            a {
+                color: inherit;
+            }
+        }
+
+        @media only screen and (min-width: 1024px) {
+            flex: 0 1 100%;
+            margin-left: (4 / 24) * 100%;
+            @include fontSize(12px);            
+        }
+    }
 }

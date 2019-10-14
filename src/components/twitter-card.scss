@@ -1,8 +1,145 @@
+@import "_settings";
+@import "_buttons";
+
+$twitterCardImageWidthMobile: 69px;
+$twitterCardImageWidthTablet: 90px;
+$twitterCardImageWidthDesktop: 100px;
+$twitterCardHeightDesktop: calc(1rem + 9vh);
+$twitterCardHeightLarge: calc(1rem + 11vh);
+
 .twitter-card{
-    button{
-        cursor: pointer;
+    margin: $verticalMargin auto;
+
+    @media only screen and (min-width: 1024px) {
+        // flex: 0 1 calc(33.3333% - 1rem);
+        flex: 0 1 25%;
+        // margin: 2rem 0;
+        margin: 1rem 0;
     }
-    .button-inline{
-        display: inline-block;
+
+    .twitter-card__button-target {
+        @extend button;
+
+        width: 100%;
+    }
+
+    .twitter-card__wrapper {
+        @include flexbox($justifyContent: space-between);
+
+        // background-color: $beige;
+        position: relative;
+        padding: 10px;
+        width: 100%;
+
+        &::before{
+            content:'';
+            display: block;
+            position: absolute;
+            top:0;
+            bottom:0;
+            left:0;
+            right:8px;
+            background-color: $beige;
+            z-index: -1;
+        }
+
+        @media only screen and (min-width: 768px) {
+            width: 95%;
+        }
+
+        @media only screen and (min-width: 1024px) {
+            // height: $twitterCardHeightDesktop;
+            min-height: 135px;
+        }
+
+        @media only screen and (min-width: 1824px) {
+            // height: $twitterCardHeightLarge;
+        }
+    }
+
+    .twitter-card__data {
+        @include flexbox($flexFlow: column, $alignItems: flex-start);
+
+        // position: relative;
+        text-align: left;
+        margin-bottom: -25px;
+
+        @media only screen and (min-width: 1024px) {
+            justify-content: flex-start;
+            width: 100%;
+            height: 100%;
+            // margin: 0;
+            margin: 0 106px 0 0;
+        }
+
+        .twitter-card__name {
+            @include fontSize(20px);
+            line-height: 1.2;
+
+            color: $black;
+            text-transform: uppercase;
+            font-weight: $boldFontWeight;
+
+            @media only screen and (min-width: 1024px) {
+                @include fontSize(12px);
+            }
+        }
+
+        .twitter-card__handle {
+            @include fontSize(18px);
+
+            color: $orange;
+
+            @media only screen and (min-width: 1024px) {
+                @include fontSize(10px);
+            }
+        }
+
+        .twitter-card__title {
+            @include fontSize(20px);
+
+            color: $black;
+            padding-bottom: 1rem;
+
+            @media only screen and (min-width: 1024px) {
+                @include fontSize(12px);
+
+                line-height: 1.3;
+                margin-top: .5rem;
+            }
+        }
+
+        .twitter-card__button {
+            @extend .primary-button;
+
+            padding: 1rem 2.5rem;
+
+            @media only screen and (min-width: 1024px) {
+                position: absolute;
+                bottom: -10px;
+                padding: .4rem 1rem;
+                font-size: 12px;
+            }
+
+            @media only screen and (min-width: 1440px) {
+                // bottom: -2rem;
+                bottom:-10px;
+            }
+        }
+    }
+
+    .twitter-card__image {
+        width: $twitterCardImageWidthMobile;
+        // margin-right: -25px;
+        position: absolute;
+        right:0;
+
+        @media only screen and (min-width: 1024px) {
+            width: $twitterCardImageWidthTablet;
+        }
+
+        @media only screen and (min-width: 1440px) {
+            width: $twitterCardImageWidthDesktop;
+        }
     }
 }

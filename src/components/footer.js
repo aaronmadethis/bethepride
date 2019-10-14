@@ -1,37 +1,100 @@
 import React from "react"
+import { StaticQuery, graphql } from "gatsby"
+
 import "./footer.scss"
 
-import logoImage from "../images/logo.svg"
-import instagramIcon from "../images/icon-instagram.svg"
-import facebookIcon from "../images/icon-facebook.svg"
-import twitterIcon from "../images/icon-twitter.svg"
+class Footer extends React.Component {
+    render() {
+        const {content} = this.props;
+        const data = JSON.parse(content);
+        const {links, icons} = data;
+        const iconPic = this.props.images.allFile.edges;
 
-const Footer = ({ content }) => {
-    const data = JSON.parse(content)
-    return(
-        <>
-            <div className="footer__logo">
-                <img src={logoImage} />
-            </div>
-            <div className="footer__links">
-                <a href="#">{data.linkTitle1}</a>
-                <a href="#">{data.linkTitle2}</a>
-                <a href="#">{data.linkTitle3}</a>
-                <a href="#">{data.linkTitle4}</a>
-                <a href="#">{data.linkTitle5}</a>
-                <a href="#">{data.linkTitle6}</a>
-                <a href="#">{data.linkTitle7}</a>
-            </div>
-            <div className="footer__contact">
-                <h3>{data.contactTitle}</h3>
-                <div className="social">
-                    <a href=""><img src={instagramIcon} alt="WildAid Instagram" /></a>
-                    <a href=""><img src={facebookIcon} alt="WildAid Facebook" /></a>
-                    <a href=""><img src={twitterIcon} alt="WildAid Twitter" /></a>
+        return(
+            <div className="footer__content">
+                {icons.slice(0, 1).map((icon, i) => {
+                    function findPic(n){
+                        return n.node.name === icon.pic
+                    }
+
+                    let pic = iconPic.filter(findPic);
+
+                    return(
+                        <div key={i} className="footer__logo">
+                            <a href={icon.url}>
+                                <img
+                                    src={pic[0].node.publicURL}
+                                    alt={icon.altText}
+                                />
+                            </a>
+                        </div>
+                    )
+                })}
+
+                <div className="footer__columns">
+                    <ul className="footer__links">
+                        {links.map((link, i) => {
+                            return(
+                                <li key={i} className="footer__link">
+                                    <a href={link.href} className={link.className}>
+                                        {link.text}
+                                    </a>
+                                </li>
+                            )
+                        })}
+                    </ul>
+                    <div className="footer__contact">
+                        <p className="footer__title">{data.title}</p>
+                        <p className="footer__paragraph" dangerouslySetInnerHTML={{ __html:data.address }} />
+                        <p className="footer__paragraph" dangerouslySetInnerHTML={{ __html:data.addressOther }} />
+                        <ul className="footer__icons">
+                            {icons.slice(1).map((icon, i) => {
+                                function findPic(n){
+                                    return n.node.name === icon.pic
+                                }
+
+                                let pic = iconPic.filter(findPic);
+
+                                return(
+                                    <li key={i} className="footer__icon">
+                                        <a href={icon.url}>
+                                            <img
+                                                src={pic[0].node.publicURL}
+                                                alt={icon.altText}
+                                            />
+                                        </a>
+                                    </li>
+                                )
+                            })}
+                        </ul>
+                        <p className="footer__paragraph">{data.paragraph}</p>
+                    </div>
+                </div>
+                <div className="footer__copyright">
+                    <small>
+                        <a href={data.privacyURL}>{data.privacyText}</a>
+                        <span dangerouslySetInnerHTML={{ __html: data.copyright }} />
+                    </small>
                 </div>
             </div>
-        </>
-    )
+        )
+    }
 }
 
-export default Footer
+export default props => (
+    <StaticQuery
+        query={graphql`
+            query IconsQuery {
+                allFile(filter: {sourceInstanceName: {eq: "icons"}}) {
+                    edges {
+                        node {
+                            name
+                            publicURL
+                        }
+                    }
+                }
+            }
+        `}
+        render={data => <Footer images={data} {...props} />}
+    />
+)

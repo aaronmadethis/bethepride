@@ -3,8 +3,6 @@ import { StaticQuery, graphql } from "gatsby"
 
 import "./instagram-feed.scss"
 
-
-
 class InstagramFeed extends React.Component {
     constructor(props) {
         super(props);
@@ -12,30 +10,31 @@ class InstagramFeed extends React.Component {
     }
 
     render() {
-        // const {content} = this.props;
-        // const data = JSON.parse(content);
         const instaimages = this.props.insta.allInstaNode.edges;
-        // console.log(instaimages[0].node.thumbnails[0]);
 
         return(
-            <section className="component-instagram-feed">
-
-                <div className="">
-                    <div className="">
-                        {instaimages.map((post, i) =>{
-                                return(
-                                    <img key={i} src={post.node.thumbnails[4].src} />
-                                )
-                            }
-                        )}
-                    </div>
+            <div className="instagram-feed">
+                <div className="instagram-feed__posts">
+                    {instaimages.slice(0, 9).map((post, i) =>{
+                            return(
+                                <div key={i} className="instagram-feed__post">
+                                    <figure>
+                                        <img
+                                            className="instagram-feed__image"
+                                            src={post.node.thumbnails[4].src}
+                                            alt="Instagram post"
+                                        />
+                                        <figcaption className={'instagram-feed__caption'}>{post.node.caption}</figcaption>
+                                    </figure>
+                                </div>
+                            )
+                        }
+                    )}
                 </div>
-            </section>
+            </div>
         )
     }
 }
-
-// export default InstagramFeed
 
 export default props => (
     <StaticQuery
@@ -44,6 +43,9 @@ export default props => (
                 allInstaNode {
                     edges {
                         node {
+                            preview
+                            original
+                            caption
                             thumbnails {
                                 src
                             }

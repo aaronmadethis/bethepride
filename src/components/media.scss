@@ -1,5 +1,149 @@
 @import "_settings";
 
 .media {
+    background-color: $beige;
 
+    .media__content {
+        @media only screen and (min-width: 1024px) {
+            margin-bottom: 0;
+            margin-top:77px;
+        }
+    }
+
+    .media__headline {
+        color: $orangeAlternate;
+
+        span {
+            color: $orange;
+            margin-left: 23vw;
+
+            @media only screen and (min-width: 1024px) {
+                margin-left: 14vw;
+            }
+
+            @media only screen and (min-width: 1440px) {
+                margin-left: $h2OffsetMargin;
+            }
+        }
+    }
+
+    .media__blocks {
+        .media__block:nth-child(n+5) {
+            display: none;
+        }
+
+        &.media__blocks--view-more {
+            .media__block:nth-child(n+5) {
+                display: flex;
+            }
+        }
+
+        @media only screen and (min-width: 1024px) {
+            @include flexbox($alignItems: stretch, $justifyContent: space-between, $flexFlow: row wrap);
+
+            padding: 0px 8vw;
+        }
+    }
+
+    .media__block {
+        @include flexbox($alignItems: center);
+
+        margin: $verticalMargin 0 0;
+
+        > div:first-child {
+            flex: 0 1 35%;
+        }
+
+        > div:last-child {
+            flex: 0 1 calc(65% - 5vw);
+            margin-left: $outerMarginMobile;
+        }
+
+        > div:only-child {
+            flex: 0 1 100%;
+            margin: 0;
+            padding: 0;
+        }
+
+        @media only screen and (min-width: 1024px) {
+            justify-content: flex-start;
+            flex: 0 1 calc(65% - 4rem);
+            margin-right: 4rem;
+
+            &:nth-child(even) {
+                flex: 0 1 calc(35%);
+                margin-right: 0;
+            }
+
+            &.media__block--portrait {
+                .media__copy {
+                    margin-left: 2vw;
+                    flex: calc(65% - 2vw);
+                }
+            }
+
+            &.media__block--landscape {
+                flex-flow: column;
+                align-self: flex-start;
+                align-items: flex-start;
+
+                .media__copy {
+                    order: 2;
+                    margin-top: 1rem;
+                }
+
+                .media__image {
+                    order: 1;
+                    margin-left: 0;
+                }
+            }
+
+            &.media__block--square {
+                flex-flow: column;
+                align-items: flex-start;
+
+                .media__copy {
+                    margin-left: 0;
+                    margin-top: 1rem;
+                }
+            }
+        }
+    }
+
+    .media__copy {
+        @include flexbox($flexFlow: column, $alignItems: flex-start, $justifyContent: space-between);
+
+        a {
+            border-bottom: 1px solid $linkColor;
+        }
+
+        p {
+            margin-top: .5rem;
+        }
+
+        @media only screen and (min-width: 1024px) {
+            p {
+                @include fontSize(16px);
+
+                margin-top: 1rem;
+            }
+        }
+    }
+
+    .media__title {
+        line-height: 1.3;
+
+        @media only screen and (min-width: 1024px) {
+            @include fontSize(28px);
+        }
+    }
+
+    .media__view-more-button {
+        margin: $verticalMargin auto 0;
+
+        @media only screen and (min-width: 1024px) {
+            margin: $verticalMargin 0 0;
+            padding-left: 8vw;
+        }
+    }
 }
