@@ -4,108 +4,64 @@
     @include fullBackgroundSize($heroBackgroundImageUrl, bottom center);
 
     background-color: $black;
-    @media only screen and (min-width: 768px) {
-        max-height: 1040px;
-        min-height: 770px;
-    }
-
-    @media only screen and (min-width: 1024px) {
-        // min-height: 128vh;
-        height: 128vh;
-        max-height: 1040px;
-        min-height: 1024px;
-    }
 
     .hero__content {
-        padding-top: calc(1rem + 20vh);
+        padding-top: calc(1rem + 15vh);
 
-        @media only screen and (min-width: 1024px) {
-            // padding-top: calc(1rem + 5vh);
-            padding-top: 0;
-            margin-top:280px;
-            max-width: 1152px;
-            margin-right: auto;
-            margin-left: auto;
+        @media only screen and (min-width: 769px) {
+            padding-top: calc(1rem + 25vh);
         }
     }
 
-    .hero__headline {
+    h1 {
         color: $beigeAlternate;
-        line-height:1;
-        position: relative;
-        margin-bottom:77px;
 
         span {
-            position: absolute;
-            display: block;
-            // bottom:-77px;
-            bottom:-44px;
             color: $beige;
-            margin-left: $h1OffsetMarginMobile + 1;
+            margin-left: $h1OffsetMarginMobile;
 
-            @media only screen and (min-width: 768px) {
-                margin-left: 21vw;
-            }
-
-            @media only screen and (min-width: 1024px) {
-                margin-left: $h1OffsetMarginTablet;
-                bottom:-77px;
-            }
-
-            @media only screen and (min-width: 1440px) {
-                margin-left: $h1OffsetMarginDesktop;
+            @media only screen and (min-width: 769px) {
+                margin-left: $h1OffsetMargin;
             }
         }
     }
 
-    .hero__subheadline,
-    .primary-button {
-        @media only screen and (min-width: 768px) {
-            margin-left: 21vw;
-        }
-
-        @media only screen and (min-width: 1024px) {
-            margin-left: $h1OffsetMarginTablet;
-        }
-
-        @media only screen and (min-width: 1440px) {
-            margin-left: $h1OffsetMarginDesktop;
+    p,
+    a {
+        @media only screen and (min-width: 769px) {
+            margin-left: $h1OffsetMargin;
         }
     }
 
-    .hero__subheadline {
+    p {
         @include fontSize(28px);
 
         width: 70%;
         color: $beige;
-        // margin-top: 2rem;
-        line-height: 1.4;
+        margin-top: 2rem;
 
-        @media only screen and (min-width: 1024px) {
+        @media only screen and (min-width: 769px) {
             width: 45%;
         }
     }
 
     a {
         margin-top: 2.75rem;
+        display: inline-block;
 
-        @media only screen and (min-width: 1024px) {
+        @media only screen and (min-width: 769px) {
             margin-top: 3.75rem;
-            margin-left: 14vw;
         }
     }
 
     .hero__caption {
-        @include fontSize(16px);
-
         color: $orange;
         position: absolute;
         bottom: 3rem;
         right: $outerMarginMobile;
 
-        @media only screen and (min-width: 1024px) {
+        @media only screen and (min-width: 769px) {
             right: $outerMargin;
-            @include fontSize(11px);
         }
     }
 }

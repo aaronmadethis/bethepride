@@ -1,13 +1,12 @@
 import React from "react";
-
-import "./text-slide.scss";
+import ReactDOM from "react-dom";
 
 function TextSlide(props) {
     return (
         <>
-        <div className={'text-slide__slide'} aria-current={props.ariaCurrent} aria-hidden={props.ariaHidden}>
-            <p className={'text-slide__title'}>{props.title}</p>
-            <p className={'text-slide__paragraph'}>{props.paragraph}</p>
+        <div className={props.className}>
+            <p className="carousel__title">{props.title}</p>
+            <p>{props.paragraph}</p>
         </div>
         </>
     )

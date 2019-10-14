@@ -1,79 +1,8 @@
 @import "_settings";
 
 .lion-life {
-    @include fullBackgroundSize($lionLifeBackgroundImageUrl, top -60px right -40px, $backgroundSize: 150%);
-
-    @media only screen and (min-width: 1024px) {
-        background-image: none;
-    }
-
-    background-color: $black;
-    color: $beige;
-
-    .lion-life__content {
-        padding-top: calc(1rem + 46vh);
-        position: relative;
-
-        @media only screen and (min-width: 768px) {
-            padding-top: calc(1rem + 70vh);
-        }
-
-        @media only screen and (min-width: 1024px) {
-            @include flexbox($flexFlow: row wrap, $alignItems: flex-start, $justifyContent: space-between);
-
-            padding-top: calc(1rem + 5vh);
-        }
-    }
-
-    .lion-life__heading {
-        flex: 0 1 calc(33.3333% - 3vw);
-        order: 1;
-        margin-right: 3vw;
-    }
-
-    .lion-life__headline {
-        color: $orange;
-        line-height: 1;
-
-        @media only screen and (min-width: 1024px) {
-            @include fontSize(70px);
-        }
-    }
-
-    .lion-life__paragraph {
-        p {
-            margin-top: 1rem;
-        }
-
-        + .lion-life__button {
-            display: none;
-
-            @media only screen and (min-width: 1024px) {
-                display: block;
-                text-align: left;
-            }
-        }
-    }
-
-    .lion-life__instagram {
-        margin-top: $verticalMargin;
-
-        @media only screen and (min-width: 1024px) {
-            order: 2;
-            flex: 0 1 66.6666%;
-            margin-top: 0;
-        }
-
-        + .lion-life__button {
-
-            @media only screen and (min-width: 1024px) {
-                display: none;
-            }
-        }
-    }
-
-    .lion-life__button {
-        text-align: center;
-        margin-top: $verticalMargin;
-    }
+    background-image: url('../images/exhibition-background-image.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
 }

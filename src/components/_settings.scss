@@ -1,9 +1,18 @@
 /************************************
+    Media Queries
+************************************/
+$largeScreen: 1824px;
+$laptop: 1440px;
+$tabletLandscape: 1024px;
+$tabletPortrait: 768px;
+$mobile: 481px;
+
+
+/************************************
     Branding
 ************************************/
 $orange: #E17000;
 $orangeAlternate: adjust-color($orange, $alpha: -0.4);
-$orangeDark: #B76413;
 $beige: #FFEDD9;
 $beigeAlternate: adjust-color($beige, $alpha: -0.45);
 $black: #000000;
@@ -13,50 +22,25 @@ $yellow: #E1B100;
 $red: #D60404;
 
 $linkColor: $orange;
-$hoverColor: $orangeDark;
 
 $headerFontFamily: 'Vesper Libre', Georgia, serif;
 $bodyFontFamily: 'Open Sans', Helvetica, sans-serif;
 
-$extraBoldFontWeight: 900;
 $boldFontWeight: 700;
 $normalFontWeight: 400;
 
-$outerMarginMobile: 5vw;
-$outerMargin: 10vw;
-
-$verticalMargin: 3rem;
-$subheadlineVerticalMargin: $verticalMargin / 2;
-
-$sectionVerticalMarginMobile: calc(1rem + 5vh);
-$sectionVerticalMargin: calc(1rem + 15vh);
-
-$h1OffsetMarginMobile: 36vw;
-$h1OffsetMarginTablet: 17vw;
-$h1OffsetMarginDesktop: 14vw;
-
-$h2OffsetMarginMobile: 15vw;
-$h2OffsetMargin: 12vw;
+$outerMarginMobile: calc(1rem + 1vw);
+$outerMargin: calc(1rem + 8vw);
+$h1OffsetMarginMobile: calc(1rem + 36vw);
+$h1OffsetMargin: calc(1rem + 12vw);
 
 $smallSpacing: 5px;
-
-$navWidthMobile: 45vw;
-$navWidthDesktop: 25vw;
-
-$headerHeightMobile: calc(1rem + 10vh);
-$headerHeightDesktop: calc(1rem + 15vh);
-$headerHeightOnScrollDesktop: calc(1rem + 8vh);
 
 /************************************
     URLs
 ************************************/
 $heroBackgroundImageUrl: url('../images/hero-background-image.jpg');
-$takeActionBackgroundImageUrl: url('../images/take-action-background-image.jpg');
-$simbaNiBackgroundImageUrl: url('../images/simba-ni-background-image.jpg');
-$unsungHeroesPersonBackgroundImageUrl: url('../images/unsung-heroes-person-background-image@2x.jpg');
-$unsungHeroesSlideBackgroundImageUrl: url('../images/unsung-heroes-slide-background-image@2x.jpg');
-$lionLifeBackgroundImageUrl: url('../images/lion-life-background-image.jpg');
-$exhibitionBackgroundImageUrl: url('../images/exhibition-background-image-with-cutout.png');
+
 
 
 /************************************
@@ -88,31 +72,6 @@ $exhibitionBackgroundImageUrl: url('../images/exhibition-background-image-with-c
     align-items: $alignItems;
     justify-content: $justifyContent;
     flex-flow: $flexFlow;
-}
-
-@mixin columnTextFlow($columnCount: 2, $columnGap: $outerMarginMobile) {
-    -webkit-column-count: $columnCount;
-    -moz-column-count: $columnCount;
-    column-count: $columnCount;
-    -webkit-column-gap: $columnGap;
-    -moz-column-gap: $columnGap;
-    column-gap: $columnGap;
-    -moz-column-fill: auto;
-    column-fill: auto;
-}
-
-@mixin borderGradient($rgbaColorFrom, $rgbaColorTo) {
-    border: 1px solid;
-    -moz-border-image: -moz-linear-gradient(top, $rgbaColorFrom, $rgbaColorTo) 1;
-    -webkit-border-image: -webkit-linear-gradient(bottom left, $rgbaColorFrom, $rgbaColorTo) 1;
-    -o-border-image: -o-linear-gradient(bottom left, $rgbaColorFrom, $rgbaColorTo) 1;
-    border-image: linear-gradient(to top right, $rgbaColorFrom, $rgbaColorTo) 1;
-}
-
-@mixin transition($transition: all .4s cubic-bezier(0, 0, 0.58, 1)) {
-    -moz-transition: $transition;
-    -webkit-transition: $transition;
-    transition: $transition;
 }
 
 
