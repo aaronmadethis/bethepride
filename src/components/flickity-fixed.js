@@ -6,8 +6,6 @@ import { canUseDOM } from 'fbjs/lib/ExecutionEnvironment';
 import PropTypes from 'prop-types';
 
 class FlickityComponent extends Component {
-  _isMounted = false;
-
   constructor(props) {
     super(props);
 
@@ -42,7 +40,6 @@ class FlickityComponent extends Component {
   }
 
   componentDidMount() {
-    this._isMounted = true;
     const Flickity = require('flickity');
 
     if (!canUseDOM) return null;
@@ -59,10 +56,6 @@ class FlickityComponent extends Component {
     if (!this.carousel) return null;
     const mountNode = this.carousel.querySelector('.flickity-slider');
     if (mountNode) return createPortal(this.props.children, mountNode);
-  }
-
-  componentWillUnmount() {
-    this._isMounted = false;
   }
 
   render() {

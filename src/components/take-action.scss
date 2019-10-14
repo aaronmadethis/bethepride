@@ -1,104 +1,11 @@
 @import "_settings";
 
-$gradient: linear-gradient(black 0, #B07D73 25%, #B07D73 85%, transparent 100%);
-
 .take-action {
-    @include fullBackgroundSize($takeActionBackgroundImageUrl, right bottom, $backgroundSize: 150%);
-    position: relative;
-    background-color: $black;
-    color: $beige;
-    padding: 0 0 calc(1rem + 20vh);
-
-    @media only screen and (min-width: 1024px) {
-        background-size: contain;
-    }
-
-    &::before{
-        content:'';
-        position:absolute;
-        top:20px;
-        left:0;
-        right:0;
-        bottom:400px;
-        background-image: $gradient;
-    }
-
-    .take-action__content {
-
-        @include flexbox($flexFlow: column, $alignItems: stretch);
-        max-width: 1152px;
-        margin-left:auto;
-        margin-right:auto;
-        padding-bottom:100px;
-        padding-left: $outerMarginMobile;
-        padding-right: $outerMarginMobile;
-        // background-image: $gradient;
-        position: relative;
-        z-index: 10;
-        @media only screen and (min-width: 1024px) {
-            padding-left: 0;
-            padding-right: 0;
-        }
-    }
-
-    // .take-action__heading {
-
-    // }
-
-    .take-action__headline {
-        color: $beigeAlternate;
-
-        span {
-            color: $beige;
-            margin-left: $h2OffsetMarginMobile;
-
-            @media only screen and (min-width: 768px) {
-               margin-left: 11vw;
-            }
-
-            @media only screen and (min-width: 1024px) {
-               margin-left: 5vw;
-            }
-        }
-    }
-
-    .take-action__paragraph {
-        margin-top: $subheadlineVerticalMargin;
-
-        @media only screen and (min-width: 1024px) {
-            margin-left: 5vw;
-            width: 50%;
-        }
-    }
-
-    .take-action__twitter-cards {
-        @media only screen and (min-width: 1024px) {
-            @include flexbox($alignItems: stretch, $justifyContent: space-between, $flexFlow: row wrap);
-
-            // width: 100%;
-            margin: 3rem 0 3rem 5vw;
-        }
-
-        .twitter-card:nth-child(n+5) {
-            display: none;
-
-            @media only screen and (min-width: 1024px) {
-                display: block;
-            }
-        }
-
-        &.take-action__twitter-cards--view-more {
-            .twitter-card:nth-child(n+5) {
-                display: block;
-            }
-        }
-    }
-
-    .take-action__view-more-button {
-        margin: $verticalMargin auto 0;
-
-        @media only screen and (min-width: 1024px) {
-            display: none;
-        }
+    background-image: url('../images/take-action-background-image.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    .wrapper-take-action__twitter-cards{
+        display: flex;
     }
 }

@@ -1,25 +1,28 @@
 import React from "react";
+import ReactDOM from "react-dom";
 
 import "./africa-map.scss";
 
-const AfricaMap = ({pic, headline, subheadline, ...props}) => {
-
-    return(
-        <div className={props.className} aria-current={props.ariaCurrent} aria-hidden={props.ariaHidden}>
+function AfricaMap(props) {
+    // console.log(props);
+    return (
+        <>
+        <div id={props.id} className={props.activeClass}>
             <img
                 className={'africa-map__image'}
-                src={pic}
-                alt={headline}
+                src={props.imageSource}
+                alt={props.headline}
+            />
+            <h2
+                className={'africa-map__headline'}
+                dangerouslySetInnerHTML={{__html:props.headline}}
             />
             <h3
-                className={'africa-map__headline'}
-                dangerouslySetInnerHTML={{__html:headline}}
-            />
-            <h4
                 className={'africa-map__subheadline'}
-                dangerouslySetInnerHTML={{__html:subheadline}}
+                dangerouslySetInnerHTML={{__html:props.subheadline}}
             />
         </div>
+        </>
     )
 }
 

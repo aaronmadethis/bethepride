@@ -7,21 +7,28 @@
 
 import React from "react"
 import PropTypes from "prop-types"
+import { useStaticQuery, graphql } from "gatsby"
 
 import "./_reset.scss"
 import "./_settings.scss"
-import "./_typography.scss"
+import "./_global.scss"
 import "./layout.scss"
 
 const Layout = ({ children, locale, changeAppClass }) => {
-
-    if (typeof window !== `undefined`) {
-        window.wildaid_locale = locale
-    }
+    const data = useStaticQuery(graphql`
+        query SiteTitleQuery {
+            site {
+                siteMetadata {
+                    title
+                    description
+                }
+            }
+        }
+    `)
 
     return (
         <>
-        <div className="layout" locale={locale}>
+        <div className="layout">
             {children}
         </div>
         </>
@@ -29,7 +36,7 @@ const Layout = ({ children, locale, changeAppClass }) => {
 }
 
 Layout.propTypes = {
-  children: PropTypes.node.isRequired
+  children: PropTypes.node.isRequired,
 }
 
 export default Layout

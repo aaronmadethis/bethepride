@@ -1,203 +1,54 @@
 @import "_settings";
 
-$hamburgerIconWidthMobile: 37px;
-$hamburgerIconWidthDesktop: 45px;
-$closeIconWidthMobile: 28px;
-$closeIconWidthDesktop: 36px;
-$logoImageWidthMobile: 85px;
-$logoImageWidth: 110px;
-
-.header {
-    @include flexbox($justifyContent: space-between, $alignItems: center);
-    @include transition;
-
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 10;
-    background-color: transparent;
-    height: $headerHeightMobile;
-
-    @media only screen and (min-width: 1024px) {
-        height: $headerHeightDesktop;
-    }
-
-    &.header--show {
-        background-color: $black;
-
-        @media only screen and (min-width: 1024px) {
-            height: $headerHeightOnScrollDesktop;
-        }
-    }
-}
+$hamburgerIconWidth: 27px;
+$logoImageWidth: 54px;
 
 .navigation {
-    @include flexbox($alignItems: center, $justifyContent: space-between);
-    @include transition;
-
+    display: flex;
+    align-items: center;
+    justify-content: center;
     position: relative;
-    height: $headerHeightMobile;
-
-    + .language-toggle {
-        .header--show & {
-            display: none;
-        }
-    }
-
-    @media only screen and (min-width: 1024px) {
-        height: $headerHeightDesktop;
-
-        .header--show & {
-            height: $headerHeightOnScrollDesktop;
-        }
-    }
-
-    .menu-is-open & {
-        + .language-toggle {
-            transform: translate3d($navWidthMobile, 0, 0);
-
-            @media only screen and (min-width: 1024px) {
-                transform: translate3d($navWidthDesktop, 0, 0);
-            }
-        }
-
-        ~ #header__tweet-button {
-            transform: translate3d(45vw, 0, 0);
-        }
-    }
 
     .navigation__menu {
-        @include flexbox($flexFlow: column, $alignItems: flex-start, $justifyContent: flex-start);
-        @include transition;
+        position: static;
 
-        overflow: auto;
-        background-color: $black;
-        height: 100vh;
-        padding: calc(1rem + 2vh) $outerMarginMobile;
-        width: $navWidthMobile;
-        transform: translate3d(-$navWidthMobile, 0, 0);
-        align-self: flex-start;
-
-        .menu-is-open & {
-            transform: translate3d(0, 0, 0);
+        @media only screen and (min-width: 769px) {
+            position: absolute;
+            left: -70px;
         }
 
-        .language-toggle {
-            transform: translate3d(0, 0, 0);
-        }
+        .button--hamburger {
+            margin-right: 10px;
 
-        @media only screen and (min-width: 1024px) {
-            padding: calc(1rem + 5vh) $outerMarginMobile;
-            width: $navWidthDesktop;
+            img {
+                max-width: $hamburgerIconWidth;
 
-            .header--show & {
-                padding: calc(1rem + 2vh) $outerMarginMobile;
-            }
-        }
-    }
-
-    .navigation__links {
-        margin: calc(1rem + 2vh) 0 0;
-
-        @media only screen and (min-width: 1024px) {
-            margin-top: $verticalMargin;
-        }
-
-        .navigation__link {
-            @include fontSize(24px);
-
-            padding: 1.5rem 0;
-
-            &:last-child {
-                padding-top: $verticalMargin;
-
-                a {
-                    padding: 1rem 2rem;
+                @media only screen and (min-width: 769px) {
+                    max-width: $hamburgerIconWidth * 2;
                 }
             }
-
-            @media only screen and (min-width: 1024px) {
-                 @include fontSize(16px);
-
-                padding: 1rem 0;
-            }
         }
     }
 
-    .navigation__branding {
-        @include flexbox($alignItems: flex-start);
-        @include transition;
+    // .navigation__expanded {
+    //     display: none;
+    // }
 
-        transform: translate3d(-40vw, 0, 0);
+    .navigation__links {
+        display: none;
 
         .menu-is-open & {
-            transform: translate3d(5vw, 0, 0);
-        }
-
-        @media only screen and (min-width: 1024px) {
-            transform: translate3d(-15vw, 0, 0);
-
-            .menu-is-open & {
-                transform: translate3d($outerMargin, 0, 0);
-            }
-        }
-    }
-
-    .navigation__toggle {
-        margin-right: 10px;
-
-        @media only screen and (min-width: 1024px) {
-            position: absolute;
-            // left: -56px;
-            left: -72px;
-        }
-
-        &.navigation__toggle--hamburger {
-            width: $hamburgerIconWidthMobile;
-
-            @media only screen and (min-width: 1024px) {
-                width: $hamburgerIconWidthDesktop;
-                margin-top:3px;
-            }
-        }
-
-        &.navigation__toggle--close {
-            width: $closeIconWidthMobile;
-
-            @media only screen and (min-width: 1024px) {
-                width: $closeIconWidthDesktop;
-            }
+            display: block;
         }
     }
 
     .navigation__logo {
-        max-width: $logoImageWidthMobile;
-        width: auto;
-
-        @media only screen and (min-width: 768px) {
+        img {
             max-width: $logoImageWidth;
-        }
-    }
-}
 
-#header__tweet-button {
-    @include transition;
-    
-    display: none;
-    position: absolute;
-    right:0;
-
-    @media only screen and (min-width: 1024px) {
-        position: relative;
-    }
-
-    .header--show & {
-        display: block;
-        transform: translate3d(-$outerMarginMobile, 0, 0);
-
-        @media only screen and (min-width: 1024px) {
-            transform: translate3d(-$outerMargin, 0, 0);
+            @media only screen and (min-width: 769px) {
+                max-width: $logoImageWidth * 2;
+            }
         }
     }
 }
