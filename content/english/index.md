@@ -317,17 +317,13 @@ description: This is a custom description for SEO and Open Graph purposes, rathe
                         "url": "https://www.youtube.com/embed/MS2WLeEhQGI"
                     },
                     {
-                        "title": "iframe title 3",
-                        "url": "https://www.youtube.com/embed/Ltdd2RGkNUY"
-                    },
-                    {
-                        "title": "iframe title 4",
+                        "title": "iframe Neria Abdi",
                         "url": "https://www.youtube.com/embed/WR5-DREoVes"
                     },
                     {
-                        "title": "iframe title 5",
+                        "title": "iframe Mandela and Julius,
                         "url": "https://www.youtube.com/embed/1rt9nrhAWSE"
-                    }
+                    },
                 ],
                 "people": [
                     {
@@ -381,7 +377,7 @@ description: This is a custom description for SEO and Open Graph purposes, rathe
         <component-lion-life
             content='{
                 "headline": "Lion in<br>My Life",
-                "paragraph": "<p>We see the lion motif everywhere, from our currency notes to kangas, t-shirts to trinkets. It is a sacred symbol, part of our history and mythology, so deeply embedded into our nation&apos;s cultural fabric that we rarely even notice it anymore. But now we want you to show us that overlooked, long-forgotten lion in your life by taking a photograph any time you notice something with a lion on it – it could be a keychain, a painting, a poster, a t-shirt, a tattoo even! – and post it to Instagram using the hashtags #lioninmylife and #bethepride.</p><p>Tell us in one sentence what the lion means to you and you will be entered into a raffle draw. The winner gets an all-expenses paid safari trip to the Serengeti in Tanzania to see lions IRL, where you&apos;ll be put up at Alex Walker&apos;s Serian&apos;s beautiful Serengeti Lamai lodge. For full list of terms and conditions, see here <a href=\"https://www.instagram.com/wildaidafrica\">here</a>.</p>",
+                "paragraph": "<p>We see the lion motif everywhere, from our currency notes to kangas, t-shirts to trinkets. It is a sacred symbol, part of our history and mythology, so deeply embedded into our nation&apos;s cultural fabric that we rarely even notice it anymore. But now we want you to show us that overlooked, long-forgotten lion in your life by taking a photograph any time you notice something with a lion on it – it could be a keychain, a painting, a poster, a t-shirt, a tattoo even! – and post it to Instagram using the hashtags #lioninmylife and #bethepride.</p><p>Tell us in one sentence what the lion means to you and you will be entered into a raffle draw. The winner gets an all-expenses paid safari trip to the Serengeti in Tanzania to see lions IRL, where you&apos;ll be put up at Alex Walker&apos;s Serian&apos;s beautiful Serengeti Lamai lodge. For full list of terms and conditions, see <a href=\"https://www.instagram.com/wildaidafrica\">here</a>.</p>",
                 "buttonText": "Share Yours",
                 "buttonUrl": "https://www.instagram.com/wildaidafrica"
         }'></component-lion-life>
