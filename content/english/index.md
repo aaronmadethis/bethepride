@@ -317,17 +317,13 @@ description: This is a custom description for SEO and Open Graph purposes, rathe
                         "url": "https://www.youtube.com/embed/MS2WLeEhQGI"
                     },
                     {
-                        "title": "iframe title 3",
-                        "url": "https://www.youtube.com/embed/Ltdd2RGkNUY"
-                    },
-                    {
-                        "title": "iframe title 4",
+                        "title": "iframe Neria Abdi",
                         "url": "https://www.youtube.com/embed/WR5-DREoVes"
                     },
                     {
-                        "title": "iframe title 5",
+                        "title": "iframe Mandela and Julius,
                         "url": "https://www.youtube.com/embed/1rt9nrhAWSE"
-                    }
+                    },
                 ],
                 "people": [
                     {
