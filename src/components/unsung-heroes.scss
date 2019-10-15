@@ -99,6 +99,14 @@
             margin-top: 2rem;
             padding: 0 $outerMargin;
         }
+        
+        .flickity-slider{
+            @media only screen and (max-width: 767px) {
+                touch-action: none;
+                -webkit-user-select: none;
+                -webkit-user-drag: none;
+            }
+        }
     }
 
     .unsung-heroes__copy {
