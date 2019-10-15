@@ -52,6 +52,13 @@ $slideHeightMobile: 116px;
             bottom:170px;
             // bottom:0;
         }
+        .flickity-slider{
+            @media only screen and (max-width: 767px) {
+                touch-action: none;
+                -webkit-user-select: none;
+                -webkit-user-drag: none;
+            }
+        }
     }
 
     .population__slide-number-headline {
