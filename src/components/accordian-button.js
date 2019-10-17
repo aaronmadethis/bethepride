@@ -5,6 +5,12 @@ import "./_buttons.scss";
 import downArrowIcon from "../images/icon-arrow-down.svg"
 import upArrowIcon from "../images/icon-arrow-up.svg"
 
+let current_lang = "en";
+
+if (typeof window !== `undefined`) {
+    current_lang = window.wildaid_locale
+}
+
 class AccordianButton extends React.Component {
     constructor(props) {
         super(props);
@@ -26,12 +32,6 @@ class AccordianButton extends React.Component {
         const { isSectionClosed } = this.state;
 
         const { buttonText, buttonTextAlternate} = this.props;
-
-        const current_lang = "en";
-
-        if (typeof window !== `undefined`) {
-            const current_lang = window.wildaid_locale
-        }
 
         if (current_lang !== "en") {
             buttonText = 'Tazama Muhtasari'
