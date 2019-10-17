@@ -22,7 +22,7 @@ title: Navigation
             "href": "#section__unsung-heroes"
         },
         {
-            "text": "Simba Maishani Mwangu",
+            "text": "Simba maishani mwangu",
             "href": "#section__lion-life"
         },
         {
