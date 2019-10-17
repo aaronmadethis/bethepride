@@ -5,6 +5,7 @@ import "./_buttons.scss";
 import downArrowIcon from "../images/icon-arrow-down.svg"
 import upArrowIcon from "../images/icon-arrow-up.svg"
 
+
 class AccordianButton extends React.Component {
     constructor(props) {
         super(props);
@@ -22,18 +23,33 @@ class AccordianButton extends React.Component {
     }
 
     render() {
+        let current_lang = "en";
+
+        if (typeof window !== `undefined`) {
+            current_lang = window.wildaid_locale
+        }
+
         const { ...props } = this.props;
         const { isSectionClosed } = this.state;
+
+        let { buttonText, buttonTextAlternate} = this.props;
+
+        if (current_lang !== "en") {
+            buttonText = 'Tazama Muhtasari'
+            buttonTextAlternate = 'Funga Muhtasari'
+        }
+
+        console.log(current_lang);
 
         return (
             <button
                 className={ isSectionClosed ? "accordian-button" : "accordian-button accordian-button--open" }
                 type="button"
                 onClick={(e) => this.toggleClass(e)}
-                aria-label={ isSectionClosed ? props.buttonText : props.buttonTextAlternate }
+                aria-label={ isSectionClosed ? buttonText : buttonTextAlternate }
                 aria-pressed={ isSectionClosed ? false : true }
             >
-                <span className="accordian-button__button-text">{ isSectionClosed ? props.buttonText : props.buttonTextAlternate }</span>
+                <span className="accordian-button__button-text">{ isSectionClosed ? buttonText : buttonTextAlternate }</span>
                 <img
                     className="accordian-button__arrow"
                     src={ isSectionClosed ? downArrowIcon : upArrowIcon}

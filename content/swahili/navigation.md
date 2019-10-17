@@ -22,12 +22,8 @@ title: Navigation
             "href": "#section__unsung-heroes"
         },
         {
-            "text": "Simba maishani mwangu",
+            "text": "Simba Maishani Mwangu",
             "href": "#section__lion-life"
-        },
-        {
-            "text": "Katika Vyombo vya Habari",
-            "href": "#section__media"
         },
         {
             "text": "Kujifunza Zaidi",
