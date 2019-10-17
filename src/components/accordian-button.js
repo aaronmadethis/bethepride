@@ -43,10 +43,10 @@ class AccordianButton extends React.Component {
                 className={ isSectionClosed ? "accordian-button" : "accordian-button accordian-button--open" }
                 type="button"
                 onClick={(e) => this.toggleClass(e)}
-                aria-label={ isSectionClosed ? buttonText : buttonTextAlternate }
+                aria-label={ isSectionClosed ? props.buttonText : props.buttonTextAlternate }
                 aria-pressed={ isSectionClosed ? false : true }
             >
-                <span className="accordian-button__button-text">{ isSectionClosed ? buttonText : buttonTextAlternate }</span>
+                <span className="accordian-button__button-text">{ isSectionClosed ? props.buttonText : props.buttonTextAlternate }</span>
                 <img
                     className="accordian-button__arrow"
                     src={ isSectionClosed ? downArrowIcon : upArrowIcon}

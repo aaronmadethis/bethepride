@@ -26,6 +26,10 @@ title: Navigation
             "href": "#section__lion-life"
         },
         {
+            "text": "In the Media",
+            "href": "#section__media"
+        },
+        {
             "text": "To Learn More",
             "href": "#section__learn"
         },
