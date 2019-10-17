@@ -261,11 +261,11 @@ description: This is a custom description for SEO and Open Graph purposes, rathe
                         "imageAltText": "Mohammed Dewji",
                         "name": "Mohammed Dewji",
                         "title": "Business Mogul and Philanthropist",
-                        "paragraph": "Mohammed is the president of MeTL, a pan-African conglomerate with interests, across multiple industries and the owner of the Simba Sports Club football team. In 2016, Mohammed signed the Giving Pledge, a commitment to donate at least half his fortune to philanthropic causes. In Tanzania he has donated to several causes such as education, health and community development. As a WildAid ambassador he has also lent his voice to supporting wildlife conservation."
+                        "paragraph": "Mohammed is the president of MeTL, a pan-African conglomerate with interests across multiple industries, and the owner of the Simba Sports Club football team. In 2016, Mohammed signed the Giving Pledge, a commitment to donate at least half his fortune to philanthropic causes. In Tanzania he has donated to several causes such as education, health and community development. As a WildAid ambassador he has also lent his voice to supporting wildlife conservation."
                     },
                     {
                         "pic": "DrBernardKissui",
-                        "imageAltText": "Dr.Bernard Kissui",
+                        "imageAltText": "Dr. Bernard Kissui",
                         "name": "Dr.Bernard Kissui",
                         "title": "Lion Researcher",
                         "paragraph": "Renowned in the field of lion conservation, Dr. Kissui started the Tarangire Lion Project as a PhD student and continues to run it to this day. Having worked for years in the Serengeti National Park and Ngorongro Conservation Area, he is passionate about understanding the drivers behind human-lion conflict and works closely with pastoralist communities to help reduce lion depredations through various mitigation measures."
