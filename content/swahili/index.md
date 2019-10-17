@@ -320,7 +320,7 @@ description: This is a custom description for SEO and Open Graph purposes, rathe
                         "url": "https://www.youtube.com/embed/WR5-DREoVes"
                     },
                     {
-                        "title": "iframe Mandela and Julius,
+                        "title": "iframe Mandela and Julius",
                         "url": "https://www.youtube.com/embed/1rt9nrhAWSE"
                     },
                 ],
