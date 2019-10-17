@@ -96,8 +96,8 @@ description: This is a custom description for SEO and Open Graph purposes, rathe
                 "headline": "Chukua",
                 "headlineAlt": "Hatua",
                 "paragraph": "Njia bora zaidi ya kuchukukua hatua  ni kuwatumia viongozi, wenye ushawishi na wenyeuamuzi Tanzania, ujumbe kwa kupitia mtandao wa kijamii wa twitter usemao #bethepride okoa simba kabla hawajatoweka kabisa. Anza kwa kubofya kwenye akaunti iliopo hapo chini.",
-                "buttonText": "Ya Ziada",
-                "buttonTextTwitter": "Tuma Ujumbe Twitter",
+                "buttonText": "View More",
+                "buttonTextTwitter": "Send Tweet",
                 "people": [{
                         "name": "Dk. John Magufuli",
                         "handle": "@MagufuliJP",
@@ -195,7 +195,7 @@ description: This is a custom description for SEO and Open Graph purposes, rathe
                 "iframeTitle": "Simba ana maana gani kwako?",
                 "title": "Kuhusu watu",
                 "paragraph": "Nchini Tanzania, simba ni ishara  ambayo imeingiliana sana na utambulisho wetu wa taifa,  ikiwakilisha sio tu urithi wetu mkubwa wa asili, ila pia tabia tunazothamini na kuvaa kama taifa. Sifa kama nguvu, fahari, mamlaka, ujasiri na ustahimilivu. Ili kuongeza ufahamu juu ya kiasi gani simba ameingiliana sana na utambulisho wetu, tafadhali sambaza video ya Simba Ni. Kisha soma kuhusu watu wenye uhamasisho walioko kwenye video kwa kubofya kwenye wasifu wao.",
-                "buttonText": "Tazama Muhtasari",
+                "buttonText": "Kuhusu watu",
                 "thumbnails": [
                     {
                         "pic": "MrishoMpoto-small",
@@ -239,7 +239,7 @@ description: This is a custom description for SEO and Open Graph purposes, rathe
                         "pic": "MrishoMpoto",
                         "imageAltText": "Mrisho Mpoto",
                         "name": "Mrisho Mpoto",
-                        "title": "Mshairi na Msanii",
+                        "title": "mshairi na msanii",
                         "paragraph": "Mrisho ni mshairi, mwigizaji, muongozaji na msimulizi maarufu, ambaye ana mapenzi makubwa na uigizaji wa mashairi ya Kiswahili. Kwa kuwa amekuwa na mapenzi makubwa na mazingira tangu akiwa mdogo, Mrisho ameamini kwa muda mrefu kuwa vitu vyote vya asili vinahitaji kulindwa na kutunzwa kwa upendo na kwa sababu hii ametunga nyimbo nyingi kuhusu thamani ya mazingira na athari za ujangili, ikiwemo wimbo maarufu uitwao \"Deni la Hisani\"."
                     },
                     {
@@ -288,7 +288,7 @@ description: This is a custom description for SEO and Open Graph purposes, rathe
                         "pic": "BenPol",
                         "imageAltText": "Ben Pol",
                         "name": "Ben Pol",
-                        "title": "Mwimbaji-Mmtunzi wa Nyimbo",
+                        "title": "Mwimbaji-mtunzi wa nyimbo",
                         "paragraph": "Mara nyingi akiitwa \"hodari wa nyimbo za miondoko laini\", Ben hutumia sauti yake ya kipekee sio tu kuimba nyimbo zinazopasua chati, ila pia hukemea biashara haramu ya wanyama pori na kuwaonyesha mamilioni ya mashabiki wake umuhimu wa kutembelea Mbuga za Tanzania. Akiwa balozi wa muda mrefu wa WildAid, Ben ametokea kwenye jumbe za video na filamu fupi  kuhusu simba na tembo."
                     },
                     {
@@ -316,13 +316,17 @@ description: This is a custom description for SEO and Open Graph purposes, rathe
                         "url": "https://www.youtube.com/embed/MS2WLeEhQGI"
                     },
                     {
-                        "title": "iframe Neria Abdi",
+                        "title": "iframe title 3",
+                        "url": "https://www.youtube.com/embed/Ltdd2RGkNUY"
+                    },
+                    {
+                        "title": "iframe title 4",
                         "url": "https://www.youtube.com/embed/WR5-DREoVes"
                     },
                     {
-                        "title": "iframe Mandela and Julius,
+                        "title": "iframe Mandela and Julius",
                         "url": "https://www.youtube.com/embed/1rt9nrhAWSE"
-                    },
+                    }
                 ],
                 "people": [
                     {
