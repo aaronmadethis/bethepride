@@ -517,10 +517,6 @@ description: This is a custom description for SEO and Open Graph purposes, rathe
                     "href": "#section__lion-life"
                 },
                 {
-                    "text": "Katika Vyombo vya Habari",
-                    "href": "#section__media"
-                },
-                {
                     "text": "Kujifunza Zaidi",
                     "href": "#section__learn"
                 },
