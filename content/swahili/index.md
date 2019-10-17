@@ -497,7 +497,7 @@ description: This is a custom description for SEO and Open Graph purposes, rathe
         content='{
             "links": [
                 {
-                    "text": "About the Crisis",
+                    "text": "Kuhusu Janga Hili",
                     "href": "#section__population"
                 },
                 {
