@@ -392,10 +392,6 @@ description: This is a custom description for SEO and Open Graph purposes, rathe
                         "href": "https://letlionslive.org"
                     },
                     {
-                        "text": "Learning to share the savannah with big animals | AP",
-                        "href": "https://apnews.com/5313930d153744f29cb5bf8cb820738c"
-                    },
-                    {
                         "text": "Where lions once ruled, they are now quietly disappearing | National Geographic",
                         "href": "https://www.nationalgeographic.com/animals/2019/07/lion-numbers-halved-since-original-lion-king/"
                     },
@@ -497,7 +493,7 @@ description: This is a custom description for SEO and Open Graph purposes, rathe
         content='{
             "links": [
                 {
-                    "text": "Kuhusu Janga Hili",
+                    "text": "About the Crisis",
                     "href": "#section__population"
                 },
                 {
