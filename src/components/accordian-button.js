@@ -31,7 +31,7 @@ class AccordianButton extends React.Component {
         const { ...props } = this.props;
         const { isSectionClosed } = this.state;
 
-        const { buttonText, buttonTextAlternate} = this.props;
+        let { buttonText, buttonTextAlternate} = this.props;
 
         if (current_lang !== "en") {
             buttonText = 'Tazama Muhtasari'
