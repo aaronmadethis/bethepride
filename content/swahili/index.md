@@ -85,7 +85,7 @@ description: This is a custom description for SEO and Open Graph purposes, rathe
             content='{
                 "headline": "Video Here",
                 "subheadline": "Subheadline will go here.",
-                "url": "http://www.youtube.com/embed/4aQwT3n2c1Q",
+                "url": "https://www.youtube.com/embed/4aQwT3n2c1Q",
                 "title": "iframe title",
                 "paragraph": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent consequat neque eu nunc semper, at pretium urna accumsan. Etiam et cursus eros, nec faucibus purus. Nullam ullamcorper malesuada mi, eu dictum ligula vulputate et. Maecenas sodales tincidunt pulvinar. In sit amet nulla convallis, bibendum massa gravida, posuere turpis. Vivamus condimentum justo nec mi dictum ornare. Nam fringilla sapien et sapien ornare gravida et sed ligula. Vivamus massa lorem, ullamcorper eget accumsan in, molestie non augue. Curabitur congue nunc eget tristique vestibulum. Aliquam erat volutpat. Aliquam sit amet ornare est. Vestibulum sollicitudin sodales commodo."
         }'></component-video-feature>
@@ -96,8 +96,8 @@ description: This is a custom description for SEO and Open Graph purposes, rathe
                 "headline": "Chukua",
                 "headlineAlt": "Hatua",
                 "paragraph": "Njia bora zaidi ya kuchukukua hatua  ni kuwatumia viongozi, wenye ushawishi na wenyeuamuzi Tanzania, ujumbe kwa kupitia mtandao wa kijamii wa twitter usemao #bethepride okoa simba kabla hawajatoweka kabisa. Anza kwa kubofya kwenye akaunti iliopo hapo chini.",
-                "buttonText": "View More",
-                "buttonTextTwitter": "Send Tweet",
+                "buttonText": "Ya Ziada",
+                "buttonTextTwitter": "Tuma Ujumbe Twitter",
                 "people": [{
                         "name": "Dk. John Magufuli",
                         "handle": "@MagufuliJP",
@@ -191,7 +191,7 @@ description: This is a custom description for SEO and Open Graph purposes, rathe
                 "headline": "Sambaza Video",
                 "headlineAlt": "\"Simba Ni\"",
                 "subheadline": "Simba ana maana gani kwako?",
-                "videoUrl": "http://www.youtube.com/embed/4aQwT3n2c1Q",
+                "videoUrl": "https://www.youtube.com/embed/4aQwT3n2c1Q",
                 "iframeTitle": "Simba ana maana gani kwako?",
                 "title": "Kuhusu watu",
                 "paragraph": "Nchini Tanzania, simba ni ishara  ambayo imeingiliana sana na utambulisho wetu wa taifa,  ikiwakilisha sio tu urithi wetu mkubwa wa asili, ila pia tabia tunazothamini na kuvaa kama taifa. Sifa kama nguvu, fahari, mamlaka, ujasiri na ustahimilivu. Ili kuongeza ufahamu juu ya kiasi gani simba ameingiliana sana na utambulisho wetu, tafadhali sambaza video ya Simba Ni. Kisha soma kuhusu watu wenye uhamasisho walioko kwenye video kwa kubofya kwenye wasifu wao.",
@@ -316,11 +316,7 @@ description: This is a custom description for SEO and Open Graph purposes, rathe
                         "url": "https://www.youtube.com/embed/MS2WLeEhQGI"
                     },
                     {
-                        "title": "iframe title 3",
-                        "url": "https://www.youtube.com/embed/Ltdd2RGkNUY"
-                    },
-                    {
-                        "title": "iframe title 4",
+                        "title": "iframe title Neria Abdi",
                         "url": "https://www.youtube.com/embed/WR5-DREoVes"
                     },
                     {
@@ -396,6 +392,10 @@ description: This is a custom description for SEO and Open Graph purposes, rathe
                         "href": "https://letlionslive.org"
                     },
                     {
+                        "text": "Learning to share the savannah with big animals | AP",
+                        "href": "https://apnews.com/5313930d153744f29cb5bf8cb820738c"
+                    },
+                    {
                         "text": "Where lions once ruled, they are now quietly disappearing | National Geographic",
                         "href": "https://www.nationalgeographic.com/animals/2019/07/lion-numbers-halved-since-original-lion-king/"
                     },
@@ -440,7 +440,7 @@ description: This is a custom description for SEO and Open Graph purposes, rathe
                         "href": "https://blogs.plos.org/everyone/2013/09/04/lions-like-to-cuddle-too/"
                     }
                 ],
-                "buttonText": "View More"
+                "buttonText": "Ya Ziada"
         }'></component-learn>
     </section>
     <section id="section__partners" className="partners" aria-label="Washirika">

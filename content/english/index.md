@@ -215,7 +215,7 @@ description: This is a custom description for SEO and Open Graph purposes, rathe
                     },
                     {
                         "pic": "DrBernardKissui-small",
-                        "imageAltText": "Dr.Bernard Kissui"
+                        "imageAltText": "Dr. Bernard Kissui"
                     },
                     {
                         "pic": "BenjaminFernandes-small",
@@ -261,7 +261,7 @@ description: This is a custom description for SEO and Open Graph purposes, rathe
                         "imageAltText": "Mohammed Dewji",
                         "name": "Mohammed Dewji",
                         "title": "Business Mogul and Philanthropist",
-                        "paragraph": "Mohammed is the president of MeTL, a pan-African conglomerate with interests across multiple industries and the owner of the Simba Sports Club football team. In 2016, Mohammed signed the Giving Pledge, a commitment to donate at least half his fortune to philanthropic causes. In Tanzania he has donated to several causes such as education, health and community development. As a WildAid ambassador he has also lent his voice to supporting wildlife conservation."
+                        "paragraph": "Mohammed is the president of MeTL, a pan-African conglomerate with interests, across multiple industries and the owner of the Simba Sports Club football team. In 2016, Mohammed signed the Giving Pledge, a commitment to donate at least half his fortune to philanthropic causes. In Tanzania he has donated to several causes such as education, health and community development. As a WildAid ambassador he has also lent his voice to supporting wildlife conservation."
                     },
                     {
                         "pic": "DrBernardKissui",
@@ -317,11 +317,7 @@ description: This is a custom description for SEO and Open Graph purposes, rathe
                         "url": "https://www.youtube.com/embed/MS2WLeEhQGI"
                     },
                     {
-                        "title": "iframe title 3",
-                        "url": "https://www.youtube.com/embed/Ltdd2RGkNUY"
-                    },
-                    {
-                        "title": "iframe title 4",
+                        "title": "iframe title Neria Abdi",
                         "url": "https://www.youtube.com/embed/WR5-DREoVes"
                     },
                     {
@@ -373,7 +369,7 @@ description: This is a custom description for SEO and Open Graph purposes, rathe
                         "imageAltText": "Mandela and Julius Video"
                     }
                 ],
-                "paragraph": "<p>Yamat. Neria. Julius. Mandela. Bernard. Stefano. Kirerenjo. You might not recognise these names, but they are our heroes and we hope they&apos;ll be yours – they are the ordinary men and women working day (and sometimes night) in wildlife conservation, doing their bit to protect Tanzania&apos;s lions and their environment. Our series highlighting <em>Conservation&apos;s Unsung Heroes</em> pays tribute to the often overlooked, rarely seen people who play a pivotal role in not only conserving this beloved species but also in helping the communities who bear the brunt of living alongside them.</p><p>That could be lion defenders like Julius and Mandela, working to prevent traditional lion hunts; or working mother Yamat, gathering invaluable data that helps her organization make effective decisions on preventing lion attacks; or Kirerenjo, who educates pastoralists about grazing their livestock more efficiently and less harmfully to lion habitat. Please watch our hero videos and then leave them a message of support.</p>",
+                "paragraph": "<p>Yamat. Neria. Julius. Mandela. Bernard. Stefano. Kirerenjo. You might not recognise these names, but they are our heroes and we hope they&apos;ll be yours – they are the ordinary men and women working day (and sometimes night) in wildlife conservation, doing their bit to protect Tanzania&apos;s lions and their environment. Our series highlighting <em>Conservation&apos;s Unsung Heroes</em> pays tribute to the often overlooked, rarely seen people who play a pivotal role in not only conserving this beloved species but also in helping the communities who bear the brunt of living alongside them.</p><p>That could be lion defenders like Julius and Mandela, working to prevent traditional lion hunts; or working mother Yamat, gathering invaluable data that helps her organization make effective decisions on preventing lion attacks; or Kirerenjo, who educates pastoralists about grazing their livestock more efficiently and less harmfully to lion habitat. Please watch our hero videos and then leave them a message of support in the YouTube comments section.</p>",
                 "lionImageAlt": "Lion"
         }'></component-unsung-heroes>
     </section>
@@ -381,7 +377,7 @@ description: This is a custom description for SEO and Open Graph purposes, rathe
         <component-lion-life
             content='{
                 "headline": "Lion in<br>My Life",
-                "paragraph": "<p>We see the lion motif everywhere, from our currency notes to kangas, t-shirts to trinkets. It is a sacred symbol, part of our history and mythology, so deeply embedded into our nation&apos;s cultural fabric that we rarely even notice it anymore. But now we want you to show us that overlooked, long-forgotten lion in your life by taking a photograph any time you notice something with a lion on it – it could be a keychain, a painting, a poster, a t-shirt, a tattoo even! – and post it to Instagram using the hashtags #lioninmylife and #bethepride.</p><p>Tell us in one sentence what the lion means to you and you will be entered into a raffle draw. The winner gets an all-expenses paid safari trip to the Serengeti in Tanzania to see lions IRL, where you&apos;ll be put up at Alex Walker&apos;s Serian&apos;s beautiful Serengeti Lamai lodge. For full list of terms and conditions, see here <a href=\"https://www.instagram.com/wildaidafrica\">here</a>.</p>",
+                "paragraph": "<p>We see the lion motif everywhere, from our currency notes to kangas, t-shirts to trinkets. It is a sacred symbol, part of our history and mythology, so deeply embedded into our nation&apos;s cultural fabric that we rarely even notice it anymore. But now we want you to show us that overlooked, long-forgotten lion in your life by taking a photograph any time you notice something with a lion on it – it could be a keychain, a painting, a poster, a t-shirt, a tattoo even! – and post it to Instagram using the hashtags #lioninmylife and #bethepride.</p><p>Tell us in one sentence what the lion means to you and you will be entered into a raffle draw. The winner gets an all-expenses paid safari trip to the Serengeti in Tanzania to see lions IRL, where you&apos;ll be put up at Alex Walker&apos;s Serian&apos;s beautiful Serengeti Lamai lodge. For full list of terms and conditions, see <a href=\"https://www.instagram.com/wildaidafrica\">here</a>.</p>",
                 "buttonText": "Share Yours",
                 "buttonUrl": "https://www.instagram.com/wildaidafrica"
         }'></component-lion-life>
@@ -395,6 +391,10 @@ description: This is a custom description for SEO and Open Graph purposes, rathe
                     {
                         "text": "Let lions live report | Panthera & WildAid",
                         "href": "https://letlionslive.org"
+                    },
+                    {
+                        "text": "Learning to share the savannah with big animals | AP",
+                        "href": "https://apnews.com/5313930d153744f29cb5bf8cb820738c"
                     },
                     {
                         "text": "Where lions once ruled, they are now quietly disappearing | National Geographic",
