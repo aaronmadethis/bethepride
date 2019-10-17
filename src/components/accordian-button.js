@@ -25,28 +25,15 @@ class AccordianButton extends React.Component {
         const { ...props } = this.props;
         const { isSectionClosed } = this.state;
 
-        const { buttonText, buttonTextAlternate} = this.props;
-
-        const current_lang = "en";
-
-        if (typeof window !== `undefined`) {
-            const current_lang = window.wildaid_locale
-        }
-
-        if (current_lang !== "en") {
-            buttonText = 'Tazama Muhtasari'
-            buttonTextAlternate = 'Funga Muhtasari'
-        }
-
         return (
             <button
                 className={ isSectionClosed ? "accordian-button" : "accordian-button accordian-button--open" }
                 type="button"
                 onClick={(e) => this.toggleClass(e)}
-                aria-label={ isSectionClosed ? buttonText : buttonTextAlternate }
+                aria-label={ isSectionClosed ? props.buttonText : props.buttonTextAlternate }
                 aria-pressed={ isSectionClosed ? false : true }
             >
-                <span className="accordian-button__button-text">{ isSectionClosed ? buttonText : buttonTextAlternate }</span>
+                <span className="accordian-button__button-text">{ isSectionClosed ? props.buttonText : props.buttonTextAlternate }</span>
                 <img
                     className="accordian-button__arrow"
                     src={ isSectionClosed ? downArrowIcon : upArrowIcon}
