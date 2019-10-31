@@ -239,7 +239,7 @@ description: This is a custom description for SEO and Open Graph purposes, rathe
                         "pic": "MrishoMpoto",
                         "imageAltText": "Mrisho Mpoto",
                         "name": "Mrisho Mpoto",
-                        "title": "mshairi na msanii",
+                        "title": "Mshairi na Msanii",
                         "paragraph": "Mrisho ni mshairi, mwigizaji, muongozaji na msimulizi maarufu, ambaye ana mapenzi makubwa na uigizaji wa mashairi ya Kiswahili. Kwa kuwa amekuwa na mapenzi makubwa na mazingira tangu akiwa mdogo, Mrisho ameamini kwa muda mrefu kuwa vitu vyote vya asili vinahitaji kulindwa na kutunzwa kwa upendo na kwa sababu hii ametunga nyimbo nyingi kuhusu thamani ya mazingira na athari za ujangili, ikiwemo wimbo maarufu uitwao \"Deni la Hisani\"."
                     },
                     {
@@ -288,7 +288,7 @@ description: This is a custom description for SEO and Open Graph purposes, rathe
                         "pic": "BenPol",
                         "imageAltText": "Ben Pol",
                         "name": "Ben Pol",
-                        "title": "Mwimbaji-mtunzi wa nyimbo",
+                        "title": "Mwimbaji-Mtunzi wa Nyimbo",
                         "paragraph": "Mara nyingi akiitwa \"hodari wa nyimbo za miondoko laini\", Ben hutumia sauti yake ya kipekee sio tu kuimba nyimbo zinazopasua chati, ila pia hukemea biashara haramu ya wanyama pori na kuwaonyesha mamilioni ya mashabiki wake umuhimu wa kutembelea Mbuga za Tanzania. Akiwa balozi wa muda mrefu wa WildAid, Ben ametokea kwenye jumbe za video na filamu fupi  kuhusu simba na tembo."
                     },
                     {
@@ -497,7 +497,7 @@ description: This is a custom description for SEO and Open Graph purposes, rathe
         content='{
             "links": [
                 {
-                    "text": "About the Crisis",
+                    "text": "Kuhusu Janga Hili",
                     "href": "#section__population"
                 },
                 {
@@ -513,7 +513,7 @@ description: This is a custom description for SEO and Open Graph purposes, rathe
                     "href": "#section__unsung-heroes"
                 },
                 {
-                    "text": "Simba maishani mwangu",
+                    "text": "Simba Maishani Mwangu",
                     "href": "#section__lion-life"
                 },
                 {
