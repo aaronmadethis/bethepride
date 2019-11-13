@@ -81,15 +81,6 @@ description: This is a custom description for SEO and Open Graph purposes, rathe
                 "africaMapsAriaLabel": "Visual representation of humans and lions in conflict"
         }'></component-population>
     </section>
-    <section id="section__video-feature" className="video-feature" aria-label="Subheadline">
-        <component-video-feature
-            content='{
-                "headline": "The Benefits of Lions",
-                "subheadline": "Saving lions is good for our economy, our ecology and us.",
-                "url": "https://www.youtube.com/embed/O9-RzYbK7q8",
-                "title": "iframe title"
-        }'></component-video-feature>
-    </section>
     <section id="section__take-action" className="take-action" aria-label="Take action">
         <component-take-action
             content='{
@@ -191,7 +182,7 @@ description: This is a custom description for SEO and Open Graph purposes, rathe
                 "headline": "Share the",
                 "headlineAlt": "\"Simba Ni\" Video",
                 "subheadline": "What does the lion mean to you?",
-                "videoUrl": "https://www.youtube.com/embed/4aQwT3n2c1Q",
+                "videoUrl": "https://www.youtube.com/embed/0aNdGQQwwt4",
                 "iframeTitle": "iframe title",
                 "title": "About the People",
                 "paragraph": "In Tanzania it is a symbol that&apos;s inextricably linked with our national identity, representing not just our rich natural heritage, but also the traits we idealise and aim to embody as a nation. Qualities like strength, majesty, power, courage and resilience. To raise awareness about how deeply linked the lion is to our identity, please share the Simba Ni video. And then read about the inspiring individuals featured in the video by clicking on their bios.",
@@ -323,6 +314,10 @@ description: This is a custom description for SEO and Open Graph purposes, rathe
                     {
                         "title": "iframe Mandela and Julius",
                         "url": "https://www.youtube.com/embed/1rt9nrhAWSE"
+                    },
+                    {
+                        "title": "iframe Bernard Kissui",
+                        "url": "https://www.youtube.com/embed/GIHH_JIIigE"
                     }
                 ],
                 "people": [
@@ -341,6 +336,10 @@ description: This is a custom description for SEO and Open Graph purposes, rathe
                     {
                         "name": "Mandela and Julius",
                         "title": "Lion Defenders"
+                    },
+                    {
+                        "name": "Bernard Kissui",
+                        "title": "Lion Researcher"
                     }
                 ],
                 "slides": [
@@ -367,6 +366,12 @@ description: This is a custom description for SEO and Open Graph purposes, rathe
                         "name": "Mandela and Julius",
                         "title": "Lion Defenders",
                         "imageAltText": "Mandela and Julius Video"
+                    },
+                    {
+                        "url": "https://i3.ytimg.com/vi/GIHH_JIIigE/maxresdefault.jpg",
+                        "name": "Bernard Kissui",
+                        "title": "Lion Researcher",
+                        "imageAltText": "Bernard Kissui Video"
                     }
                 ],
                 "paragraph": "<p>Yamat. Neria. Julius. Mandela. Bernard. Stefano. Kirerenjo. You might not recognise these names, but they are our heroes and we hope they&apos;ll be yours – they are the ordinary men and women working day (and sometimes night) in wildlife conservation, doing their bit to protect Tanzania&apos;s lions and their environment. Our series highlighting <em>Conservation&apos;s Unsung Heroes</em> pays tribute to the often overlooked, rarely seen people who play a pivotal role in not only conserving this beloved species but also in helping the communities who bear the brunt of living alongside them.</p><p>That could be lion defenders like Julius and Mandela, working to prevent traditional lion hunts; or working mother Yamat, gathering invaluable data that helps her organization make effective decisions on preventing lion attacks; or Kirerenjo, who educates pastoralists about grazing their livestock more efficiently and less harmfully to lion habitat. Please watch our hero videos and then leave them a message of support in the YouTube comments section.</p>",

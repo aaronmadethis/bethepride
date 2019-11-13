@@ -1,7 +1,7 @@
 import React from "react"
 import "./lion-life.scss"
 
-import InstagramFeed from "./instagram-feed"
+// import InstagramFeed from "./instagram-feed"
 import LinkButton from "./link-button"
 
 const LionLife = ({ content }) => {
@@ -26,7 +26,7 @@ const LionLife = ({ content }) => {
                 </div>
             </div>
             <div className="lion-life__instagram">
-                <InstagramFeed />
+                {/* <InstagramFeed /> */}
             </div>
             <div className="lion-life__button">
                 <LinkButton

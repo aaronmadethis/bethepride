@@ -80,16 +80,6 @@ description: This is a custom description for SEO and Open Graph purposes, rathe
                 ]
         }'></component-population>
     </section>
-    <section id="section__video-feature" className="video-feature" aria-label="Subheadline">
-        <component-video-feature
-            content='{
-                "headline": "Video Here",
-                "subheadline": "Subheadline will go here.",
-                "url": "https://www.youtube.com/embed/4aQwT3n2c1Q",
-                "title": "iframe title",
-                "paragraph": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent consequat neque eu nunc semper, at pretium urna accumsan. Etiam et cursus eros, nec faucibus purus. Nullam ullamcorper malesuada mi, eu dictum ligula vulputate et. Maecenas sodales tincidunt pulvinar. In sit amet nulla convallis, bibendum massa gravida, posuere turpis. Vivamus condimentum justo nec mi dictum ornare. Nam fringilla sapien et sapien ornare gravida et sed ligula. Vivamus massa lorem, ullamcorper eget accumsan in, molestie non augue. Curabitur congue nunc eget tristique vestibulum. Aliquam erat volutpat. Aliquam sit amet ornare est. Vestibulum sollicitudin sodales commodo."
-        }'></component-video-feature>
-    </section>
     <section id="section__take-action" className="take-action" aria-label="Chukua Hatua">
         <component-take-action
             content='{
@@ -191,7 +181,7 @@ description: This is a custom description for SEO and Open Graph purposes, rathe
                 "headline": "Sambaza Video",
                 "headlineAlt": "\"Simba Ni\"",
                 "subheadline": "Simba ana maana gani kwako?",
-                "videoUrl": "https://www.youtube.com/embed/4aQwT3n2c1Q",
+                "videoUrl": "https://www.youtube.com/embed/0aNdGQQwwt4",
                 "iframeTitle": "Simba ana maana gani kwako?",
                 "title": "Kuhusu watu",
                 "paragraph": "Nchini Tanzania, simba ni ishara  ambayo imeingiliana sana na utambulisho wetu wa taifa,  ikiwakilisha sio tu urithi wetu mkubwa wa asili, ila pia tabia tunazothamini na kuvaa kama taifa. Sifa kama nguvu, fahari, mamlaka, ujasiri na ustahimilivu. Ili kuongeza ufahamu juu ya kiasi gani simba ameingiliana sana na utambulisho wetu, tafadhali sambaza video ya Simba Ni. Kisha soma kuhusu watu wenye uhamasisho walioko kwenye video kwa kubofya kwenye wasifu wao.",
@@ -322,6 +312,10 @@ description: This is a custom description for SEO and Open Graph purposes, rathe
                     {
                         "title": "iframe Mandela and Julius",
                         "url": "https://www.youtube.com/embed/1rt9nrhAWSE"
+                    },
+                    {
+                        "title": "iframe Bernard Kissui",
+                        "url": "https://www.youtube.com/embed/GIHH_JIIigE"
                     }
                 ],
                 "people": [
@@ -340,6 +334,10 @@ description: This is a custom description for SEO and Open Graph purposes, rathe
                     {
                         "name": "Mandela and Julius",
                         "title": "Lion Defenders"
+                    },
+                    {
+                        "name": "Bernard Kissui",
+                        "title": "Lion Researcher"
                     }
                 ],
                 "slides": [
@@ -366,6 +364,12 @@ description: This is a custom description for SEO and Open Graph purposes, rathe
                         "name": "Mandela and Julius",
                         "title": "Lion Defenders",
                         "imageAltText": "Mandela and Julius Video"
+                    },
+                    {
+                        "url": "https://i3.ytimg.com/vi/GIHH_JIIigE/maxresdefault.jpg",
+                        "name": "Bernard Kissui",
+                        "title": "Lion Researcher",
+                        "imageAltText": "Bernard Kissui Video"
                     }
                 ],
                 "paragraph": "<p>Yamat. Neria. Julius. Mandela. Bernard. Stefano. Kirerenjo. Unaweza usitambue majina haya, lakini hawa ni mashujaa wetu na tunatumaini watakuwa wa kwako- wao ni wanaume na wanawake wa kawaida wanaofanya kazi mchana (na wakati mwingine usiku) kwenye uhifadhi wa wanyamapori, wakichangia juhudi zao katika kulinda simba wa Tanzania na mazingira yao. Mfululizo wetu unaowamulika Mashujaa wasiojulikana wa Uhifadhi unawatambua watu ambao mara nyingi hawajulikani na hawaonekani mara kwa mara ambao wana nafasi kubwa sio tu katika kuhifadhi spishi hii pendwa ila pia katika kusaidia jamii ambazo zinapitia changamoto ya kuishi karibu nao.</p><p>Inaweza kuwa watetezi wa simba kama Julius na Mandela, waliofanya kazi kuzuia uwindaji wa kiasili wa simba, au mama anayefanya kazi, Yamat, anayekusanya habari za thamani sana zinazolisaidia shirika lake kufanya maamuzi yenye ufanisi ya kuzuia mashambulizi ya simba; au Kirerenjo, anayeelimisha wafugaji kuhusu kuchunga wanyama wao kwa ufanisi zaidi na kwa njia yenye madhara madogo zaidi kwenye makazi ya simba. Tafadhali tazama film zetu za mashujaa wa uhifadhi alafu uwaachie ujumbe wa kuwatia moyo.</p>",
