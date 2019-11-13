@@ -6,7 +6,7 @@ function VideoSlide(props) {
     return (
         <>
         <div className={props.className} onClick={props.clickEvent} aria-current={props.ariaCurrent}>
-            <p className="video-slide__slide-number">{props.slideNumber}/4</p>
+            <p className="video-slide__slide-number">{props.slideNumber}/5</p>
             <img
                 className="video-slide__thumbnail"
                 src={props.url}
