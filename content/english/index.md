@@ -81,15 +81,6 @@ description: This is a custom description for SEO and Open Graph purposes, rathe
                 "africaMapsAriaLabel": "Visual representation of humans and lions in conflict"
         }'></component-population>
     </section>
-    <section id="section__video-feature" className="video-feature" aria-label="Subheadline">
-        <component-video-feature
-            content='{
-                "headline": "The Benefits of Lions",
-                "subheadline": "Saving lions is good for our economy, our ecology and us.",
-                "url": "https://www.youtube.com/embed/O9-RzYbK7q8",
-                "title": "iframe title"
-        }'></component-video-feature>
-    </section>
     <section id="section__take-action" className="take-action" aria-label="Take action">
         <component-take-action
             content='{
@@ -191,7 +182,7 @@ description: This is a custom description for SEO and Open Graph purposes, rathe
                 "headline": "Share the",
                 "headlineAlt": "\"Simba Ni\" Video",
                 "subheadline": "What does the lion mean to you?",
-                "videoUrl": "https://www.youtube.com/embed/4aQwT3n2c1Q",
+                "videoUrl": "https://www.youtube.com/embed/0aNdGQQwwt4",
                 "iframeTitle": "iframe title",
                 "title": "About the People",
                 "paragraph": "In Tanzania it is a symbol that&apos;s inextricably linked with our national identity, representing not just our rich natural heritage, but also the traits we idealise and aim to embody as a nation. Qualities like strength, majesty, power, courage and resilience. To raise awareness about how deeply linked the lion is to our identity, please share the Simba Ni video. And then read about the inspiring individuals featured in the video by clicking on their bios.",
