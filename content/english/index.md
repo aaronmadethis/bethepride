@@ -323,6 +323,10 @@ description: This is a custom description for SEO and Open Graph purposes, rathe
                     {
                         "title": "iframe Mandela and Julius",
                         "url": "https://www.youtube.com/embed/1rt9nrhAWSE"
+                    },
+                    {
+                        "title": "iframe Bernard Kissui",
+                        "url": "https://www.youtube.com/embed/GIHH_JIIigE"
                     }
                 ],
                 "people": [
@@ -341,6 +345,10 @@ description: This is a custom description for SEO and Open Graph purposes, rathe
                     {
                         "name": "Mandela and Julius",
                         "title": "Lion Defenders"
+                    },
+                    {
+                        "name": "Bernard Kissui",
+                        "title": "Lion Researcher"
                     }
                 ],
                 "slides": [
@@ -367,6 +375,12 @@ description: This is a custom description for SEO and Open Graph purposes, rathe
                         "name": "Mandela and Julius",
                         "title": "Lion Defenders",
                         "imageAltText": "Mandela and Julius Video"
+                    },
+                    {
+                        "url": "https://i3.ytimg.com/vi/GIHH_JIIigE/maxresdefault.jpg",
+                        "name": "Bernard Kissui",
+                        "title": "Lion Researcher",
+                        "imageAltText": "Bernard Kissui Video"
                     }
                 ],
                 "paragraph": "<p>Yamat. Neria. Julius. Mandela. Bernard. Stefano. Kirerenjo. You might not recognise these names, but they are our heroes and we hope they&apos;ll be yours – they are the ordinary men and women working day (and sometimes night) in wildlife conservation, doing their bit to protect Tanzania&apos;s lions and their environment. Our series highlighting <em>Conservation&apos;s Unsung Heroes</em> pays tribute to the often overlooked, rarely seen people who play a pivotal role in not only conserving this beloved species but also in helping the communities who bear the brunt of living alongside them.</p><p>That could be lion defenders like Julius and Mandela, working to prevent traditional lion hunts; or working mother Yamat, gathering invaluable data that helps her organization make effective decisions on preventing lion attacks; or Kirerenjo, who educates pastoralists about grazing their livestock more efficiently and less harmfully to lion habitat. Please watch our hero videos and then leave them a message of support in the YouTube comments section.</p>",
