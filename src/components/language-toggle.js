@@ -13,7 +13,7 @@ function LanguageToggle({locale}) {
             {locale === 'en' ? (
                 <div>
                     <small className="language-toggle__title">Language</small>
-                    <Link to="/sw">
+                    <Link to="/">
                         <img
                             className="language-toggle__image"
                             src={englishLanguageImage}
@@ -24,7 +24,7 @@ function LanguageToggle({locale}) {
               ) : (
                 <div>
                     <small className="language-toggle__title">Language</small>
-                    <Link to="/">
+                    <Link to="/en">
                         <img
                             className="language-toggle__image"
                             src={swahiliLanguageImage}
