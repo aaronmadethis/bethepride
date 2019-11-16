@@ -9,6 +9,7 @@
     "gatsby": "2.14.0",
     "gatsby-cli": "^2.7.30",
     "gatsby-image": "^2.2.6",
+    "gatsby-plugin-cookiehub": "^1.0.0",
     "gatsby-plugin-manifest": "^2.2.4",
     "gatsby-plugin-offline": "^2.2.4",
     "gatsby-plugin-react-helmet": "^3.1.2",
@@ -34,7 +35,8 @@
     "react-flickity-component": "^3.3.0",
     "react-helmet": "^5.2.1",
     "react-media": "^1.10.0",
-    "rehype-react": "^4.0.1"
+    "rehype-react": "^4.0.1",
+    "universal-cookie": "^4.0.2"
   },
   "devDependencies": {
     "instafeed-lite": "^1.0.10",
