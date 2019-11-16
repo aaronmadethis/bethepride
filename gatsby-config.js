@@ -131,6 +131,19 @@ module.exports = {
           // In case you want to add any custom content types: https://github.com/jariz/gatsby-plugin-s3/blob/master/recipes/custom-content-type.md
         },
       },
-    }
+    },
+    {
+      resolve: `gatsby-plugin-cookiehub`,
+      options: {
+        // your cookiehub widget ID
+        cookihubId: `b492869a`,
+        // your google analytics tracking id
+        trackingId: `UA-149496370-1`,
+        // Puts tracking script in the head instead of the body
+        head: false,
+        // enable ip anonymization
+        anonymize: true,
+      },
+    },
   ],
 }
