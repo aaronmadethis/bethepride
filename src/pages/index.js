@@ -18,6 +18,7 @@ import Media from "../components/media"
 import Learn from "../components/learn"
 import Partners from "../components/partners"
 import Footer from "../components/footer"
+// import CookieHub from "../components/cookiehub"
 
 const renderAst = new rehypeReact({
     createElement: React.createElement,
@@ -81,7 +82,7 @@ class IndexPage extends React.Component {
             <div className={finalClasses}>
                 <Navigation locale={locale} nav={nav} changeAppClass={this.changeAppClass} />
                 <Layout locale={locale}>
-                    <SEO title="Home" />
+                    <SEO title="Home" lang={locale} />
                     {
                         renderAst(post.htmlAst)
                     }
