@@ -1,4 +1,4 @@
-/* import React from "react"
+import React from "react"
 import { StaticQuery, graphql } from "gatsby"
 
 import "./instagram-feed.scss"
@@ -57,4 +57,3 @@ export default props => (
       render={data => <InstagramFeed insta={data} {...props} />}
     />
 )
- */
