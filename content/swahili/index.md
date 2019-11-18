@@ -114,7 +114,7 @@ description: This is a custom description for SEO and Open Graph purposes, rathe
                         "handle": "@fatma_karume",
                         "title": "Mwanasheria na Mwanaharakati",
                         "pic": "twitter-karume",
-                        "personType": "politician"
+                        "personType": "influencer"
                     },
                     {
                         "name": "Majaliwa Kassim",
