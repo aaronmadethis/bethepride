@@ -32,7 +32,7 @@ const TwitterCard = ({person, buttonText, pic, personType}) => {
             message = " #simba ni mnyama maarufu kwa watalii, uhai wake unatishiwa na upotevu wa makazi + kupungua kwa chakula + ujangili + na migogoro na binadamu. Wanaumuhimu kwenye uchumi wetu, mazingira yetu & urithi wetu! Jiunge na harakati Bethepride.com #bethepride";
         }
 
-        finalURL = url_base + encodeURIComponent(handle) + encodeURIComponent(message) + url_empty;
+        finalURL = url_base + encodeURIComponent(handle) + encodeURIComponent(message);
 
         let width  = 575,
             height = 400,
