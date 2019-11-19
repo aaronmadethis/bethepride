@@ -5,7 +5,7 @@ const TwitterCard = ({person, buttonText, pic, personType}) => {
     const {name, handle, title} = person;
 
     function handleClick(e) {
-        const url_base = "http://twitter.com/share?text=";
+        const url_base = "http://twitter.com/intent/tweet?text=";
         const url_empty = "&url=" + encodeURI("https:bethepride.com/");
         const locale = window.wildaid_locale;
 
