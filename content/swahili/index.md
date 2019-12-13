@@ -80,6 +80,15 @@ description: This is a custom description for SEO and Open Graph purposes, rathe
                 ]
         }'></component-population>
     </section>
+    <section id="section__video-feature" className="video-feature" aria-label="Subheadline">
+        <component-video-feature
+            content='{
+                "headline": "Kwa Nini Tunawahitaji Simba",
+                "subheadline": "Kuwaokoa simba ni jambo zuri kwa uchumi wetu, mazingira yetu na sisi.",
+                "url": "https://www.youtube.com/embed/Y3WirZ2kabw",
+                "title": "Kwa Nini Tunawahitaji Simba"
+        }'></component-video-feature>
+    </section>
     <section id="section__take-action" className="take-action" aria-label="Chukua Hatua">
         <component-take-action
             content='{
@@ -236,7 +245,7 @@ description: This is a custom description for SEO and Open Graph purposes, rathe
                         "pic": "EricMajura",
                         "imageAltText": "Eric Majura",
                         "name": "Eric Majura",
-                        "title": "Mr. Tanzania 2017",
+                        "title": "Mr. Tanzania 2019",
                         "paragraph": "Eric anaamini kuwa anaweza kuelezewa kuwa ana roho na nguvu ya simba, kwa sababu ya uwajibikaji wake usiotetereka na kujitolea kwake katika fani ya kujenga mwili – alishinda mashindano ya Mr. Tanzania baada ya karibia miaka ishirini aliyotumia kuujenga mwili wake. Kwake yeye, simba sio tu muhimu kwa mazingira, ila ni chanzo cha kuhamasisha  watu wawe na  nguvu na msukumo wa mafanikio bora."
                     },
                     {
