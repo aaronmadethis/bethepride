@@ -81,6 +81,15 @@ description: This is a custom description for SEO and Open Graph purposes, rathe
                 "africaMapsAriaLabel": "Visual representation of humans and lions in conflict"
         }'></component-population>
     </section>
+    <section id="section__video-feature" className="video-feature" aria-label="Subheadline">
+        <component-video-feature
+            content='{
+                "headline": "Why We Need Lions",
+                "subheadline": "Saving lions is good for our economy, our environment and us.",
+                "url": "https://www.youtube.com/embed/BPs93k9EujA",
+                "title": "Why We Need Lions"
+        }'></component-video-feature>
+    </section>
     <section id="section__take-action" className="take-action" aria-label="Take action">
         <component-take-action
             content='{
@@ -237,7 +246,7 @@ description: This is a custom description for SEO and Open Graph purposes, rathe
                         "pic": "EricMajura",
                         "imageAltText": "Eric Majura",
                         "name": "Eric Majura",
-                        "title": "Mr. Tanzania 2017",
+                        "title": "Mr. Tanzania 2019",
                         "paragraph": "Eric believes he can be described as having the spirit and strength of a lion, because of his unwavering commitment and dedication to bodybuilding – he won Mr. Tanzania after nearly two decades spent perfecting his body. To him, lions are not just important to the environment, but a source of inspiration that people should look to for strength and ambition."
                     },
                     {
